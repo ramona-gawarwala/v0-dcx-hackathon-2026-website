@@ -20,7 +20,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 
-export const REPO_URL = 'https://github.com/ramona-gawarwala/v0-DCX-hackathon-2026'
+export const REPO_URL = 'https://github.com/ramona-gawarwala/v0-dcx-hackathon-2026-website'
 export const LIVE_URL = 'https://v0-dcx-hackathon-2026-website.vercel.app'
 
 export const navLinks = [
