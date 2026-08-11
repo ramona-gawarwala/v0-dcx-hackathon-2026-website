@@ -7,12 +7,12 @@ Deadline: **Sun 14 Sep 2026, [time]**. Late = not judged, so submit early and up
 - [ ] **Live URL** — your deployed Vercel app (must open and work).
 - [ ] **Repo or v0 link** — so judges can see how you built it.
 - [ ] **Title + one-line pitch** — what it does, in plain words.
-- [ ] **Demo video ([2–3] min)** — screen recording of the app working. A demo, not a presentation.
+- [ ] **Demo video (2–3 min)** — screen recording of the app working. A demo, not a presentation.
 - [ ] **Team + challenge** — who you are and which [challenge](challenges.md) you picked.
 
 ## Where to submit
 
-Submit here: **[submission link — e.g. DevPost / form]**.
+Submit here: post your project in the **[🏆 Submissions](https://teams.microsoft.com/l/channel/19%3A6fe1fc0a5cde42cca8bf848597b663ed%40thread.tacv2/%F0%9F%8F%86%20Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61)** channel on Microsoft Teams.
 
 ## Add this to your repo
 

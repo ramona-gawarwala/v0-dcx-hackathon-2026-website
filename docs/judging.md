@@ -2,7 +2,7 @@
 
 ## How it works
 
-- Each team gives a **[2–3] minute demo** of the working app (not slides).
+- Each team gives a **2–3 minute demo** of the working app (not slides).
 - Judges score against the criteria below.
 - Multiple awards — beginners and non-engineers can win too.
 

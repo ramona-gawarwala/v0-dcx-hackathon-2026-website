@@ -1,8 +1,7 @@
 import type { FaqGroup } from '@/components/faq-accordion'
-import { REPO_URL } from '@/lib/content'
 
-// Deep-links to the full guides that live in the repo's docs/ folder.
-const doc = (file: string) => `${REPO_URL}/blob/main/docs/${file}`
+// Links to the full guides, served on-site under /guides.
+const doc = (slug: string) => `/guides/${slug}`
 
 export const faqGroups: FaqGroup[] = [
   {
@@ -12,19 +11,19 @@ export const faqGroups: FaqGroup[] = [
         q: 'Do I need to know how to code?',
         a:
           'No. Start on [v0.dev](https://v0.dev) — describe your app and deploy it. The [Beginner guide](' +
-          doc('beginner-guide.md') +
+          doc('beginner-guide') +
           ') walks you through your first live app before you write real code.',
       },
       {
         q: 'Who is this for? Do I need to be a developer?',
         a:
           'Everyone — not just engineers. Consultants, designers, product people, and domain experts all add value. The point is pairing your expertise with AI, not hand-writing code. Mixed teams tend to build the best products. New to it all? Start with the [Beginner guide](' +
-          doc('beginner-guide.md') +
+          doc('beginner-guide') +
           ').',
       },
       {
         q: 'Do I need a team, or can I go solo?',
-        a: 'Teams of 2–5 are encouraged — solo is allowed, but a team is more fun and usually ships more. No team yet? Post what you want to build and what you bring in the team-forming channel, or we\u2019ll help group you at kickoff. See [How it works](/#how-it-works).',
+        a: 'Teams of 2–5 are encouraged — solo is allowed, but a team is more fun and usually ships more. No team yet? Post what you want to build and what you bring in the team-forming channel, or we’ll help group you at kickoff. See [How it works](/how-it-works).',
       },
       {
         q: 'What does it cost?',
@@ -36,7 +35,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'How finished does my project need to be?',
-        a: 'Not very. A working demo of a small slice wins over an unfinished big idea. Aim to demo ~25% of the big idea, done well. See [Judging](/#judging).',
+        a: 'Not very. A working demo of a small slice wins over an unfinished big idea. Aim to demo ~25% of the big idea, done well. See [Judging](/judging).',
       },
     ],
   },
@@ -53,7 +52,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'What makes something an "AI agent" (not just a chatbot)?',
-        a: 'Two things: a reasoning loop (observe, plan, act, check, repeat) and tools (actions it can take — search, query a database, call an API). A chatbot just replies; an agent decides what to do and does it. That\u2019s the Harvest level in [Challenges](/#challenges). More: [AI SDK Agents](https://ai-sdk.dev/docs/agents/overview).',
+        a: 'Two things: a reasoning loop (observe, plan, act, check, repeat) and tools (actions it can take — search, query a database, call an API). A chatbot just replies; an agent decides what to do and does it. That’s the Harvest level in [Challenges](/challenges). More: [AI SDK Agents](https://ai-sdk.dev/docs/agents/overview).',
       },
       {
         q: 'What\u2019s the difference between an agent and a skill?',
@@ -90,7 +89,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Can I ground the AI in my own documents or data?',
-        a: 'Yes — that\u2019s the Sprout level. Use [RAG](https://ai-sdk.dev/docs/guides/rag-chatbot) to fetch the relevant parts of your content and pass them as context, add [guardrails](https://ai-sdk.dev/docs/agents/building-agents) ("only answer from the provided context; if it\u2019s not there, say I don\u2019t know"), and use [callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks) to log or stop bad output. See Ask My Docs and Live Lookup in [Challenges](/#challenges).',
+        a: 'Yes — that’s the Sprout level. Use [RAG](https://ai-sdk.dev/docs/guides/rag-chatbot) to fetch the relevant parts of your content and pass them as context, add [guardrails](https://ai-sdk.dev/docs/agents/building-agents) ("only answer from the provided context; if it’s not there, say I don’t know"), and use [callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks) to log or stop bad output. See Ask My Docs and Live Lookup in [Challenges](/challenges).',
       },
       {
         q: 'How do I reduce the model\u2019s hallucinations?',
@@ -111,7 +110,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Do I have to attend live or present in person?',
-        a: 'It\u2019s part-time, so you don\u2019t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/#submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/#judging)).',
+        a: 'It’s part-time, so you don’t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)).',
       },
     ],
   },
@@ -130,14 +129,14 @@ export const faqGroups: FaqGroup[] = [
         q: 'Can I host on GitHub Pages?',
         a:
           'No — it\u2019s static only and can\u2019t run server-side AI routes. Use [Vercel](https://vercel.com) or another host that runs server-side code — see the [Deployment guide](' +
-          doc('deployment-guide.md') +
+          doc('deployment-guide') +
           ').',
       },
       {
         q: 'Why won\u2019t Vercel connect my company repo?',
         a:
           'The free Hobby plan can\u2019t connect to Git-org repos. Use a personal repo or a paid Team. See the [Deployment guide](' +
-          doc('deployment-guide.md') +
+          doc('deployment-guide') +
           ').',
       },
     ],

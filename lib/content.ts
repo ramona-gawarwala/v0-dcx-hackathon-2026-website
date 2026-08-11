@@ -22,15 +22,75 @@ import {
 
 export const REPO_URL = 'https://github.com/ramona-gawarwala/v0-dcx-hackathon-2026-website'
 export const LIVE_URL = 'https://v0-dcx-hackathon-2026-website.vercel.app'
+export const V0_COMMUNITY_URL = 'https://v0.dev/community'
+export const VERCEL_TEMPLATES_URL = 'https://vercel.com/templates'
+
+// Microsoft Teams — "General | Innovation Hackathon 2026" team and its channels
+export const TEAMS_TEAM_URL =
+  'https://teams.microsoft.com/l/team/19%3A6VZc0lYnAVy-qh6prOW7bX4V4yAcAyzRikL3TJPp85A1%40thread.tacv2/conversations?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
+export const TEAMS_ANNOUNCEMENTS_URL =
+  'https://teams.microsoft.com/l/channel/19%3A6VZc0lYnAVy-qh6prOW7bX4V4yAcAyzRikL3TJPp85A1%40thread.tacv2/%F0%9F%93%A2%20Announcements?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
+export const TEAMS_TEAM_FORMATION_URL =
+  'https://teams.microsoft.com/l/channel/19%3Ab74e2bdfc48743eb87251501ff7529ed%40thread.tacv2/%F0%9F%91%A5%20Team%20Formation?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
+export const TEAMS_HELP_URL =
+  'https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Ask%20for%20help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
+export const TEAMS_SUBMISSIONS_URL =
+  'https://teams.microsoft.com/l/channel/19%3A6fe1fc0a5cde42cca8bf848597b663ed%40thread.tacv2/%F0%9F%8F%86%20Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 
 export const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'How it works', href: '/#how-it-works' },
-  { label: 'Project types', href: '/#project-types' },
-  { label: 'Challenges', href: '/#challenges' },
-  { label: 'Judging', href: '/#judging' },
-  { label: 'Submit', href: '/#submit' },
+  { label: 'How it works', href: '/how-it-works' },
+  { label: 'Start building', href: '/start-building' },
+  { label: 'Project types', href: '/project-types' },
+  { label: 'Challenges', href: '/challenges' },
+  { label: 'What you get', href: '/benefits' },
+  { label: 'Judging', href: '/judging' },
+  { label: 'Submit', href: '/submit' },
+  { label: 'Resources', href: '/resources' },
   { label: 'FAQ', href: '/faq' },
+]
+
+export type NavLeaf = { label: string; href: string }
+export type NavGroup = { label: string; items: NavLeaf[] }
+export type NavEntry = NavLeaf | NavGroup
+
+export function isNavGroup(entry: NavEntry): entry is NavGroup {
+  return 'items' in entry
+}
+
+// Grouped navigation for the sidebar: every section and guide is its own page,
+// grouped so related pages sit together.
+export const navMenu: NavEntry[] = [
+  { label: 'Home', href: '/' },
+  { label: 'How it works', href: '/how-it-works' },
+  {
+    label: 'Build',
+    items: [
+      { label: 'Start building', href: '/start-building' },
+      { label: 'Project types', href: '/project-types' },
+      { label: 'Challenges', href: '/challenges' },
+    ],
+  },
+  {
+    label: 'Compete',
+    items: [
+      { label: 'What you get', href: '/benefits' },
+      { label: 'Judging', href: '/judging' },
+      { label: 'Submit', href: '/submit' },
+    ],
+  },
+  {
+    label: 'Guides',
+    items: [
+      { label: 'Beginner guide', href: '/guides/beginner-guide' },
+      { label: 'AI SDK guide', href: '/guides/ai-sdk-guide' },
+      { label: 'Deployment guide', href: '/guides/deployment-guide' },
+      { label: 'Help', href: '/guides/help' },
+    ],
+  },
+  { label: 'Resources', href: '/resources' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Code of Conduct', href: '/code-of-conduct' },
 ]
 
 export const schedule = [

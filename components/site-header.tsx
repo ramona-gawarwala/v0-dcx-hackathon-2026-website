@@ -2,55 +2,34 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, X, Sprout } from 'lucide-react'
-import { navLinks, REPO_URL } from '@/lib/content'
-import { GithubIcon } from '@/components/github-icon'
+import { navMenu, isNavGroup } from '@/lib/content'
+import { isNavLinkActive } from '@/lib/nav'
+import { ThemeToggle } from '@/components/theme-toggle'
+import { NavSideToggle } from '@/components/nav-side-toggle'
+import { ScrollProgress } from '@/components/scroll-progress'
 
 export function SiteHeader() {
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+      <ScrollProgress />
+      <div className="flex h-16 items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-display text-base font-bold tracking-tight">
           <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Sprout className="size-5" />
           </span>
           <span>
-            DCX <span className="text-primary">Hackathon</span>
+            <span className="text-brand-blue">DCX</span> AI Hackathon 2026
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
-          {navLinks.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {l.label}
-            </Link>
-          ))}
-        </nav>
-
         <div className="flex items-center gap-2">
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-medium transition-colors hover:bg-muted sm:inline-flex"
-          >
-            <GithubIcon className="size-4" />
-            Repo
-          </a>
-          <a
-            href="https://v0.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 md:inline-flex"
-          >
-            Start building
-          </a>
+          <NavSideToggle />
+          <ThemeToggle />
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -65,25 +44,48 @@ export function SiteHeader() {
 
       {open && (
         <div className="border-t border-border/60 bg-background md:hidden">
-          <nav className="mx-auto flex max-w-6xl flex-col px-4 py-2 sm:px-6">
-            {navLinks.map((l) => (
-              <Link
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-2 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-              >
-                {l.label}
-              </Link>
-            ))}
-            <a
-              href="https://v0.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-2 mb-2 inline-flex items-center justify-center rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground"
-            >
-              Start building
-            </a>
+          <nav className="flex flex-col px-4 py-3 sm:px-6">
+            {navMenu.map((entry) => {
+              if (isNavGroup(entry)) {
+                return (
+                  <div key={entry.label} className="py-1">
+                    <p className="px-2 pb-1 pt-3 font-mono text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                      {entry.label}
+                    </p>
+                    {entry.items.map((item) => {
+                      const itemActive = isNavLinkActive(item.href, pathname, null)
+                      return (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          onClick={() => setOpen(false)}
+                          aria-current={itemActive ? 'true' : undefined}
+                          className={`block rounded-lg px-2 py-2.5 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
+                            itemActive ? 'text-foreground' : 'text-muted-foreground'
+                          }`}
+                        >
+                          {item.label}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                )
+              }
+              const isActive = isNavLinkActive(entry.href, pathname, null)
+              return (
+                <Link
+                  key={entry.href}
+                  href={entry.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={isActive ? 'true' : undefined}
+                  className={`rounded-lg px-2 py-3 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground ${
+                    isActive ? 'text-foreground' : 'text-muted-foreground'
+                  }`}
+                >
+                  {entry.label}
+                </Link>
+              )
+            })}
           </nav>
         </div>
       )}
