@@ -4,11 +4,48 @@ import { levels, flavours, growthExample, challenges, type Challenge } from '@/l
 
 const levelStyles: Record<
   Challenge['level'],
-  { chip: string; accent: string; ring: string }
+  { chip: string; accent: string; ring: string; band: string; bar: string; softBar: string }
 > = {
-  Seed: { chip: 'bg-seed/10 text-seed border-seed/30', accent: 'text-seed', ring: 'hover:border-seed/40' },
-  Sprout: { chip: 'bg-sprout/10 text-sprout border-sprout/30', accent: 'text-sprout', ring: 'hover:border-sprout/40' },
-  Harvest: { chip: 'bg-harvest/10 text-harvest border-harvest/30', accent: 'text-harvest', ring: 'hover:border-harvest/40' },
+  Seed: {
+    chip: 'bg-seed/10 text-seed border-seed/30',
+    accent: 'text-seed',
+    ring: 'hover:border-seed/40',
+    band: 'bg-seed text-seed-foreground',
+    bar: 'bg-seed',
+    softBar: 'bg-seed/25',
+  },
+  Sprout: {
+    chip: 'bg-sprout/10 text-sprout border-sprout/30',
+    accent: 'text-sprout',
+    ring: 'hover:border-sprout/40',
+    band: 'bg-sprout text-sprout-foreground',
+    bar: 'bg-sprout',
+    softBar: 'bg-sprout/25',
+  },
+  Harvest: {
+    chip: 'bg-harvest/10 text-harvest border-harvest/30',
+    accent: 'text-harvest',
+    ring: 'hover:border-harvest/40',
+    band: 'bg-harvest text-harvest-foreground',
+    bar: 'bg-harvest',
+    softBar: 'bg-harvest/25',
+  },
+}
+
+const barHeights = ['h-2.5', 'h-4', 'h-6']
+
+function GrowthMeter({ level, styleKey }: { level: number; styleKey: Challenge['level'] }) {
+  const s = levelStyles[styleKey]
+  return (
+    <div className="flex items-end gap-1.5" aria-hidden="true">
+      {barHeights.map((h, i) => (
+        <span
+          key={h}
+          className={`w-2.5 rounded-sm ${h} ${i < level ? s.bar : s.softBar}`}
+        />
+      ))}
+    </div>
+  )
 }
 
 export function Challenges() {
@@ -23,24 +60,37 @@ export function Challenges() {
 
         {/* Levels */}
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-          {levels.map((l) => (
-            <div key={l.name} className="relative overflow-hidden rounded-2xl border border-border bg-card p-6">
-              <div className="flex items-center justify-between">
-                <span className={`flex size-12 items-center justify-center rounded-xl ${l.chipClass} border`}>
-                  <l.icon className="size-6" />
-                </span>
-                <span className="font-mono text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                  Level {l.n}
-                </span>
+          {levels.map((l) => {
+            const s = levelStyles[l.name as Challenge['level']]
+            return (
+              <div
+                key={l.name}
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-shadow hover:shadow-lg"
+              >
+                <div className={`flex items-center justify-between px-6 py-4 ${s.band}`}>
+                  <div className="flex items-center gap-3">
+                    <span className="flex size-11 items-center justify-center rounded-xl bg-white/20">
+                      <l.icon className="size-6" />
+                    </span>
+                    <div>
+                      <p className="font-mono text-[11px] font-semibold uppercase tracking-widest opacity-80">
+                        Level {l.n}
+                      </p>
+                      <h3 className="font-display text-2xl font-bold leading-tight">{l.name}</h3>
+                    </div>
+                  </div>
+                  <GrowthMeter level={l.n} styleKey={l.name as Challenge['level']} />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <p className="text-sm font-semibold text-foreground">{l.does}</p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{l.meaning}</p>
+                  <p className={`mt-5 inline-flex w-fit items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs font-medium ${s.chip}`}>
+                    {l.codeword}
+                  </p>
+                </div>
               </div>
-              <h3 className={`mt-5 font-display text-2xl font-bold ${l.colorClass}`}>{l.name}</h3>
-              <p className="mt-1 text-sm font-medium text-foreground">{l.does}</p>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{l.meaning}</p>
-              <p className="mt-4 inline-flex rounded-md bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
-                {l.codeword}
-              </p>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         {/* Flavours + growth example */}
