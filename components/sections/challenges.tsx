@@ -4,24 +4,21 @@ import { levels, flavours, growthExample, challenges, type Challenge } from '@/l
 
 const levelStyles: Record<
   Challenge['level'],
-  { chip: string; accent: string; ring: string; band: string }
+  { chip: string; accent: string; band: string }
 > = {
   Seed: {
     chip: 'bg-seed/15 text-harvest border-seed/40',
     accent: 'text-harvest',
-    ring: 'hover:border-seed/50',
     band: 'bg-seed text-seed-foreground',
   },
   Sprout: {
     chip: 'bg-sprout/12 text-sprout border-sprout/30',
     accent: 'text-sprout',
-    ring: 'hover:border-sprout/40',
     band: 'bg-sprout text-sprout-foreground',
   },
   Harvest: {
     chip: 'bg-harvest/10 text-harvest border-harvest/30',
     accent: 'text-harvest',
-    ring: 'hover:border-harvest/40',
     band: 'bg-harvest text-harvest-foreground',
   },
 }
@@ -43,7 +40,7 @@ function GrowthMeter({ level }: { level: number }) {
 
 export function Challenges() {
   return (
-    <section id="challenges" className="scroll-mt-16 border-b border-border">
+    <section id="challenges" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Challenges"
@@ -87,8 +84,8 @@ export function Challenges() {
         </div>
 
         {/* Flavours + growth example */}
-        <div className="mt-8 grid gap-5 lg:grid-cols-[1fr_1.1fr]">
-          <div className="rounded-2xl border border-border bg-secondary/50 p-6">
+        <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
+          <div>
             <h3 className="font-display text-lg font-semibold">Add a flavour (optional)</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               Modality — voice, images, or video — is a flavour you can add at any level, not a
@@ -108,16 +105,16 @@ export function Challenges() {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div>
             <h3 className="font-display text-lg font-semibold">See it grow</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               The same idea — a language-learning helper — grows as the AI does more.
             </p>
-            <div className="mt-5 space-y-3">
+            <div className="mt-5 space-y-4">
               {growthExample.map((g) => (
                 <div
                   key={g.level}
-                  className="grid grid-cols-[80px_1fr] items-start gap-3 rounded-xl border border-border p-4"
+                  className="grid grid-cols-[80px_1fr] items-start gap-3"
                 >
                   <span
                     className={`inline-flex items-center justify-center rounded-md border px-2 py-1 text-xs font-semibold ${levelStyles[g.level as Challenge['level']].chip}`}
@@ -145,7 +142,7 @@ export function Challenges() {
             return (
               <article
                 key={c.title}
-                className={`flex flex-col rounded-2xl border border-border bg-card p-6 transition-colors ${s.ring}`}
+                className="card-september flex flex-col rounded-2xl border border-border bg-card p-6"
               >
                 <span className={`inline-flex w-fit items-center rounded-md border px-2.5 py-1 text-xs font-semibold ${s.chip}`}>
                   {c.level}
@@ -175,7 +172,7 @@ export function Challenges() {
           })}
         </div>
 
-        <p className="mt-8 rounded-xl border border-border bg-secondary/50 p-5 text-sm leading-relaxed text-muted-foreground">
+        <p className="mt-8 border-l-2 border-primary pl-5 text-sm leading-relaxed text-muted-foreground">
           <span className="font-semibold text-foreground">Bring your own idea?</span> Go for it. Pick
           a level, keep it small enough to demo, and check it against the judging criteria. Everyone
           who takes part gets a certificate of participation and personal feedback on SuccessFactors.

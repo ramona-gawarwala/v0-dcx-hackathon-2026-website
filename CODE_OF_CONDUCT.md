@@ -16,5 +16,3 @@ This hackathon is for everyone. We're here to build, learn, and have fun.
 ## Reporting
 
 Contact [organizer name / email / channel]. Reports are handled confidentially.
-
-Adapted from the [Contributor Covenant](https://www.contributor-covenant.org).

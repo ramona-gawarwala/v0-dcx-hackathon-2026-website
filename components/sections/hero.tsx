@@ -1,42 +1,16 @@
-import { Calendar, Users, Sparkles } from 'lucide-react'
+import { Calendar, Users, Sparkles, ArrowUpRight } from 'lucide-react'
+import { V0_COMMUNITY_URL } from '@/lib/content'
 
 const facts = [
   { icon: Calendar, label: 'When', value: '1–14 Sep 2026', tone: 'bg-seed/20 text-harvest' },
   { icon: Users, label: 'Teams', value: 'Solo or 2–5', tone: 'bg-sprout/15 text-sprout' },
-  { icon: Sparkles, label: 'Cost', value: 'Free to join', tone: 'bg-primary/12 text-primary' },
 ]
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.5]"
-        style={{
-          backgroundImage: 'radial-gradient(var(--color-border) 1.2px, transparent 1.2px)',
-          backgroundSize: '22px 22px',
-          maskImage: 'radial-gradient(120% 90% at 50% 0%, black 30%, transparent 78%)',
-          WebkitMaskImage: 'radial-gradient(120% 90% at 50% 0%, black 30%, transparent 78%)',
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-40 size-[32rem] rounded-full opacity-40 blur-3xl"
-        style={{
-          background:
-            'conic-gradient(from 140deg at 50% 50%, var(--color-seed), var(--color-sprout), var(--color-harvest), var(--color-seed))',
-        }}
-      />
-      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-28">
-        <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
-          <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-primary opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-primary" />
-          </span>
-          DCX AI Hackathon · 2 weeks · part-time
-        </div>
-
-        <h1 className="mt-6 max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
+    <section className="relative overflow-hidden">
+      <div className="relative mx-auto max-w-6xl px-4 pt-20 pb-14 sm:px-6 md:pt-28 md:pb-16">
+        <h1 className="max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
           Build and ship an{' '}
           <span className="bg-gradient-to-r from-harvest via-primary to-sprout bg-clip-text text-transparent">
             AI-powered app
@@ -49,9 +23,9 @@ export function Hero() {
           designers, and first-timers. Done beats perfect.
         </p>
 
-        <dl className="mt-14 grid max-w-2xl grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
+        <dl className="mt-12 flex flex-wrap gap-x-12 gap-y-6">
           {facts.map((f) => (
-            <div key={f.label} className="flex items-center gap-3 bg-card p-5">
+            <div key={f.label} className="flex items-center gap-3">
               <span className={`flex size-10 shrink-0 items-center justify-center rounded-lg ${f.tone}`}>
                 <f.icon className="size-5" />
               </span>
@@ -62,6 +36,28 @@ export function Hero() {
             </div>
           ))}
         </dl>
+
+        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <a
+            href="https://v0.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-september group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground"
+          >
+            Start building
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+          <a
+            href={V0_COMMUNITY_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-september-outline group inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold"
+          >
+            <Sparkles className="size-4 text-primary" />
+            See what&rsquo;s possible
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+        </div>
       </div>
     </section>
   )
