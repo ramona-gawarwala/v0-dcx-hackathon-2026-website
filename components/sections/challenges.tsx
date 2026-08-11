@@ -4,44 +4,37 @@ import { levels, flavours, growthExample, challenges, type Challenge } from '@/l
 
 const levelStyles: Record<
   Challenge['level'],
-  { chip: string; accent: string; ring: string; band: string; bar: string; softBar: string }
+  { chip: string; accent: string; ring: string; band: string }
 > = {
   Seed: {
-    chip: 'bg-seed/10 text-seed border-seed/30',
-    accent: 'text-seed',
-    ring: 'hover:border-seed/40',
+    chip: 'bg-seed/15 text-harvest border-seed/40',
+    accent: 'text-harvest',
+    ring: 'hover:border-seed/50',
     band: 'bg-seed text-seed-foreground',
-    bar: 'bg-seed',
-    softBar: 'bg-seed/25',
   },
   Sprout: {
-    chip: 'bg-sprout/10 text-sprout border-sprout/30',
+    chip: 'bg-sprout/12 text-sprout border-sprout/30',
     accent: 'text-sprout',
     ring: 'hover:border-sprout/40',
     band: 'bg-sprout text-sprout-foreground',
-    bar: 'bg-sprout',
-    softBar: 'bg-sprout/25',
   },
   Harvest: {
     chip: 'bg-harvest/10 text-harvest border-harvest/30',
     accent: 'text-harvest',
     ring: 'hover:border-harvest/40',
     band: 'bg-harvest text-harvest-foreground',
-    bar: 'bg-harvest',
-    softBar: 'bg-harvest/25',
   },
 }
 
 const barHeights = ['h-2.5', 'h-4', 'h-6']
 
-function GrowthMeter({ level, styleKey }: { level: number; styleKey: Challenge['level'] }) {
-  const s = levelStyles[styleKey]
+function GrowthMeter({ level }: { level: number }) {
   return (
     <div className="flex items-end gap-1.5" aria-hidden="true">
       {barHeights.map((h, i) => (
         <span
           key={h}
-          className={`w-2.5 rounded-sm ${h} ${i < level ? s.bar : s.softBar}`}
+          className={`w-2.5 rounded-sm ${h} ${i < level ? 'bg-current' : 'bg-current/25'}`}
         />
       ))}
     </div>
@@ -69,7 +62,7 @@ export function Challenges() {
               >
                 <div className={`flex items-center justify-between px-6 py-4 ${s.band}`}>
                   <div className="flex items-center gap-3">
-                    <span className="flex size-11 items-center justify-center rounded-xl bg-white/20">
+                    <span className="flex size-11 items-center justify-center rounded-xl bg-current/15">
                       <l.icon className="size-6" />
                     </span>
                     <div>
@@ -79,7 +72,7 @@ export function Challenges() {
                       <h3 className="font-display text-2xl font-bold leading-tight">{l.name}</h3>
                     </div>
                   </div>
-                  <GrowthMeter level={l.n} styleKey={l.name as Challenge['level']} />
+                  <GrowthMeter level={l.n} />
                 </div>
                 <div className="flex flex-1 flex-col p-6">
                   <p className="text-sm font-semibold text-foreground">{l.does}</p>
