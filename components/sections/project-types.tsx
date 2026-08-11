@@ -4,7 +4,7 @@ import { projectTypes } from '@/lib/content'
 
 export function ProjectTypes() {
   return (
-    <section id="project-types" className="scroll-mt-16 border-b border-border bg-secondary/40">
+    <section id="project-types" className="scroll-mt-16 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Project types"
@@ -16,7 +16,7 @@ export function ProjectTypes() {
           {projectTypes.map((t) => (
             <article
               key={t.title}
-              className="flex flex-col rounded-2xl border border-border bg-card p-6 transition-colors hover:border-primary/40"
+              className="card-september flex flex-col rounded-2xl border border-border bg-card p-6"
             >
               <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <t.icon className="size-6" />

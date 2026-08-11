@@ -108,7 +108,7 @@ The loop is the *thinking*; the tools are the *hands*. Reasoning with no tools c
 
 ## Bring your own
 
-Have a better idea? Go for it. Pick a level, keep it small enough to demo by [deadline], and check it against the [judging criteria](judging.md).
+Have a better idea? Go for it. Pick a level, keep it small enough to demo by Sun 14 Sep, and check it against the [judging criteria](judging.md).
 
 ## Why it's worth it
 

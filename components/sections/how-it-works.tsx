@@ -11,7 +11,7 @@ const basics = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="scroll-mt-16 border-b border-border">
+    <section id="how-it-works" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="How it works"
@@ -20,9 +20,9 @@ export function HowItWorks() {
         />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-2">
             {basics.map((b) => (
-              <div key={b.title} className="rounded-2xl border border-border bg-card p-6">
+              <div key={b.title}>
                 <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
                   <b.icon className="size-5" />
                 </span>
@@ -32,7 +32,7 @@ export function HowItWorks() {
             ))}
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div>
             <h3 className="font-display text-base font-semibold">Schedule</h3>
             <ol className="mt-4">
               {schedule.map((s, i) => (

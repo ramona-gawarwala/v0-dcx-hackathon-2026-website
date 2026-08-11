@@ -25,8 +25,8 @@ That's your working app. Everything else is optional.
 Only if you want to edit code directly.
 
 ```bash
-git clone [YOUR_REPO_URL]
-cd [YOUR_REPO]
+git clone https://github.com/ramona-gawarwala/v0-DCX-hackathon-2026.git
+cd v0-DCX-hackathon-2026
 pnpm install
 cp .env.example .env.local   # add your keys
 pnpm dev                     # http://localhost:3000

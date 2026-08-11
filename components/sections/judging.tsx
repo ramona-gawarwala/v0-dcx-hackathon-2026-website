@@ -4,7 +4,7 @@ import { judgingCriteria, awards } from '@/lib/content'
 
 export function Judging() {
   return (
-    <section id="judging" className="scroll-mt-16 border-b border-border bg-secondary/40">
+    <section id="judging" className="scroll-mt-16 bg-secondary/40">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Judging"
@@ -12,8 +12,8 @@ export function Judging() {
           description="Each team gives a 2–3 minute demo of the working app. Judges reward creativity and clear thinking. Beginners and non-engineers can win too."
         />
 
-        <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr]">
+          <div>
             <h3 className="font-display text-lg font-semibold">Criteria</h3>
             <ul className="mt-6 space-y-6">
               {judgingCriteria.map((c) => (
@@ -32,7 +32,7 @@ export function Judging() {
             <p className="mt-6 text-xs text-muted-foreground">Weights are a guide — adjust to your event goal.</p>
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+          <div>
             <span className="flex size-11 items-center justify-center rounded-xl bg-harvest/15 text-harvest">
               <Trophy className="size-6" />
             </span>
@@ -40,13 +40,10 @@ export function Judging() {
             <p className="mt-1 text-sm text-muted-foreground">
               Multiple awards — you don't need a finished product to win.
             </p>
-            <ul className="mt-5 space-y-2.5">
+            <ul className="mt-5 space-y-3">
               {awards.map((a) => (
-                <li
-                  key={a}
-                  className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm font-medium"
-                >
-                  <Trophy className="size-4 text-harvest" />
+                <li key={a} className="flex items-center gap-3 text-sm font-medium">
+                  <Trophy className="size-4 shrink-0 text-harvest" />
                   {a}
                 </li>
               ))}

@@ -1,5 +1,5 @@
-import { Check, ArrowRight, CalendarClock } from 'lucide-react'
-import { submitChecklist } from '@/lib/content'
+import { Check, ArrowRight, CalendarClock, Trophy } from 'lucide-react'
+import { submitChecklist, TEAMS_SUBMISSIONS_URL } from '@/lib/content'
 
 const readmeTemplate = `# [Project name]
 
@@ -12,10 +12,13 @@ const readmeTemplate = `# [Project name]
 
 export function Submit() {
   return (
-    <section id="submit" className="scroll-mt-16 bg-foreground text-background">
+    <section id="submit" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <div className="max-w-2xl">
-          <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest">Submit</p>
+          <div className="flex items-center gap-2.5">
+            <span aria-hidden="true" className="h-px w-6 bg-harvest/60" />
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest">Submit</p>
+          </div>
           <div className="mt-4 inline-flex items-center gap-2.5 rounded-full border border-harvest/40 bg-harvest/10 px-4 py-1.5 text-sm font-medium text-harvest">
             <CalendarClock className="size-4" />
             Deadline
@@ -23,27 +26,34 @@ export function Submit() {
           <h2 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-5xl">
             Sunday 14 September 2026
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-background/70">
+          <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
             Late = not judged, so submit early and update if needed. Record your video early — tech
             fails at the last minute.
           </p>
+          <a
+            href={TEAMS_SUBMISSIONS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-september group mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-primary-foreground"
+          >
+            <Trophy className="size-4" />
+            Submit in the Submissions channel
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+          </a>
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr]">
           <div>
             <h3 className="font-display text-lg font-semibold">Submission checklist</h3>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-5 space-y-4">
               {submitChecklist.map((item) => (
-                <li
-                  key={item.title}
-                  className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.04] p-4"
-                >
-                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-harvest/20 text-harvest">
+                <li key={item.title} className="flex items-start gap-3">
+                  <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-harvest/15 text-harvest">
                     <Check className="size-3.5" />
                   </span>
                   <div>
                     <p className="text-sm font-semibold">{item.title}</p>
-                    <p className="mt-0.5 text-sm text-background/60">{item.body}</p>
+                    <p className="mt-0.5 text-sm text-muted-foreground">{item.body}</p>
                   </div>
                 </li>
               ))}
@@ -52,15 +62,15 @@ export function Submit() {
 
           <div>
             <h3 className="font-display text-lg font-semibold">Add this to your repo</h3>
-            <p className="mt-1 text-sm text-background/60">
+            <p className="mt-1 text-sm text-muted-foreground">
               Drop a short README at the top of your project so judges find everything fast.
             </p>
-            <pre className="mt-5 overflow-x-auto rounded-xl border border-white/10 bg-black/30 p-5 font-mono text-xs leading-relaxed text-background/90">
+            <pre className="mt-5 overflow-x-auto rounded-xl border border-border bg-muted p-5 font-mono text-xs leading-relaxed text-foreground">
               <code>{readmeTemplate}</code>
             </pre>
-            <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.04] p-5 text-sm leading-relaxed">
+            <div className="mt-5 border-l-2 border-harvest pl-5 text-sm leading-relaxed">
               <p className="font-semibold text-harvest">Before you submit</p>
-              <p className="mt-1 text-background/70">
+              <p className="mt-1 text-muted-foreground">
                 Test your live link in an incognito window — a broken link means judges can&apos;t
                 score you. Show the app doing the thing; skip the intro slides.
               </p>
@@ -69,10 +79,10 @@ export function Submit() {
               href="https://vercel.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-lg bg-background px-6 py-3 text-sm font-semibold text-foreground transition-opacity hover:opacity-90"
+              className="btn-september group mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
               Deploy your app
-              <ArrowRight className="size-4" />
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </a>
           </div>
         </div>
