@@ -1,33 +1,92 @@
-# v0-dcx-hackathon-2026-site
+# DCX AI Hackathon 2026
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Build and ship an AI-powered app over **2 weeks (1–14 September 2026)**, part-time, using **[v0](https://v0.dev)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
 
-## Built with v0
+**New here? Start with [How it works](docs/how-it-works.md).**
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Quick links: [How it works](docs/how-it-works.md) · [Challenges](docs/challenges.md) · [Submit](docs/submission.md) · [Judging](docs/judging.md) · [Help](docs/help.md)
+
+This repo holds **both** the hackathon documentation and the event website (a Next.js app deployed on Vercel). See [The website](#the-website) below.
+
+---
+
+## Start building in 5 minutes
+
+No setup, no local install needed.
+
+1. Go to **[v0.dev](https://v0.dev)** and describe what you want to build.
+2. Click **Deploy** to publish it to Vercel — you get a live URL instantly.
+3. Keep iterating in v0 (or open in your editor) until it's demo-ready.
+
+That's your working app. Everything else is optional.
+
+## Run locally (optional)
+
+Only if you want to edit code directly.
+
+```bash
+git clone [YOUR_REPO_URL]
+cd [YOUR_REPO]
+pnpm install
+cp .env.example .env.local   # add your keys
+pnpm dev                     # http://localhost:3000
+```
+
+You need [Node.js 20+](https://nodejs.org) and [pnpm](https://pnpm.io). Never commit `.env.local`.
+
+---
+
+## Not sure what to build?
+
+Pick a **project type** first — it answers "what kind of thing am I making?" so you don't get stuck choosing tools. Full patterns, tools, and who each suits: **[Project types](docs/project-types.md)**.
+
+| Type | Goal | Good for |
+|---|---|---|
+| 🚀 Product Builder | Solve a user problem with an app | POs, BAs, designers, full-stack devs |
+| 🤖 AI Agent | An assistant that performs tasks | Developers, AI enthusiasts |
+| 🔄 AI Workflow Automation | Automate a business process | Developers, BAs, process specialists |
+| 🤖🤖 Multi-Agent System | Multiple agents collaborate | Advanced participants |
+| 📊 Data & Insights | Help users understand data | Anyone working with data |
+| 🎨 Experience & Creativity | Build something engaging | Designers, anyone having fun |
+
+---
+
+## Everything you need
+
+| I want to… | Go to |
+|---|---|
+| Understand the format, teams, and schedule | [How it works](docs/how-it-works.md) |
+| Build my first app (no experience) | [Beginner guide](docs/beginner-guide.md) |
+| Pick something to build | [Project types](docs/project-types.md) · [Challenges](docs/challenges.md) |
+| Wire up AI models and code | [AI SDK guide](docs/ai-sdk-guide.md) |
+| Get my app live | [Deployment guide](docs/deployment-guide.md) |
+| Browse curated links | [Resources](resources/README.md) |
+| Submit my project | [Submit](docs/submission.md) |
+| Know how I'll be scored | [Judging](docs/judging.md) |
+| Get unstuck | [Help](docs/help.md) · [FAQ](docs/faq.md) |
+
+Be kind: [Code of Conduct](CODE_OF_CONDUCT.md).
+
+Browse the full, organised **[documentation index](docs/README.md)**.
+
+---
+
+## The website
+
+The event website lives in this same repo — a [Next.js](https://nextjs.org) app built with [v0](https://v0.app) and deployed on Vercel. It renders the content above for participants.
+
+- **App code:** [`app/`](app/), [`components/`](components/), [`lib/`](lib/)
+- **Content source:** [`lib/content.ts`](lib/content.ts) and [`lib/faq.ts`](lib/faq.ts) — keep these in sync with the markdown in [`docs/`](docs/).
+
+### Develop the site
+
+```bash
+pnpm install
+pnpm dev     # http://localhost:3000
+```
+
+This repository is linked to a [v0](https://v0.app) project — start new chats there to make changes, and v0 will push commits directly to this repo. Every merge to `main` automatically deploys to Vercel.
 
 [Continue working on v0 →](https://v0.app/chat/projects/prj_9agUHEjhrViIr4wKEDmNnUbpgnTE)
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+For organizers maintaining the docs, see [CONTRIBUTING](CONTRIBUTING.md).

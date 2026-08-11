@@ -1,10 +1,8 @@
-import { ArrowRight, Calendar, Users, Sparkles } from 'lucide-react'
-import { GithubIcon } from '@/components/github-icon'
-import { REPO_URL } from '@/lib/content'
+import { Calendar, Users, Sparkles } from 'lucide-react'
 
 const facts = [
   { icon: Calendar, label: 'When', value: '1–14 Sep 2026', tone: 'bg-seed/20 text-harvest' },
-  { icon: Users, label: 'Teams', value: '2–5 people', tone: 'bg-sprout/15 text-sprout' },
+  { icon: Users, label: 'Teams', value: 'Solo or 2–5', tone: 'bg-sprout/15 text-sprout' },
   { icon: Sparkles, label: 'Cost', value: 'Free to join', tone: 'bg-primary/12 text-primary' },
 ]
 
@@ -50,33 +48,6 @@ export function Hero() {
           Part-time, around your day job, using v0 + Vercel. Open to everyone — engineers, POs, BAs,
           designers, and first-timers. Done beats perfect.
         </p>
-
-        <div className="mt-8 flex flex-wrap items-center gap-3">
-          <a
-            href="https://v0.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Start building in 5 minutes
-            <ArrowRight className="size-4" />
-          </a>
-          <a
-            href="#how-it-works"
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-semibold transition-colors hover:bg-muted"
-          >
-            How it works
-          </a>
-          <a
-            href={REPO_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <GithubIcon className="size-4" />
-            Repo
-          </a>
-        </div>
 
         <dl className="mt-14 grid max-w-2xl grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-3">
           {facts.map((f) => (

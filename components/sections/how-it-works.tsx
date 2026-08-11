@@ -3,8 +3,8 @@ import { SectionHeading } from '@/components/section-heading'
 import { schedule } from '@/lib/content'
 
 const basics = [
-  { icon: Users, title: 'Teams', body: '2–5 people. Solo is allowed, but a team is more fun — and mixed teams tend to build better products.' },
-  { icon: Clock, title: 'Duration', body: 'Two weeks, 1–14 September. Part-time — build around your day job, no need to drop everything.' },
+  { icon: Users, title: 'Teams', body: 'Enter solo or as a team of 2–5 — both are free to join. A team is more fun, and mixed teams tend to build better products.' },
+  { icon: Clock, title: 'Duration', body: 'Two weeks, 1–14 September. Part-time and self-paced — no daily session and no full days blocked. Work with your team around your day job.' },
   { icon: Target, title: 'Goal', body: 'Ship a working, demoable AI app. Aim to finish ~25% of your big idea — small enough to demo.' },
   { icon: Wrench, title: 'Tools', body: 'v0 + Vercel. Use any AI model available via the AI Gateway.' },
 ]

@@ -11,6 +11,12 @@ import {
   Mic,
   Image as ImageIcon,
   Video,
+  Award,
+  TrendingUp,
+  Trophy,
+  GraduationCap,
+  HeartHandshake,
+  Users,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -18,11 +24,12 @@ export const REPO_URL = 'https://github.com/ramona-gawarwala/v0-DCX-hackathon-20
 export const LIVE_URL = 'https://v0-dcx-hackathon-2026-website.vercel.app'
 
 export const navLinks = [
-  { label: 'How it works', href: '#how-it-works' },
-  { label: 'Project types', href: '#project-types' },
-  { label: 'Challenges', href: '#challenges' },
-  { label: 'Judging', href: '#judging' },
-  { label: 'Submit', href: '#submit' },
+  { label: 'Home', href: '/' },
+  { label: 'How it works', href: '/#how-it-works' },
+  { label: 'Project types', href: '/#project-types' },
+  { label: 'Challenges', href: '/#challenges' },
+  { label: 'Judging', href: '/#judging' },
+  { label: 'Submit', href: '/#submit' },
   { label: 'FAQ', href: '/faq' },
 ]
 
@@ -246,6 +253,52 @@ export const awards = [
   'Best Use of AI',
   'Best Design',
   'Best First-Timer / Beginner',
+]
+
+export type Benefit = {
+  icon: LucideIcon
+  title: string
+  body: string
+}
+
+export const benefitHighlights: { icon: LucideIcon; label: string }[] = [
+  { icon: Award, label: 'Certificate of participation' },
+  { icon: TrendingUp, label: 'Feedback on SuccessFactors' },
+  { icon: GraduationCap, label: 'Hands-on AI skills' },
+  { icon: Trophy, label: 'A shot at an award' },
+]
+
+export const benefits: Benefit[] = [
+  {
+    icon: Award,
+    title: 'Certificate of participation',
+    body: 'Everyone who takes part earns one — proof you showed up and built something.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Feedback on SuccessFactors',
+    body: 'Personal feedback recorded on your SuccessFactors — real evidence of your commitment to growing your skills.',
+  },
+  {
+    icon: GraduationCap,
+    title: 'Real AI skills you keep',
+    body: 'Learn to build and ship a working AI app with v0 + Vercel, hands-on — skills that carry into your day job.',
+  },
+  {
+    icon: Trophy,
+    title: 'Awards to win',
+    body: 'Best Overall, Best Use of AI, Best Design, and Best First-Timer — beginners and non-engineers can win too.',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Open to everyone',
+    body: 'No experience needed. Part-time and low-risk — a friendly way to try AI for the first time.',
+  },
+  {
+    icon: Users,
+    title: 'Teammates & connections',
+    body: 'Team up across roles — engineers, POs, BAs, and designers. Mixed teams build the best products.',
+  },
 ]
 
 export const submitChecklist = [
