@@ -15,11 +15,15 @@ export const faqGroups: FaqGroup[] = [
           ') walks you through your first live app before you write real code.',
       },
       {
-        q: 'Who is this for? Do I need to be a developer?',
+        q: 'Who can join? Do I need to be a developer?',
         a:
-          'Everyone — not just engineers. Consultants, designers, product people, and domain experts all add value. The point is pairing your expertise with AI, not hand-writing code. Mixed teams tend to build the best products. New to it all? Start with the [Beginner guide](' +
+          'Every DCX staff member is welcome — whatever your role, you don\u2019t need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing your expertise with AI, not hand-writing code, and mixed teams tend to build the best products. New to it all? Start with the [Beginner guide](' +
           doc('beginner-guide') +
           ').',
+      },
+      {
+        q: 'Do I need to register, and by when?',
+        a: 'Yes — sign up before the kickoff on 1 September. Registration closes when the hackathon starts, so anyone who registers after 1 September rolls into the next hackathon we run, not this one. Grab your spot early, and if you don\u2019t have a team yet, post in the team-forming channel (see [How it works](/how-it-works)).',
       },
       {
         q: 'Do I need a team, or can I go solo?',
@@ -88,6 +92,20 @@ export const faqGroups: FaqGroup[] = [
         a: 'Yes — it\u2019s encouraged. [GitHub Copilot](https://github.com/features/copilot) and similar assistants help you write and understand code faster; that\u2019s separate from the AI inside your app. One rule: keep confidential client data out of any external tool.',
       },
       {
+        q: 'Is there a starter template or repo I can build from?',
+        a: 'Yes — you rarely need a blank page. Either describe your app to [v0](https://v0.dev) and it generates a working Next.js + AI SDK app, or clone an open-source template. Vercel\u2019s [Chatbot](https://vercel.com/templates/next.js/chatbot) ([source](https://github.com/vercel/chatbot)) is the flagship: free, open-source, Next.js + AI SDK + AI Gateway, one-click deploy with chat history and auth built in. For "chat with our docs" ideas, use the [Internal Knowledge Base (RAG)](https://vercel.com/templates/next.js/ai-sdk-internal-knowledge-base) template. More in the [AI SDK guide](' +
+          doc('ai-sdk-guide') +
+          ') and the [full gallery](https://vercel.com/templates?type=ai).',
+      },
+      {
+        q: 'What do I need to get set up?',
+        a: 'Not much. Sign in to [v0](https://v0.dev) and [Vercel](https://vercel.com) with your GitHub account, and create an AI Gateway key for model access. You can build and deploy entirely in the browser with v0 — nothing to install. To work locally instead, you need Node 20+ and pnpm, then `pnpm install` and `pnpm dev`. Full walkthrough: [AI SDK guide](' +
+          doc('ai-sdk-guide') +
+          ') and [Deployment guide](' +
+          doc('deployment-guide') +
+          ').',
+      },
+      {
         q: 'Can I ground the AI in my own documents or data?',
         a: 'Yes — that’s the Sprout level. Use [RAG](https://ai-sdk.dev/docs/guides/rag-chatbot) to fetch the relevant parts of your content and pass them as context, add [guardrails](https://ai-sdk.dev/docs/agents/building-agents) ("only answer from the provided context; if it’s not there, say I don’t know"), and use [callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks) to log or stop bad output. See Ask My Docs and Live Lookup in [Challenges](/challenges).',
       },
@@ -105,12 +123,28 @@ export const faqGroups: FaqGroup[] = [
         a: 'Neither. There\u2019s no daily meeting to attend and no all-day commitment. You and your team work in your own time across the two weeks, at whatever pace suits you. The only shared moments are the kickoff (team formation and a quick brief) and the demo at the end; in between, mentors are on hand in the team channel whenever you get stuck. Coordinate with your teammates however you like — a short daily check-in helps, but it\u2019s up to you.',
       },
       {
+        q: 'Who owns what I build?',
+        a: 'You and your team keep your work and can carry on building after the event — that\u2019s encouraged. Treat what you ship as a learning prototype: anything you\u2019d take further for real client or production use still goes through your normal company review. Standard DCX IP and confidentiality policies apply to anything work-related.',
+      },
+      {
+        q: 'Can I use real client or company data?',
+        a: 'No — use sample, synthetic, or public data instead. Keep confidential client information and personal data (PII) out of your prompts, your app, and any external AI tool. To make the AI answer from your content, use a small, non-sensitive sample with [RAG](https://ai-sdk.dev/docs/guides/rag-chatbot). When in doubt, leave it out.',
+      },
+      {
+        q: 'Are my prompts used to train the AI models?',
+        a: 'Through the [AI Gateway](https://vercel.com/docs/ai-gateway) you can [disallow prompt training](https://vercel.com/docs/ai-gateway/security-and-compliance/disallow-prompt-training) so your inputs aren\u2019t used to train providers\u2019 models. Even so, don\u2019t paste confidential or client data into prompts — treat AI tools like any other external service.',
+      },
+      {
+        q: 'Is there a code of conduct?',
+        a: 'Yes. Be respectful, inclusive, and supportive — this is a welcoming space for people trying AI for the first time. Read the full [Code of conduct](/code-of-conduct), and if something isn\u2019t right, raise it with the organisers.',
+      },
+      {
         q: 'Can I start early or reuse an existing project?',
         a: 'Build during the hackathon window (1–14 September) — it keeps things fair. Bringing an idea, sketches, or a problem is fine; starting from a codebase you wrote earlier isn\u2019t. Open-source libraries, templates, and v0 starters are fair game.',
       },
       {
         q: 'Do I have to attend live or present in person?',
-        a: 'It’s part-time, so you don’t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)).',
+        a: 'It\u2019s part-time, so you don\u2019t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)). You submit through a form — we post the link in the Submissions channel on the morning of Monday 14 September — with your repo, live app URL, project type, and video. There are two ways to be recognised: judges\u2019 awards from the demo, and People\u2019s Choice, voted by everyone.',
       },
     ],
   },
@@ -123,7 +157,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'My app works locally but breaks when deployed.',
-        a: 'Env vars aren\u2019t set on the host. Add them in the platform dashboard, then redeploy.',
+        a: 'Env vars aren\u2019t set on the host \u2014 add them in the platform dashboard, then redeploy. Locally, the file must be named `.env.local` and you need to restart `pnpm dev` after changing it. If `pnpm dev` itself errors, run `pnpm install` again and check you\u2019re on Node 20+.',
       },
       {
         q: 'Can I host on GitHub Pages?',
@@ -135,7 +169,28 @@ export const faqGroups: FaqGroup[] = [
       {
         q: 'Why won\u2019t Vercel connect my company repo?',
         a:
-          'The free Hobby plan can\u2019t connect to Git-org repos. Use a personal repo or a paid Team. See the [Deployment guide](' +
+          'The free Hobby plan can\u2019t connect to Git-org repos. Use a personal repo or a paid Team. Need Vercel Enterprise? We can support that for the hackathon \u2014 talk to the organisers or ask in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel. See the [Deployment guide](' +
+          doc('deployment-guide') +
+          ').',
+      },
+      {
+        q: 'What if I only have the free tier on Vercel?',
+        a:
+          'That\u2019s all you need. Vercel\u2019s free [Hobby plan](https://vercel.com/docs/plans/hobby) publishes and runs a real app, server-side AI routes included \u2014 just deploy from a personal (non-commercial) repo and keep to sample or synthetic data. Build with free tools you already have: [VS Code](https://code.visualstudio.com) + [GitHub Copilot](https://github.com/features/copilot)\u2019s free tier, [Cursor](https://cursor.com/pricing), or [Gemini CLI](https://github.com/google-gemini/gemini-cli). Free-tier limits are in the [Deployment guide](' +
+          doc('deployment-guide') +
+          ').',
+      },
+      {
+        q: 'How do I share my project so judges can see it?',
+        a:
+          'Judges need two things: a public live URL (no login wall, so it opens in an incognito window) and your code \u2014 a public GitHub repo or your v0 project link. You can build either way, and the [Start building](/start-building) page walks through both: start in v0 and Push to GitHub, or build locally and connect the repo to Vercel. For the exact deploy steps, see the [Deployment guide](' +
+          doc('deployment-guide') +
+          '). When you\u2019re ready, enter everything in the submission form (posted in the Submissions channel on Monday 14 September) \u2014 the full checklist lives on the [Submit page](/submit).',
+      },
+      {
+        q: 'How do we save our work and collaborate as a team with version control?',
+        a:
+          'Use GitHub \u2014 one habit that gives you version control, a backup, and team collaboration at once. Connect your v0/Vercel project to a GitHub repo so every change is saved with full history: in v0 click Push to GitHub, or run `git commit` and `git push` often if you build locally. Don\u2019t rely on a single browser tab. GitHub lets you go back to any earlier version, and Vercel keeps every deployment so you can [instantly roll back](https://vercel.com/docs/deployments/managing-deployments) if a change breaks the app. To work as a team, share one repo: each person builds on their own branch and opens a pull request, Vercel gives every branch its own preview URL to test safely, and merging to `main` deploys to production \u2014 keep commits small and frequent to avoid clashes (merge conflicts). One catch: Vercel\u2019s free Hobby plan is a personal account with no team members, so either make the GitHub repo public and let one teammate\u2019s account do the deploys (GitHub still handles everyone collaborating), or use a Vercel Pro Team for private org repos and multiple members. New to Git? Start with [GitHub Hello World](https://docs.github.com/en/get-started/start-your-journey/hello-world) and [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow), see how pushes deploy in [Vercel Git](https://vercel.com/docs/git) and [Vercel environments](https://vercel.com/docs/deployments/environments), and follow the step-by-step [Deployment guide](' +
           doc('deployment-guide') +
           ').',
       },

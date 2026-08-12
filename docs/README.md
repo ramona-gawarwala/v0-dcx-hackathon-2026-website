@@ -36,7 +36,6 @@ Everything you need to take part in the **DCX AI Hackathon 2026**, organised by 
 
 | Doc | What it covers |
 |---|---|
-| [Help](help.md) | Where to ask and how to get support |
 | [FAQ](faq.md) | Answers to common questions |
 | [Resources](../resources/README.md) | Curated links and tools |
 

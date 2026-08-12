@@ -4,7 +4,7 @@ Build and ship an AI-powered app over **2 weeks (1–14 September 2026)**, part-
 
 **New here? Start with [How it works](docs/how-it-works.md).**
 
-Quick links: [How it works](docs/how-it-works.md) · [Challenges](docs/challenges.md) · [Submit](docs/submission.md) · [Judging](docs/judging.md) · [Help](docs/help.md)
+Quick links: [How it works](docs/how-it-works.md) · [Challenges](docs/challenges.md) · [Submit](docs/submission.md) · [Judging](docs/judging.md) · [FAQ](docs/faq.md)
 
 This repo holds **both** the hackathon documentation and the event website (a Next.js app deployed on Vercel). See [The website](#the-website) below.
 
@@ -63,7 +63,7 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 | Browse curated links | [Resources](resources/README.md) |
 | Submit my project | [Submit](docs/submission.md) |
 | Know how I'll be scored | [Judging](docs/judging.md) |
-| Get unstuck | [Help](docs/help.md) · [FAQ](docs/faq.md) |
+| Get unstuck | [FAQ](docs/faq.md) · [Resources](resources/README.md) |
 
 Be kind: [Code of Conduct](CODE_OF_CONDUCT.md).
 

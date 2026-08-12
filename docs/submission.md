@@ -1,18 +1,35 @@
 # Submit
 
-Deadline: **Sun 14 Sep 2026, [time]**. Late = not judged, so submit early and update if needed.
+Deadline: **Mon 14 Sep 2026, [time]**. Late = not judged, so submit early and update if needed.
 
 ## Checklist
 
-- [ ] **Live URL** — your deployed Vercel app (must open and work).
-- [ ] **Repo or v0 link** — so judges can see how you built it.
+- [ ] **Live URL** — your deployed Vercel app; public, with no password or login wall (must open and work).
+- [ ] **Public repo or v0 link** — public, not private or password-protected, so judges can see how you built it.
 - [ ] **Title + one-line pitch** — what it does, in plain words.
 - [ ] **Demo video (2–3 min)** — screen recording of the app working. A demo, not a presentation.
+- [ ] **Project type** — which of the [6 project types](project-types.md) you built (the form asks for this).
 - [ ] **Team + challenge** — who you are and which [challenge](challenges.md) you picked.
+- [ ] **Optional: enter People's Choice** — share your app in the Submissions channel so other participants can vote for their favourite.
 
 ## Where to submit
 
-Submit here: post your project in the **[🏆 Submissions](https://teams.microsoft.com/l/channel/19%3A6fe1fc0a5cde42cca8bf848597b663ed%40thread.tacv2/%F0%9F%8F%86%20Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61)** channel on Microsoft Teams.
+Submissions go through a **form** — much like the registration form. On the **morning of Monday 14 September** we'll post the link in the **[🏆 Submissions](https://teams.microsoft.com/l/channel/19%3A5b966dd4bf2443718c2214df59d3bce8%40thread.tacv2/Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61)** channel on Microsoft Teams. Fill it in with your public repo, live app URL, project type, and demo video — that form is your official entry, and judges score from it. Both the repo and the URL must be public (no password or login wall).
+
+**Want the People's Choice award?** Also share your app as a post in the same channel so other participants can vote for their favourite. See [Judging](judging.md).
+
+Use this format so people can try it and vote with a 👍 reaction:
+
+```
+🚀 [Project name] — [one-line pitch]
+
+👉 Try it: [live app URL]
+🎬 Demo (2 min): [video link]
+🧩 Project type: [which one] · Challenge: [which one]
+👥 Team: [names]
+
+React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.
+```
 
 ## Add this to your repo
 
@@ -23,8 +40,9 @@ So judges find everything fast, drop a short README at the top of your project r
 
 [One-line pitch — what it does, for whom.]
 
-- Live app: [your Vercel URL]
+- Live app (public): [your Vercel URL]
 - Demo video: [link]
+- Project type: [which one]
 - Challenge: [which one]
 - Team: [names]
 ```
@@ -35,4 +53,4 @@ So judges find everything fast, drop a short README at the top of your project r
 - Show the app doing the thing. Skip the intro slides.
 - Broken link = judges can't score you. Test it in an incognito window.
 
-Stuck? See [Help](help.md).
+Stuck? See the [FAQ](faq.md), or ask in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel.

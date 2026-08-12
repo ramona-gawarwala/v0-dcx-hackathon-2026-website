@@ -1,8 +1,10 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import {
   Users,
   UserPlus,
   Megaphone,
+  Activity,
   LifeBuoy,
   Trophy,
   Rocket,
@@ -11,11 +13,13 @@ import {
   Sparkles,
   ArrowUpRight,
   Code2,
+  ShieldCheck,
   type LucideIcon,
 } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
 import {
   REPO_URL,
+  REGISTER_URL,
   V0_COMMUNITY_URL,
   VERCEL_TEMPLATES_URL,
   TEAMS_TEAM_URL,
@@ -23,6 +27,7 @@ import {
   TEAMS_ANNOUNCEMENTS_URL,
   TEAMS_HELP_URL,
   TEAMS_SUBMISSIONS_URL,
+  PULSE_CHECK_URL,
 } from '@/lib/content'
 
 type ResourceLink = {
@@ -35,7 +40,7 @@ type ResourceLink = {
 const connect: ResourceLink[] = [
   {
     icon: Users,
-    label: 'Join the hackathon Team',
+    label: 'Join the Team',
     desc: 'See your team, add members, and follow every channel in one place.',
     href: TEAMS_TEAM_URL,
   },
@@ -52,8 +57,14 @@ const connect: ResourceLink[] = [
     href: TEAMS_ANNOUNCEMENTS_URL,
   },
   {
+    icon: Activity,
+    label: 'Pulse Check',
+    desc: "End of Week 1? A 30-second check-in on how you're doing and where you'd like help.",
+    href: PULSE_CHECK_URL,
+  },
+  {
     icon: LifeBuoy,
-    label: 'Ask for help',
+    label: 'Help',
     desc: 'Stuck? Drop your question with a screenshot — no question is too basic.',
     href: TEAMS_HELP_URL,
   },
@@ -103,12 +114,48 @@ export function Resources() {
     <section id="resources" className="scroll-mt-16">
       <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
-          eyebrow="Resources"
+          eyebrow="Support"
           title="Everything you need, in one place"
           description="Join the Microsoft Teams space to connect with other participants, then use the tools and docs below to build and ship."
         />
 
         <div className="mt-12 space-y-14">
+          <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8">
+            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <div className="max-w-md text-center sm:text-left">
+                <h3 className="font-display text-xl font-semibold">Register to join</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Fill in the short registration form to take part. Sign up by 1 September so we can
+                  add you to the Teams space before kickoff.
+                </p>
+                <a
+                  href={REGISTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-september group mt-5 inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground"
+                >
+                  Register
+                  <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </a>
+              </div>
+              <a
+                href={REGISTER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0"
+                aria-label="Open the registration form"
+              >
+                <Image
+                  src="/register-qr.png"
+                  alt="QR code to open the AI Playground Hackathon registration form"
+                  width={160}
+                  height={160}
+                  className="rounded-xl border border-border"
+                />
+              </a>
+            </div>
+          </div>
+
           <div>
             <h3 className="font-display text-lg font-semibold">Join &amp; connect</h3>
             <p className="mt-1 text-sm text-muted-foreground">The Innovation Hackathon 2026 Team on Microsoft Teams.</p>
@@ -117,12 +164,23 @@ export function Resources() {
                 <ResourceRow key={item.label} item={item} />
               ))}
             </div>
+            <p className="mt-6 flex items-start gap-2 text-sm leading-relaxed text-muted-foreground">
+              <ShieldCheck className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span>
+                Something not right?{' '}
+                <Link href="/report" className="font-medium text-primary underline-offset-4 hover:underline">
+                  Report a problem
+                </Link>{' '}
+                &mdash; anonymous, handled confidentially.
+              </span>
+            </p>
           </div>
 
           <div>
             <h3 className="font-display text-lg font-semibold">Submit your project</h3>
             <p className="mt-1 text-sm text-muted-foreground">
-              When you&rsquo;re ready, post your project in the Submissions channel. See the{' '}
+              When you&rsquo;re ready, fill in the submission form in the Submissions channel. See
+              the{' '}
               <Link href="/submit" className="font-medium text-primary underline-offset-4 hover:underline">
                 submission checklist
               </Link>{' '}

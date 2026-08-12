@@ -13,10 +13,10 @@
 |---|---|
 | Mon 1 Sep | Kickoff + team formation |
 | Week 1 (1–7 Sep) | Pick a challenge, start building |
-| Throughout | Mentors available in the [🆘 Ask for help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Ask%20for%20help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel |
+| Throughout | Mentors available in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel |
 | Week 2 (8–14 Sep) | Keep building, wrap up your demo |
-| Sun 14 Sep, [time] | Submissions due — see [Submit](submission.md) |
-| [Demo day, time] | Demos + judging — see [Judging](judging.md) |
+| Mon 14 Sep, [time] | Submissions due — see [Submit](submission.md) |
+| Demo day (TBC) | Demos + judging — see [Judging](judging.md) |
 
 ## Forming a team
 
@@ -28,4 +28,4 @@ Mixed teams (not all engineers) tend to build better products.
 
 Start by picking a [project type](project-types.md), then scope a [challenge](challenges.md). Aim to finish ~25% of your big idea — pick something small enough to demo.
 
-Questions? See [Help](help.md).
+Questions? See the [FAQ](faq.md).

@@ -1,4 +1,5 @@
 import { Sparkles, LayoutTemplate, ArrowUpRight } from 'lucide-react'
+import Link from 'next/link'
 import { SectionHeading } from '@/components/section-heading'
 import { startSteps, V0_COMMUNITY_URL, VERCEL_TEMPLATES_URL } from '@/lib/content'
 
@@ -26,6 +27,49 @@ export function StartBuilding() {
           <span className="font-semibold text-primary">The one rule:</span> deploy early and often. A
           live URL that does one thing beats a perfect app on your laptop. Ship something small in
           week 1, then improve it in week 2.
+        </div>
+
+        <div className="mt-12">
+          <h3 className="font-display text-lg font-semibold">Two ways to build</h3>
+          <p className="mt-1 text-sm text-muted-foreground">
+            Both are welcome &mdash; pick whichever feels comfortable.
+          </p>
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            <div className="rounded-lg border border-border bg-card p-5">
+              <h4 className="font-display text-base font-semibold">All on v0 + Vercel &mdash; no local setup</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Describe your app on v0.dev, refine it in the browser, and hit Deploy for a live URL.
+                Best if you want to do the whole build and deploy on Vercel and have enough v0
+                credits.
+              </p>
+            </div>
+            <div className="rounded-lg border border-border bg-card p-5">
+              <h4 className="font-display text-base font-semibold">Start on v0, refine locally</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Generate the app on v0, then pull it to your machine to refine in your own editor
+                &mdash; this needs a local setup &mdash; and publish from Vercel when you&rsquo;re
+                ready. Best if you want more control or to save credits.
+              </p>
+            </div>
+          </div>
+          <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+            Either way, make your repo public and deploy a live URL before you submit. Full deploy
+            steps are in the{' '}
+            <Link
+              href="/guides/deployment-guide"
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Deployment guide
+            </Link>
+            , and what to hand in is on the{' '}
+            <Link
+              href="/submit"
+              className="font-medium text-primary underline-offset-4 hover:underline"
+            >
+              Submit page
+            </Link>
+            .
+          </p>
         </div>
 
         <div className="mt-10">

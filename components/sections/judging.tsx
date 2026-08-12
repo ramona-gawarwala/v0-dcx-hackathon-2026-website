@@ -9,7 +9,7 @@ export function Judging() {
         <SectionHeading
           eyebrow="Judging"
           title="Working demos win — not slides"
-          description="Each team gives a 2–3 minute demo of the working app. Judges reward creativity and clear thinking. Beginners and non-engineers can win too."
+          description="Two ways to win: judges score each team's 2–3 minute demo, and every participant votes for a People's Choice. Beginners and non-engineers can win too."
         />
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1.4fr_1fr]">
@@ -48,6 +48,11 @@ export function Judging() {
                 </li>
               ))}
             </ul>
+            <p className="mt-4 text-sm text-muted-foreground">
+              People&apos;s Choice is voted by participants — share your app in the Submissions
+              channel to enter. React with 👍 to every project you&apos;d love to try; most
+              reactions wins. One post per team.
+            </p>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
-import { levels, flavours, growthExample, challenges, type Challenge } from '@/lib/content'
+import { GrowIt } from '@/components/grow-it'
+import { levels, flavours, challenges, type Challenge } from '@/lib/content'
 
 const levelStyles: Record<
   Challenge['level'],
@@ -25,7 +26,7 @@ const levelStyles: Record<
 
 const barHeights = ['h-2.5', 'h-4', 'h-6']
 
-function GrowthMeter({ level }: { level: number }) {
+function GrowthMeter({ level }: Readonly<{ level: number }>) {
   return (
     <div className="flex items-end gap-1.5" aria-hidden="true">
       {barHeights.map((h, i) => (
@@ -105,30 +106,7 @@ export function Challenges() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-display text-lg font-semibold">See it grow</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              The same idea — a language-learning helper — grows as the AI does more.
-            </p>
-            <div className="mt-5 space-y-4">
-              {growthExample.map((g) => (
-                <div
-                  key={g.level}
-                  className="grid grid-cols-[80px_1fr] items-start gap-3"
-                >
-                  <span
-                    className={`inline-flex items-center justify-center rounded-md border px-2 py-1 text-xs font-semibold ${levelStyles[g.level as Challenge['level']].chip}`}
-                  >
-                    {g.level}
-                  </span>
-                  <div>
-                    <p className="text-sm font-medium text-foreground">{g.what}</p>
-                    <p className="mt-0.5 text-xs text-muted-foreground">The AI is {g.ai}.</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <GrowIt />
         </div>
 
         {/* Challenge cards */}
