@@ -26,11 +26,6 @@ export const guides: Guide[] = [
     title: 'Deployment guide',
     description: 'Where and how to deploy an app that runs server-side AI calls.',
   },
-  {
-    slug: 'help',
-    title: 'Help',
-    description: 'Get unstuck fast — mentors, common issues, and where to ask.',
-  },
 ]
 
 export function getGuide(slug: string): Guide | undefined {
@@ -48,7 +43,6 @@ const DOC_ROUTES: Record<string, string> = {
   'beginner-guide': '/guides/beginner-guide',
   'ai-sdk-guide': '/guides/ai-sdk-guide',
   'deployment-guide': '/guides/deployment-guide',
-  help: '/guides/help',
   challenges: '/challenges',
   'how-it-works': '/how-it-works',
   judging: '/judging',

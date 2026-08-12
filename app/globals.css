@@ -225,8 +225,6 @@
   .nav-right #site-sidebar {
     left: auto;
     right: 0;
-    border-right-width: 0;
-    border-left-width: 1px;
   }
 }
 

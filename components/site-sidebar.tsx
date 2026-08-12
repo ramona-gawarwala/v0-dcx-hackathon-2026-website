@@ -28,7 +28,7 @@ export function SiteSidebar() {
     isNavLinkActive(leaf.href, pathname, null)
 
   return (
-    <aside id="site-sidebar" className="fixed bottom-0 left-0 top-16 z-40 hidden w-60 overflow-y-auto border-r border-border bg-background px-6 py-8 md:block">
+    <aside id="site-sidebar" className="fixed bottom-0 left-0 top-16 z-40 hidden w-60 overflow-y-auto bg-background/70 px-6 py-8 backdrop-blur-md md:block">
       <nav aria-label="Site" className="flex flex-col gap-7">
         {navMenu.map((entry) => {
           if (isNavGroup(entry)) {

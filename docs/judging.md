@@ -2,9 +2,12 @@
 
 ## How it works
 
-- Each team gives a **2–3 minute demo** of the working app (not slides).
-- Judges score against the criteria below.
-- Multiple awards — beginners and non-engineers can win too.
+There are two ways to be recognised:
+
+- **Judges' awards** — each team gives a **2–3 minute demo** of the working app (not slides), and judges score it against the criteria below.
+- **People's Choice** — voted by participants. Share your app in the Submissions channel so others can vote for their favourite.
+
+Multiple awards, and beginners and non-engineers can win too.
 
 ## Criteria
 
@@ -24,7 +27,12 @@ Weights are a guide — adjust to your event goal.
 - Best Use of AI
 - Best Design
 - Best First-Timer / Beginner
+- People's Choice — voted by participants
 - [Add your own]
+
+## People's Choice
+
+Alongside the judges' awards, everyone gets a say. Share your app as a post in the **Submissions** channel, and react with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own. It rewards the fun, useful, and inspiring builds, not just polish.
 
 ## What judges reward
 

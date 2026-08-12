@@ -1,14 +1,24 @@
-import { Check, ArrowRight, CalendarClock, Trophy } from 'lucide-react'
+import { Check, ArrowUpRight, CalendarClock, Trophy } from 'lucide-react'
 import { submitChecklist, TEAMS_SUBMISSIONS_URL } from '@/lib/content'
 
 const readmeTemplate = `# [Project name]
 
 [One-line pitch — what it does, for whom.]
 
-- Live app: [your Vercel URL]
+- Live app (public): [your Vercel URL]
 - Demo video: [link]
+- Project type: [which one]
 - Challenge: [which one]
 - Team: [names]`
+
+const peoplesChoicePost = `🚀 [Project name] — [one-line pitch]
+
+👉 Try it: [live app URL]
+🎬 Demo (2 min): [video link]
+🧩 Project type: [which one] · Challenge: [which one]
+👥 Team: [names]
+
+React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.`
 
 export function Submit() {
   return (
@@ -24,11 +34,16 @@ export function Submit() {
             Deadline
           </div>
           <h2 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-5xl">
-            Sunday 14 September 2026
+            Monday 14 September 2026
           </h2>
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-            Late = not judged, so submit early and update if needed. Record your video early — tech
-            fails at the last minute.
+            On the morning of Monday 14 September we&apos;ll post the submission form in the
+            Submissions channel — much like the registration form. Fill it in with your public
+            repo, live app URL, project type, and demo video; that form is your official entry,
+            and judges score from it. Both the repo and the URL must be public — no password or
+            login wall. Late = not judged, so submit early and update the form if you need to.
+            Want the People&apos;s Choice award too? Also share your app in the channel so other
+            participants can vote.
           </p>
           <a
             href={TEAMS_SUBMISSIONS_URL}
@@ -37,8 +52,8 @@ export function Submit() {
             className="btn-september group mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-primary-foreground"
           >
             <Trophy className="size-4" />
-            Submit in the Submissions channel
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+            Open the Submissions channel
+            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
 
@@ -82,9 +97,24 @@ export function Submit() {
               className="btn-september group mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
               Deploy your app
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+              <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-border bg-secondary/30 p-6 sm:p-8">
+          <div className="flex items-center gap-2.5">
+            <Trophy className="size-5 shrink-0 text-harvest" />
+            <h3 className="font-display text-lg font-semibold">Share for People&apos;s Choice</h3>
+          </div>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+            Optional, but it&apos;s how the participant-voted award works. Post your app in the
+            Submissions channel using this format so people can try it and vote with a
+            reaction. One post per team.
+          </p>
+          <pre className="mt-5 overflow-x-auto rounded-xl border border-border bg-muted p-5 font-mono text-xs leading-relaxed text-foreground">
+            <code>{peoplesChoicePost}</code>
+          </pre>
         </div>
       </div>
     </section>

@@ -25,6 +25,18 @@ export const LIVE_URL = 'https://v0-dcx-hackathon-2026-website.vercel.app'
 export const V0_COMMUNITY_URL = 'https://v0.dev/community'
 export const VERCEL_TEMPLATES_URL = 'https://vercel.com/templates'
 
+// Microsoft Forms registration for the AI Playground Hackathon.
+export const REGISTER_URL =
+  'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUOUpIUjVVMURHR0gwM1dRTFpRWkRaVE40SC4u'
+
+// Microsoft Forms — anonymous "Report a problem" form (Code of Conduct / safety).
+export const REPORT_URL =
+  'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUMjA2TlNNTkdVQ0ZIS1lTRVIySUpPNTQ3UC4u'
+
+// Microsoft Forms — mid-event "Pulse Check" (end of Week 1) check-in.
+export const PULSE_CHECK_URL =
+  'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUREpHNTA0Nlg1VU5OSTk2Q0NIVlA4WE9LTi4u'
+
 // Microsoft Teams — "General | Innovation Hackathon 2026" team and its channels
 export const TEAMS_TEAM_URL =
   'https://teams.microsoft.com/l/team/19%3A6VZc0lYnAVy-qh6prOW7bX4V4yAcAyzRikL3TJPp85A1%40thread.tacv2/conversations?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
@@ -33,9 +45,9 @@ export const TEAMS_ANNOUNCEMENTS_URL =
 export const TEAMS_TEAM_FORMATION_URL =
   'https://teams.microsoft.com/l/channel/19%3Ab74e2bdfc48743eb87251501ff7529ed%40thread.tacv2/%F0%9F%91%A5%20Team%20Formation?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 export const TEAMS_HELP_URL =
-  'https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Ask%20for%20help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
+  'https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 export const TEAMS_SUBMISSIONS_URL =
-  'https://teams.microsoft.com/l/channel/19%3A6fe1fc0a5cde42cca8bf848597b663ed%40thread.tacv2/%F0%9F%8F%86%20Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
+  'https://teams.microsoft.com/l/channel/19%3A5b966dd4bf2443718c2214df59d3bce8%40thread.tacv2/Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 
 export const navLinks = [
   { label: 'Home', href: '/' },
@@ -48,6 +60,7 @@ export const navLinks = [
   { label: 'Submit', href: '/submit' },
   { label: 'Resources', href: '/resources' },
   { label: 'FAQ', href: '/faq' },
+  { label: 'Help', href: '/help' },
 ]
 
 export type NavLeaf = { label: string; href: string }
@@ -85,12 +98,23 @@ export const navMenu: NavEntry[] = [
       { label: 'Beginner guide', href: '/guides/beginner-guide' },
       { label: 'AI SDK guide', href: '/guides/ai-sdk-guide' },
       { label: 'Deployment guide', href: '/guides/deployment-guide' },
-      { label: 'Help', href: '/guides/help' },
     ],
   },
-  { label: 'Resources', href: '/resources' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Code of Conduct', href: '/code-of-conduct' },
+  {
+    label: 'Community',
+    items: [
+      { label: 'Code of Conduct', href: '/code-of-conduct' },
+      { label: 'Report a problem', href: '/report' },
+    ],
+  },
+  {
+    label: 'Support',
+    items: [
+      { label: 'Help', href: '/help' },
+      { label: 'Resources', href: '/resources' },
+      { label: 'FAQ', href: '/faq' },
+    ],
+  },
 ]
 
 export const schedule = [
@@ -98,8 +122,8 @@ export const schedule = [
   { when: 'Week 1 (1–7 Sep)', what: 'Pick a challenge, start building' },
   { when: 'Throughout', what: 'Mentors available in the team channel' },
   { when: 'Week 2 (8–14 Sep)', what: 'Keep building, wrap up your demo' },
-  { when: 'Sun 14 Sep', what: 'Submissions due' },
-  { when: 'Demo day', what: 'Demos + judging' },
+  { when: 'Mon 14 Sep', what: 'Submissions due' },
+  { when: 'Demo day (TBC)', what: 'Demos + judging' },
 ]
 
 export const startSteps = [
@@ -128,6 +152,7 @@ export type ProjectType = {
   examples: string
   checklist: string[]
   goodFor: string
+  ideas: string[]
 }
 
 export const projectTypes: ProjectType[] = [
@@ -139,6 +164,7 @@ export const projectTypes: ProjectType[] = [
     examples: 'Internal productivity tool, learning platform, accessibility solution, sustainability dashboard.',
     checklist: ['UI', 'Business logic', 'Data storage', 'Deployment'],
     goodFor: 'POs · BAs · Designers · Full-stack devs',
+    ideas: ['Onboarding checklist app', 'Accessibility contrast checker', 'Team skills directory', 'Expense-policy helper'],
   },
   {
     icon: Bot,
@@ -148,6 +174,7 @@ export const projectTypes: ProjectType[] = [
     examples: 'Knowledge assistant, meeting assistant, documentation assistant, support chatbot.',
     checklist: ['Chat UI', 'Model', 'Prompt', 'Tool(s)', 'Deployment'],
     goodFor: 'Developers · AI enthusiasts',
+    ideas: ['Docs Q&A assistant', 'Meeting-notes summariser', 'New-joiner onboarding buddy', 'Ticket-reply drafter'],
   },
   {
     icon: Workflow,
@@ -157,6 +184,7 @@ export const projectTypes: ProjectType[] = [
     examples: 'Ticket triage, email classification, report generation, approval workflows.',
     checklist: ['Trigger', 'Workflow', 'AI step', 'Output action'],
     goodFor: 'Developers · BAs · Process specialists',
+    ideas: ['Inbox triage & routing', 'Weekly report generator', 'Bug-report classifier', 'Approval reminders'],
   },
   {
     icon: Network,
@@ -166,6 +194,7 @@ export const projectTypes: ProjectType[] = [
     examples: 'Product Owner Agent, Architect Agent, Developer Agent, Tester Agent.',
     checklist: ['Coordinator', 'Specialist agents', 'Shared context', 'Final response'],
     goodFor: 'Advanced participants — keep scope small',
+    ideas: ['PO → Dev → Tester pipeline', 'Researcher + writer + reviewer', 'Planner + solver + checker'],
   },
   {
     icon: BarChart3,
@@ -175,6 +204,7 @@ export const projectTypes: ProjectType[] = [
     examples: 'Dashboards, analytics, AI insights, forecasting.',
     checklist: ['Data source', 'Processing', 'Visualisation', 'Deployment'],
     goodFor: 'Anyone working with data',
+    ideas: ['CSV → chart explainer', 'Survey theme finder', 'Simple forecast dashboard', 'Anomaly spotter'],
   },
   {
     icon: Palette,
@@ -184,6 +214,7 @@ export const projectTypes: ProjectType[] = [
     examples: 'Games, interactive stories, visualisations, AI-powered experiences.',
     checklist: ['Interactive UI', 'AI / content engine', 'Content or assets', 'Deployment'],
     goodFor: 'Designers and anyone having fun with it',
+    ideas: ['Text-to-slides generator', 'Illustrated story maker', 'Quick quiz game', 'List-to-diagram tool'],
   },
 ]
 
@@ -237,10 +268,49 @@ export const flavours = [
   { icon: Video, name: 'Video', body: 'Pull a summary or key moments from a clip (video-to-text).' },
 ]
 
-export const growthExample = [
-  { level: 'Seed', what: 'Generates example sentences from a word', ai: 'creating on request' },
-  { level: 'Sprout', what: 'Quizzes you on your vocab list', ai: 'working with your data' },
-  { level: 'Harvest', what: 'Plans a lesson, quizzes you, tracks progress', ai: 'running several steps for you' },
+export type GrowthIdea = {
+  name: string
+  tagline: string
+  steps: { level: 'Seed' | 'Sprout' | 'Harvest'; what: string }[]
+}
+
+export const growthIdeas: GrowthIdea[] = [
+  {
+    name: 'Language helper',
+    tagline: 'Learn a language with a little help.',
+    steps: [
+      { level: 'Seed', what: 'Generates example sentences from a word.' },
+      { level: 'Sprout', what: 'Quizzes you on your own vocab list.' },
+      { level: 'Harvest', what: 'Plans lessons, quizzes you, and tracks your progress.' },
+    ],
+  },
+  {
+    name: 'Learning buddy',
+    tagline: 'Prep for an exam with an AI coach.',
+    steps: [
+      { level: 'Seed', what: 'Turns a topic into practice questions and a case scenario.' },
+      { level: 'Sprout', what: 'Quizzes you from your own notes and syllabus.' },
+      { level: 'Harvest', what: 'Tracks weak spots, schedules revision, and sets fresh scenarios up to exam day.' },
+    ],
+  },
+  {
+    name: 'Prompt library',
+    tagline: 'Build and reuse better prompts.',
+    steps: [
+      { level: 'Seed', what: 'Writes a tailored prompt from your goal and constraints.' },
+      { level: 'Sprout', what: 'Saves, searches, and reuses your own prompt library.' },
+      { level: 'Harvest', what: 'Picks the right prompt for a task, runs it, and refines until it fits.' },
+    ],
+  },
+  {
+    name: 'Activity by weather',
+    tagline: 'Find something to do, rain or shine.',
+    steps: [
+      { level: 'Seed', what: 'Suggests activities from the weather and who you’re with.' },
+      { level: 'Sprout', what: 'Checks a live weather API for your location.' },
+      { level: 'Harvest', what: 'Sends a daily plan that adapts to the forecast and who’s free.' },
+    ],
+  },
 ]
 
 export type Challenge = {
@@ -313,6 +383,7 @@ export const awards = [
   'Best Use of AI',
   'Best Design',
   'Best First-Timer / Beginner',
+  'People\u2019s Choice (voted by participants)',
 ]
 
 export type Benefit = {
@@ -325,6 +396,7 @@ export const benefitHighlights: { icon: LucideIcon; label: string }[] = [
   { icon: Award, label: 'Certificate of participation' },
   { icon: TrendingUp, label: 'Feedback on SuccessFactors' },
   { icon: GraduationCap, label: 'Hands-on AI skills' },
+  { icon: Sprout, label: 'Grow outside your comfort zone' },
   { icon: Trophy, label: 'A shot at an award' },
 ]
 
@@ -347,7 +419,7 @@ export const benefits: Benefit[] = [
   {
     icon: Trophy,
     title: 'Awards to win',
-    body: 'Best Overall, Best Use of AI, Best Design, and Best First-Timer — beginners and non-engineers can win too.',
+    body: 'Best Overall, Best Use of AI, Best Design, Best First-Timer, and a People\u2019s Choice voted by everyone — beginners and non-engineers can win too.',
   },
   {
     icon: HeartHandshake,
@@ -362,9 +434,11 @@ export const benefits: Benefit[] = [
 ]
 
 export const submitChecklist = [
-  { title: 'Live URL', body: 'Your deployed Vercel app (must open and work).' },
-  { title: 'Repo or v0 link', body: 'So judges can see how you built it.' },
+  { title: 'Live URL', body: 'Your deployed Vercel app — public, with no password or login wall (must open and work).' },
+  { title: 'Public repo or v0 link', body: 'Public, not private or password-protected, so judges can see how you built it.' },
   { title: 'Title + one-line pitch', body: 'What it does, in plain words.' },
   { title: 'Demo video (2–3 min)', body: 'A screen recording of the app working — a demo, not a presentation.' },
+  { title: 'Project type', body: 'Which of the 6 project types you built — the form asks for this.' },
   { title: 'Team + challenge', body: 'Who you are and which challenge you picked.' },
+  { title: 'Optional: enter People\u2019s Choice', body: 'Share your app in the Submissions channel so other participants can vote for their favourite.' },
 ]

@@ -1,5 +1,6 @@
-import { Calendar, Users, Sparkles, ArrowUpRight } from 'lucide-react'
-import { V0_COMMUNITY_URL } from '@/lib/content'
+import Link from 'next/link'
+import { Calendar, Users, Sparkles, ArrowUpRight, ArrowRight } from 'lucide-react'
+import { V0_COMMUNITY_URL, REGISTER_URL } from '@/lib/content'
 
 const facts = [
   { icon: Calendar, label: 'When', value: '1–14 Sep 2026', tone: 'bg-seed/20 text-harvest' },
@@ -39,12 +40,12 @@ export function Hero() {
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
           <a
-            href="https://v0.dev"
+            href={REGISTER_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-september group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground"
           >
-            Start building
+            Register
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a
@@ -57,6 +58,13 @@ export function Hero() {
             See what&rsquo;s possible
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
+          <Link
+            href="/start-building"
+            className="btn-september-outline group inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold"
+          >
+            Start building
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+          </Link>
         </div>
       </div>
     </section>
