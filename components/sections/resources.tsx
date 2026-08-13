@@ -13,6 +13,7 @@ import {
   Sparkles,
   ArrowUpRight,
   Code2,
+  Blocks,
   ShieldCheck,
   type LucideIcon,
 } from 'lucide-react'
@@ -83,6 +84,7 @@ const build: ResourceLink[] = [
   { icon: Rocket, label: 'v0.dev', desc: 'Describe your app in plain language and get a working build.', href: 'https://v0.dev' },
   { icon: Sparkles, label: 'v0 Community', desc: 'Browse real builds for inspiration and starting points.', href: V0_COMMUNITY_URL },
   { icon: LayoutTemplate, label: 'Vercel templates', desc: 'Ready-made starters you can deploy in a click.', href: VERCEL_TEMPLATES_URL },
+  { icon: Blocks, label: 'AI SDK examples', desc: 'Small, runnable examples to copy — chat, tools, and more.', href: 'https://github.com/vercel/ai/tree/main/examples' },
   { icon: BookOpen, label: 'AI SDK docs', desc: 'Add chat, tools, and streaming to your app.', href: 'https://ai-sdk.dev/docs' },
   { icon: Code2, label: 'GitHub repo', desc: 'The source for this site and all the docs.', href: REPO_URL },
 ]
@@ -201,6 +203,19 @@ export function Resources() {
                 <ResourceRow key={item.label} item={item} />
               ))}
             </div>
+            <p className="mt-6 flex items-start gap-2 text-sm leading-relaxed text-muted-foreground">
+              <BookOpen className="mt-0.5 size-4 shrink-0 text-primary" />
+              <span>
+                New to this? The{' '}
+                <Link
+                  href="/guides/ai-sdk-guide#starter-templates"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  AI SDK guide
+                </Link>{' '}
+                walks through picking a template and getting it running, step by step.
+              </span>
+            </p>
           </div>
         </div>
       </div>

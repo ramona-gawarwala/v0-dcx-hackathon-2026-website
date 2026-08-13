@@ -56,14 +56,35 @@ Pass `tools: { weather }` to `streamText`, and add `stopWhen` for multi-step cal
 
 ## Starter templates
 
-Clone one instead of starting from scratch — [full gallery](https://vercel.com/templates?type=ai):
+Don't start from a blank file — get something running, then make it yours.
+
+**Copy-paste examples** — one small, working thing you can read in minutes:
+
+- [AI SDK — Getting Started](https://ai-sdk.dev/docs/getting-started) — build a working chatbot in about 5 minutes.
+- [Node HTTP server example](https://github.com/vercel/ai/tree/main/examples/node-http-server) — no framework, just a model call.
+- [Express example](https://github.com/vercel/ai/tree/main/examples/express) — the same idea inside a familiar server.
+- [All AI SDK examples](https://github.com/vercel/ai/tree/main/examples) — Next.js, Nuxt, SvelteKit, and more.
+
+**Full starter apps** — clone a whole app and swap in your idea ([full gallery](https://vercel.com/templates?type=ai)):
 
 | Template | Good for |
 |---|---|
-| **AI Chatbot** | Most teams — chat + persistence, multimodal |
-| **Internal Knowledge Base (RAG)** | "Chat with our docs" ideas |
+| **[AI Chatbot](https://github.com/vercel/chatbot)** | Most teams — chat + persistence, multimodal |
+| **[Internal Knowledge Base (RAG)](https://vercel.com/templates/next.js/nextjs-openai-doc-search-starter)** | "Chat with our docs" ideas |
 | **Natural Language → PostgreSQL** | Querying data in plain English |
 | **Multi-Modal / Semantic Image Search** | Image input or search |
+
+### Use a template in 5 steps
+
+Take the following steps to go from template to live app:
+
+1. Pick the example or template above that's closest to your idea.
+2. Clone it, or click **Deploy** on its page to get your own copy.
+3. Add your `AI_GATEWAY_API_KEY` to `.env.local` — see [Get a model key](#get-a-model-key).
+4. Run it with `pnpm install` then `pnpm dev`, and open http://localhost:3000.
+5. Deploy it and open the live URL — see the [Deployment guide](deployment-guide.md).
+
+Then replace the template's content with your idea, one piece at a time.
 
 ## Let your AI assistant help
 

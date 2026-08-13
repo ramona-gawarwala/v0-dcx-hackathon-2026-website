@@ -5,7 +5,7 @@ import { startSteps, V0_COMMUNITY_URL, VERCEL_TEMPLATES_URL } from '@/lib/conten
 
 export function StartBuilding() {
   return (
-    <section id="start-building" className="scroll-mt-16 bg-secondary/40">
+    <section id="start-building" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Start in 5 minutes"

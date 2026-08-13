@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Calendar, Users, Sparkles, ArrowUpRight, ArrowRight } from 'lucide-react'
 import { V0_COMMUNITY_URL, REGISTER_URL } from '@/lib/content'
+import { CelebrateLink } from '@/components/celebrate-link'
 
 const facts = [
   { icon: Calendar, label: 'When', value: '1–14 Sep 2026', tone: 'bg-seed/20 text-harvest' },
@@ -12,11 +13,11 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="relative mx-auto max-w-6xl px-4 pt-20 pb-14 sm:px-6 md:pt-28 md:pb-16">
         <h1 className="max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          Build and ship an{' '}
-          <span className="bg-gradient-to-r from-harvest via-primary to-sprout bg-clip-text text-transparent">
+          Build and ship an
+          <span className="block bg-gradient-to-r from-harvest via-primary to-sprout bg-clip-text text-transparent">
             AI-powered app
-          </span>{' '}
-          in two weeks.
+          </span>
+          in two weeks
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
@@ -39,15 +40,13 @@ export function Hero() {
         </dl>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a
+          <CelebrateLink
             href={REGISTER_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-september group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground"
           >
             Register
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </CelebrateLink>
           <a
             href={V0_COMMUNITY_URL}
             target="_blank"

@@ -7,7 +7,7 @@ For **organizers** maintaining this repo (participants don't need this).
 - Keep it short. Busy people skim — lead with the action.
 - One idea per section. Use lists and tables over paragraphs.
 - Replace every `[placeholder]` before the event goes live.
-- The `docs/` markdown is the source of truth. When you change it, update the matching website content in [`lib/content.ts`](lib/content.ts) and [`lib/faq.ts`](lib/faq.ts) so the site and docs stay in sync.
+- The `docs/` markdown is the source of truth. When you change it, update the matching website content in [`lib/content.ts`](../lib/content.ts) and [`lib/faq.ts`](../lib/faq.ts) so the site and docs stay in sync.
 
 ## Placeholders to fill in
 

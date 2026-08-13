@@ -9,13 +9,14 @@ import { isNavLinkActive } from '@/lib/nav'
 import { ThemeToggle } from '@/components/theme-toggle'
 import { NavSideToggle } from '@/components/nav-side-toggle'
 import { ScrollProgress } from '@/components/scroll-progress'
+import { Countdown } from '@/components/countdown'
 
 export function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <ScrollProgress />
       <div className="flex h-16 items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2 font-display text-base font-bold tracking-tight">
@@ -28,6 +29,7 @@ export function SiteHeader() {
         </Link>
 
         <div className="flex items-center gap-2">
+          <Countdown variant="compact" />
           <NavSideToggle />
           <ThemeToggle />
           <button

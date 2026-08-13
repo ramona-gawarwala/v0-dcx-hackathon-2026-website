@@ -47,6 +47,8 @@ Quick answers, grouped by topic. Jump to a question below.
 32. [What if I only have the free tier on Vercel?](#32-what-if-i-only-have-the-free-tier-on-vercel)
 33. [How do I share my project so judges can see it?](#33-how-do-i-share-my-project-so-judges-can-see-it)
 34. [How do we save our work and collaborate as a team with version control?](#34-how-do-we-save-our-work-and-collaborate-as-a-team-with-version-control)
+35. [v0 says GitHub is connected but the pull or sync fails.](#35-v0-says-github-is-connected-but-the-pull-or-sync-fails)
+36. [I have several repos and the pull keeps failing on the wrong one.](#36-i-have-several-repos-and-the-pull-keeps-failing-on-the-wrong-one)
 
 ---
 
@@ -285,7 +287,7 @@ Through the [AI Gateway](https://vercel.com/docs/ai-gateway) you can [disallow p
 
 ### 25. Is there a code of conduct?
 
-Yes. Be respectful, inclusive, and supportive — this is a welcoming space for people trying AI for the first time. Read the full [Code of conduct](../CODE_OF_CONDUCT.md), and if something isn't right, raise it with the organisers or in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel.
+Yes. Be respectful, inclusive, and supportive — this is a welcoming space for people trying AI for the first time. Read the full [Code of conduct](CODE_OF_CONDUCT.md), and if something isn't right, raise it with the organisers or in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel.
 
 ### 26. Can I start early or reuse an existing project?
 
@@ -353,5 +355,27 @@ Use **GitHub** — that one habit gives you version control, a backup, and team 
 - [Collaborate on v0](https://v0.app/docs) — sharing chats and syncing a v0 project with GitHub.
 
 Step-by-step deploy instructions are in the [Deployment guide](deployment-guide.md).
+
+### 35. v0 says GitHub is connected but the pull or sync fails.
+
+A stale token can still look **connected** while it no longer authenticates, so the pull can't run. Work through these in order:
+
+1. **Fully disconnect and reconnect** (not just re-open). In v0 open **Settings → Git**, disconnect the GitHub account/repo, then reconnect and **explicitly grant access to your repo**. A stale token often looks connected but no longer authenticates.
+2. **Check the GitHub App authorization.** On GitHub, go to **Settings → Applications → Authorized GitHub Apps → Vercel/v0** and confirm your repo is in the allowed list — repo access can be revoked separately from the connection.
+3. **Use v0's built-in Pull changes.** In **Settings → Git** there's a **Pull changes** action in the UI. It runs through v0's own Git flow and can succeed (and refresh the token) even when a sandbox/terminal pull can't.
+4. **Start a fresh chat in the same project.** An old chat's sandbox can get stuck and stop syncing your latest pushes. Starting a **new chat** in the same v0 project spins up a clean sandbox that re-syncs the current repo state — from there you can create and merge the PR in Vercel and publish. Keep just **one active chat per project** to avoid file-sync clashes.
+
+Once the reconnect goes through, retry the pull. Still failing after all of these? Post in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel with a screenshot of the error.
+
+### 36. I have several repos and the pull keeps failing on the wrong one.
+
+Most “it says connected but still fails” cases with multiple repos come down to a **mismatch**: each v0 chat/project is **bound to one specific Git repo**, and the sandbox always authenticates against *that* repo — not whichever one you last reconnected. If you have similarly named repos (for example `…-site` and `…-website`) and you reconnect GitHub to the wrong one, you'll hit the same auth failure because the project is still pointing at the original.
+
+**First, check which repo this project is bound to:** in v0 **Settings → Git**, read the connected repo's full `owner/repo` name. Then pick your path:
+
+- **You just want this project's latest code** — grant GitHub access to the **same** repo the project is bound to (e.g. `owner/…-site`), make sure that's the authorized repo in **Settings → Git**, then pull.
+- **You actually want to work from the other repo** — that's a different operation: **retarget** the project to that repo in **Settings → Git** first, then pull from it.
+
+When in doubt, compare the full `owner/repo` name **character for character** — a one-word difference (like `-site` vs `-website`) is enough to point the sandbox at a repo your account can't access.
 
 Didn't find your answer? Ask in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel.

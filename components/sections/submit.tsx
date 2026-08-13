@@ -1,5 +1,8 @@
 import { Check, ArrowUpRight, CalendarClock, Trophy } from 'lucide-react'
 import { submitChecklist, TEAMS_SUBMISSIONS_URL } from '@/lib/content'
+import { CelebrateLink } from '@/components/celebrate-link'
+import { CopyButton } from '@/components/copy-button'
+import { Countdown } from '@/components/countdown'
 
 const readmeTemplate = `# [Project name]
 
@@ -33,9 +36,10 @@ export function Submit() {
             <CalendarClock className="size-4" />
             Deadline
           </div>
-          <h2 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-5xl">
+          <h2 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Monday 14 September 2026
           </h2>
+          <Countdown />
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
             On the morning of Monday 14 September we&apos;ll post the submission form in the
             Submissions channel — much like the registration form. Fill it in with your public
@@ -45,16 +49,14 @@ export function Submit() {
             Want the People&apos;s Choice award too? Also share your app in the channel so other
             participants can vote.
           </p>
-          <a
+          <CelebrateLink
             href={TEAMS_SUBMISSIONS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn-september group mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-primary-foreground"
           >
             <Trophy className="size-4" />
             Open the Submissions channel
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </CelebrateLink>
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_1fr]">
@@ -80,9 +82,12 @@ export function Submit() {
             <p className="mt-1 text-sm text-muted-foreground">
               Drop a short README at the top of your project so judges find everything fast.
             </p>
-            <pre className="mt-5 overflow-x-auto rounded-xl border border-border bg-muted p-5 font-mono text-xs leading-relaxed text-foreground">
-              <code>{readmeTemplate}</code>
-            </pre>
+            <div className="relative mt-5">
+              <CopyButton text={readmeTemplate} label="Copy README" className="absolute right-3 top-3" />
+              <pre className="overflow-x-auto rounded-xl border border-border bg-muted p-5 pt-12 font-mono text-xs leading-relaxed text-foreground">
+                <code>{readmeTemplate}</code>
+              </pre>
+            </div>
             <div className="mt-5 border-l-2 border-harvest pl-5 text-sm leading-relaxed">
               <p className="font-semibold text-harvest">Before you submit</p>
               <p className="mt-1 text-muted-foreground">
@@ -112,9 +117,16 @@ export function Submit() {
             Submissions channel using this format so people can try it and vote with a
             reaction. One post per team.
           </p>
-          <pre className="mt-5 overflow-x-auto rounded-xl border border-border bg-muted p-5 font-mono text-xs leading-relaxed text-foreground">
-            <code>{peoplesChoicePost}</code>
-          </pre>
+          <div className="relative mt-5">
+            <CopyButton
+              text={peoplesChoicePost}
+              label="Copy post"
+              className="absolute right-3 top-3"
+            />
+            <pre className="overflow-x-auto rounded-xl border border-border bg-muted p-5 pt-12 font-mono text-xs leading-relaxed text-foreground">
+              <code>{peoplesChoicePost}</code>
+            </pre>
+          </div>
         </div>
       </div>
     </section>

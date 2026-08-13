@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 // Drops the leading H1 so the page renders its own title.
 function getContent(): string {
-  const raw = fs.readFileSync(path.join(process.cwd(), 'CODE_OF_CONDUCT.md'), 'utf8')
+  const raw = fs.readFileSync(path.join(process.cwd(), 'docs', 'CODE_OF_CONDUCT.md'), 'utf8')
   return raw.replace(/^#[^\n]*\r?\n+/, '')
 }
 

@@ -65,7 +65,7 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 | Know how I'll be scored | [Judging](docs/judging.md) |
 | Get unstuck | [FAQ](docs/faq.md) · [Resources](resources/README.md) |
 
-Be kind: [Code of Conduct](CODE_OF_CONDUCT.md).
+Be kind: [Code of Conduct](docs/CODE_OF_CONDUCT.md).
 
 Browse the full, organised **[documentation index](docs/README.md)**.
 
@@ -89,4 +89,4 @@ This repository is linked to a [v0](https://v0.app) project — start new chats 
 
 [Continue working on v0 →](https://v0.app/chat/projects/prj_9agUHEjhrViIr4wKEDmNnUbpgnTE)
 
-For organizers maintaining the docs, see [CONTRIBUTING](CONTRIBUTING.md).
+For organizers maintaining the docs, see [CONTRIBUTING](docs/CONTRIBUTING.md).

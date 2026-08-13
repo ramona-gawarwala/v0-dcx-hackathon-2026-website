@@ -28,7 +28,7 @@ export default function HomePage() {
       <BenefitsBanner />
 
       <section className="scroll-mt-16">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-20">
+        <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
           <h2 className="font-display text-2xl font-bold tracking-tight sm:text-3xl">
             How it works, in three steps
           </h2>
@@ -36,7 +36,7 @@ export default function HomePage() {
             A part-time, two-week sprint. Here&rsquo;s the whole journey.
           </p>
 
-          <ol className="mt-10 grid gap-8 md:grid-cols-3">
+          <ol className="reveal-stagger mt-10 grid gap-8 md:grid-cols-3">
             {steps.map((s) => (
               <li key={s.n}>
                 <span className="font-mono text-4xl font-bold text-primary/25">{s.n}</span>

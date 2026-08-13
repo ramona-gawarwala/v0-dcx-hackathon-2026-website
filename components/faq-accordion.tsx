@@ -25,7 +25,8 @@ function renderCode(text: string, keyBase: number): ReactNode[] {
   return nodes
 }
 
-function renderAnswer(text: string): ReactNode[] {
+// Renders inline markdown links [text](url) and `code` within a single paragraph.
+function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = []
   let last = 0
   let key = 0
@@ -64,6 +65,16 @@ function renderAnswer(text: string): ReactNode[] {
   return nodes
 }
 
+// Splits an answer into paragraphs on blank lines so long answers can breathe.
+function renderAnswer(text: string): ReactNode[] {
+  return text
+    .split(/\n{2,}/)
+    .map((para) => para.trim())
+    .filter(Boolean)
+    .map((para) => <p key={para.slice(0, 32)}>{renderInline(para)}</p>)
+}
+
+
 function FaqRow({ item, id, open, onToggle }: Readonly<{ item: FaqItem; id: string; open: boolean; onToggle: (id: string) => void }>) {
   return (
     <div className="border-b border-border last:border-b-0">
@@ -71,15 +82,23 @@ function FaqRow({ item, id, open, onToggle }: Readonly<{ item: FaqItem; id: stri
         type="button"
         onClick={() => onToggle(id)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 py-4 text-left"
+        className="flex w-full items-center justify-between gap-4 py-5 text-left"
       >
-        <span className="font-display text-base font-medium">{item.q}</span>
+        <span
+          className={`font-display text-[15px] font-medium leading-snug transition-colors sm:text-base ${
+            open ? 'text-primary' : 'text-foreground'
+          }`}
+        >
+          {item.q}
+        </span>
         <ChevronDown
           className={`size-5 shrink-0 text-primary transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
         />
       </button>
       {open && (
-        <p className="pb-5 pr-8 text-sm leading-relaxed text-muted-foreground">{renderAnswer(item.a)}</p>
+        <div className="max-w-[68ch] space-y-3.5 pb-6 pr-2 text-[15px] leading-7 text-muted-foreground sm:pr-6">
+          {renderAnswer(item.a)}
+        </div>
       )}
     </div>
   )
@@ -122,7 +141,7 @@ export function FaqAccordion({ groups }: Readonly<{ groups: FaqGroup[] }>) {
           <h2 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             {g.group}
           </h2>
-          <div className="mt-3 rounded-2xl border border-border bg-card px-6">
+          <div className="mt-3 rounded-2xl border border-border bg-card px-5 sm:px-6">
             {g.items.map((item) => {
               const id = `${g.group}::${item.q}`
               return <FaqRow key={id} id={id} item={item} open={openIds.has(id)} onToggle={toggle} />

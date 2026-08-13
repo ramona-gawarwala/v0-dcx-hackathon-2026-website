@@ -11,7 +11,7 @@ export function Benefits() {
           description="Whether you win or not, everyone walks away with something — recognition, real skills, and evidence of your growth."
         />
 
-        <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="reveal-stagger mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {benefits.map((b) => (
             <article key={b.title} className="flex flex-col">
               <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">

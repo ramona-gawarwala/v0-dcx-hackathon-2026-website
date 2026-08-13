@@ -6,6 +6,19 @@ Never built an AI app? Start here. You'll have a live app before you write real 
 
 An AI app has layers — the hardware, the AI model, the platform that serves it, then your app on top. **You only build the top.** Vercel and the AI Gateway handle the servers, the models (GPT, Claude, Gemini…), and the plumbing. You focus on the idea and the experience.
 
+Here's the whole request flow — what happens when someone uses your app:
+
+```mermaid
+flowchart LR
+  U([User]) -->|prompt| A["Your app — built with v0"]
+  A -->|API call| G["Vercel AI Gateway"]
+  G -->|routes to| M["Model: GPT · Gemini · Claude"]
+  M -.->|response| A
+  A -.->|reply| U
+```
+
+You build the box on the left; the Gateway and the model are a one-line swap away.
+
 ## Before the hackathon (~1 hour)
 
 1. Create a **[Vercel account](https://vercel.com/signup)** and a **[v0](https://v0.dev)** account.
@@ -15,7 +28,7 @@ An AI app has layers — the hardware, the AI model, the platform that serves it
 ## Your first hour
 
 1. Pick a scoped idea from [Challenges](challenges.md).
-2. Clone a matching starter — see [starter templates](ai-sdk-guide.md#starter-templates).
+2. Copy a small example or clone a matching starter — see [starter templates](ai-sdk-guide.md#starter-templates).
 3. Deploy it and open the live URL in a private/incognito window to confirm it works.
 
 ## Your first day
@@ -26,10 +39,12 @@ An AI app has layers — the hardware, the AI model, the platform that serves it
 
 ## Make it visible to judges
 
-Judges need your **live URL** and to **see the code**, so put your project on GitHub and make the repo **public** (or share your v0 project link). Two easy paths:
+Judges need your **live URL** and to **see the code**, so deploy your app and put it on GitHub as a **public** repo (or share your v0 project link). Both easy paths start on v0 — the same two ways as the [Start building](/start-building) page:
 
-- **v0 first** — build on [v0.dev](https://v0.dev), click **Deploy**, then **Push to GitHub** and set the repo public.
-- **Local first** — build on your machine, push to a **public** GitHub repo, then import it in [Vercel](https://vercel.com/new) to deploy.
+- **All on v0 + Vercel (no local setup)** — build on [v0.dev](https://v0.dev), click **Deploy** for a live URL, then **Push to GitHub** and set the repo public.
+- **Start on v0, then refine locally** — build on v0 and **Push to GitHub**, pull the repo to your machine to edit in your own editor, and publish from Vercel when you're ready.
+
+Both keep v0 and Vercel connected for you, so you skip the fiddly "import a repo into Vercel" step.
 
 Pushing to GitHub also **backs up your work** — do it early and keep pushing, so a closed tab or spent credits never costs you the project.
 

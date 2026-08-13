@@ -34,8 +34,8 @@ export function NavSideToggle() {
       title={label}
       className="hidden size-10 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:bg-muted hover:text-foreground md:inline-flex"
     >
-      {/* Render a stable icon until mounted to avoid hydration mismatch */}
-      {mounted && side === 'right' ? <PanelLeft className="size-5" /> : <PanelRight className="size-5" />}
+      {/* Icon reflects the menu's current side; the label describes the toggle action. */}
+      {mounted && side === 'right' ? <PanelRight className="size-5" /> : <PanelLeft className="size-5" />}
       <span className="sr-only">{label}</span>
     </button>
   )

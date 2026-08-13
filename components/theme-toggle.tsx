@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
-import { applyTheme, nextTheme, THEME_STORAGE_KEY, type Theme } from '@/lib/theme'
+import { applyThemeWithTransition, nextTheme, THEME_STORAGE_KEY, type Theme } from '@/lib/theme'
 
 export function ThemeToggle() {
   const [theme, setTheme] = useState<Theme>('light')
@@ -16,7 +16,7 @@ export function ThemeToggle() {
 
   function toggle() {
     const next = nextTheme(theme)
-    applyTheme(next, document.documentElement)
+    applyThemeWithTransition(next, document.documentElement)
     try {
       localStorage.setItem(THEME_STORAGE_KEY, next)
     } catch {

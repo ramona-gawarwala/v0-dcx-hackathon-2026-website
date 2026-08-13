@@ -19,38 +19,38 @@ export function HowItWorks() {
           description="A part-time, two-week sprint. Pick a challenge, build a slice, and demo it."
         />
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.1fr_1fr]">
-          <div className="grid gap-8 sm:grid-cols-2">
-            {basics.map((b) => (
-              <div key={b.title}>
-                <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  <b.icon className="size-5" />
-                </span>
-                <h3 className="mt-4 font-display text-base font-semibold">{b.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.body}</p>
-              </div>
-            ))}
-          </div>
+        <div className="reveal-stagger mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {basics.map((b) => (
+            <div key={b.title}>
+              <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <b.icon className="size-5" />
+              </span>
+              <h3 className="mt-4 font-display text-base font-semibold">{b.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{b.body}</p>
+            </div>
+          ))}
+        </div>
 
-          <div>
-            <h3 className="font-display text-base font-semibold">Schedule</h3>
-            <ol className="mt-4">
-              {schedule.map((s, i) => (
-                <li
-                  key={s.when}
-                  className="flex gap-4 border-l-2 border-primary/20 pl-4 pb-5 last:pb-0"
-                >
-                  <div className="relative -ml-[21px] mt-1 size-3 shrink-0 rounded-full border-2 border-primary bg-background" />
-                  <div className="-mt-0.5">
-                    <p className="font-mono text-xs font-semibold uppercase tracking-wide text-primary">
-                      {s.when}
-                    </p>
-                    <p className="text-sm text-foreground">{s.what}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
+        <div className="mt-16">
+          <h3 className="font-display text-base font-semibold">Two-week timeline</h3>
+          <ol className="reveal-stagger mt-8 grid gap-x-6 gap-y-8 sm:grid-cols-2 lg:grid-cols-6">
+            {schedule.map((s, i) => (
+              <li key={s.when} className="flex flex-col">
+                <div className="flex items-center gap-3">
+                  <span className="z-10 flex size-8 shrink-0 items-center justify-center rounded-full border-2 border-primary bg-background font-mono text-xs font-bold text-primary">
+                    {i + 1}
+                  </span>
+                  {i < schedule.length - 1 && (
+                    <span aria-hidden="true" className="hidden h-0.5 flex-1 rounded-full bg-primary/20 lg:block" />
+                  )}
+                </div>
+                <p className="mt-4 font-mono text-[11px] font-semibold uppercase tracking-widest text-primary">
+                  {s.when}
+                </p>
+                <p className="mt-1 text-sm leading-relaxed text-foreground">{s.what}</p>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
