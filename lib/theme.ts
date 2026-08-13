@@ -17,3 +17,19 @@ export function applyTheme(theme: Theme, root: HTMLElement): void {
   root.classList.remove('light', 'dark')
   root.classList.add(theme)
 }
+
+/** Like applyTheme, but briefly animates the colour change (unless motion is reduced). */
+export function applyThemeWithTransition(theme: Theme, root: HTMLElement): void {
+  const reduce =
+    typeof window !== 'undefined' &&
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+  if (!reduce) {
+    root.classList.add('theme-anim')
+    root.getBoundingClientRect() // force reflow so the class swap actually transitions
+    window.setTimeout(() => root.classList.remove('theme-anim'), 360)
+  }
+
+  applyTheme(theme, root)
+}

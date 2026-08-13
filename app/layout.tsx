@@ -1,20 +1,24 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Sora, Inter } from 'next/font/google'
+import { Manrope, Atkinson_Hyperlegible } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteSidebar } from '@/components/site-sidebar'
 import { SiteFooter } from '@/components/site-footer'
 import { PageDecor } from '@/components/page-decor'
+import { RevealObserver } from '@/components/reveal-observer'
+import { EasterEgg } from '@/components/easter-egg'
 import './globals.css'
 
-const sora = Sora({
+const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
 })
 
-const inter = Inter({
+// Atkinson Hyperlegible ships only regular + bold (not variable).
+const atkinson = Atkinson_Hyperlegible({
   subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-body',
   display: 'swap',
 })
@@ -59,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light ${sora.variable} ${inter.variable} bg-background`}
+      className={`light ${manrope.variable} ${atkinson.variable} bg-background`}
       suppressHydrationWarning
     >
       <head>
@@ -71,8 +75,10 @@ export default function RootLayout({
         <div className="site-main relative flex min-h-[calc(100dvh-4rem)] flex-col">
           <PageDecor />
           <div className="flex-1">{children}</div>
-          <SiteFooter />
         </div>
+        <SiteFooter />
+        <RevealObserver />
+        <EasterEgg />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

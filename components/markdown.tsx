@@ -3,6 +3,8 @@ import Link from 'next/link'
 import ReactMarkdown, { type Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { resolveDocHref } from '@/lib/guides'
+import { MermaidDiagram } from '@/components/mermaid-diagram'
+import { CopyButton } from '@/components/copy-button'
 
 function extractText(node: ReactNode): string {
   if (typeof node === 'string' || typeof node === 'number') return String(node)
@@ -36,10 +38,10 @@ const components: Components = {
       {children}
     </h3>
   ),
-  p: ({ children }) => <p className="mt-4 leading-relaxed">{children}</p>,
-  ul: ({ children }) => <ul className="mt-4 list-disc space-y-2 pl-6 marker:text-primary">{children}</ul>,
-  ol: ({ children }) => <ol className="mt-4 list-decimal space-y-2 pl-6 marker:text-muted-foreground">{children}</ol>,
-  li: ({ children }) => <li className="leading-relaxed">{children}</li>,
+  p: ({ children }) => <p className="mt-5 leading-[1.7]">{children}</p>,
+  ul: ({ children }) => <ul className="mt-5 list-disc space-y-2 pl-6 marker:text-primary">{children}</ul>,
+  ol: ({ children }) => <ol className="mt-5 list-decimal space-y-2 pl-6 marker:text-primary">{children}</ol>,
+  li: ({ children }) => <li className="leading-[1.7]">{children}</li>,
   strong: ({ children }) => <strong className="font-semibold text-foreground">{children}</strong>,
   hr: () => <hr className="my-10 border-border" />,
   blockquote: ({ children }) => (
@@ -68,11 +70,28 @@ const components: Components = {
       </Link>
     )
   },
-  pre: ({ children }) => (
-    <pre className="md-codeblock mt-4 overflow-x-auto rounded-lg border border-border bg-muted p-4 text-sm text-foreground">
-      {children}
-    </pre>
-  ),
+  pre: ({ children }) => {
+    if (
+      children &&
+      typeof children === 'object' &&
+      'props' in children &&
+      /language-mermaid/.test((children as { props: { className?: string } }).props.className ?? '')
+    ) {
+      const code = extractText((children as { props: { children?: ReactNode } }).props.children)
+      return <MermaidDiagram chart={code} />
+    }
+    return (
+      <div className="relative mt-6">
+        <CopyButton
+          text={extractText((children as { props: { children?: ReactNode } }).props?.children ?? children)}
+          className="absolute right-3 top-3"
+        />
+        <pre className="md-codeblock overflow-x-auto rounded-lg border border-border bg-muted p-4 pt-12 text-sm text-foreground">
+          {children}
+        </pre>
+      </div>
+    )
+  },
   code: ({ className, children, ...props }: ComponentPropsWithoutRef<'code'>) => {
     const isBlock = /language-/.test(className ?? '')
     if (isBlock) {
@@ -102,7 +121,7 @@ const components: Components = {
 
 export function Markdown({ content }: Readonly<{ content: string }>) {
   return (
-    <div className="text-pretty text-base leading-relaxed text-muted-foreground">
+    <div className="max-w-[68ch] text-pretty text-[17px] leading-[1.7] text-foreground">
       <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
         {content}
       </ReactMarkdown>

@@ -1,7 +1,7 @@
-import { Check } from 'lucide-react'
 import { SectionHeading } from '@/components/section-heading'
 import { GrowIt } from '@/components/grow-it'
-import { levels, flavours, challenges, type Challenge } from '@/lib/content'
+import { ChallengeFilter } from '@/components/challenge-filter'
+import { levels, flavours, type Challenge } from '@/lib/content'
 
 const levelStyles: Record<
   Challenge['level'],
@@ -114,41 +114,7 @@ export function Challenges() {
         <p className="mt-1 text-sm text-muted-foreground">
           Pick one — a scoped idea beats a big vague one. Each works for any project type.
         </p>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {challenges.map((c) => {
-            const s = levelStyles[c.level]
-            return (
-              <article
-                key={c.title}
-                className="card-september flex flex-col rounded-2xl border border-border bg-card p-6"
-              >
-                <span className={`inline-flex w-fit items-center rounded-md border px-2.5 py-1 text-xs font-semibold ${s.chip}`}>
-                  {c.level}
-                </span>
-                <h4 className="mt-3 font-display text-lg font-semibold">{c.title}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  <span className="font-semibold text-foreground">Problem: </span>
-                  {c.problem}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  <span className="font-semibold text-foreground">Build: </span>
-                  {c.build}
-                </p>
-                <div className="mt-4 border-t border-border pt-4">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Done when</p>
-                  <ul className="mt-2 space-y-2">
-                    {c.done.map((d) => (
-                      <li key={d} className="flex items-start gap-2 text-sm text-foreground">
-                        <Check className={`mt-0.5 size-4 shrink-0 ${s.accent}`} />
-                        {d}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            )
-          })}
-        </div>
+        <ChallengeFilter />
 
         <p className="mt-8 border-l-2 border-primary pl-5 text-sm leading-relaxed text-muted-foreground">
           <span className="font-semibold text-foreground">Bring your own idea?</span> Go for it. Pick

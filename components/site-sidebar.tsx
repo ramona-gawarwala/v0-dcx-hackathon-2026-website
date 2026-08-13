@@ -37,7 +37,7 @@ export function SiteSidebar() {
                 <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
                   {entry.label}
                 </p>
-                <ul className="space-y-0.5 border-l border-border">
+                <ul className="space-y-0.5 border-l border-border/60">
                   {entry.items.map((item) => (
                     <li key={item.href}>
                       <SidebarLink item={item} active={isActive(item)} />
@@ -48,7 +48,7 @@ export function SiteSidebar() {
             )
           }
           return (
-            <ul key={entry.href} className="space-y-0.5 border-l border-border">
+            <ul key={entry.href} className="space-y-0.5 border-l border-border/60">
               <li>
                 <SidebarLink item={entry} active={isActive(entry)} />
               </li>

@@ -41,4 +41,4 @@ Everything you need to take part in the **DCX AI Hackathon 2026**, organised by 
 
 ---
 
-**Maintaining these docs?** Keep them in sync with the website content in [`lib/content.ts`](../lib/content.ts) and [`lib/faq.ts`](../lib/faq.ts). See [CONTRIBUTING](../CONTRIBUTING.md).
+**Maintaining these docs?** Keep them in sync with the website content in [`lib/content.ts`](../lib/content.ts) and [`lib/faq.ts`](../lib/faq.ts). See [CONTRIBUTING](CONTRIBUTING.md).

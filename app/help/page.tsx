@@ -75,8 +75,7 @@ const quickFixes: Array<{ problem: string; fix: string }> = [
   { problem: 'App won\u2019t deploy', fix: 'Open the Vercel build logs and fix the first error shown.' },
   { problem: 'AI calls fail', fix: 'Check your API key / AI Gateway is set in the project\u2019s env vars.' },
   { problem: 'Local pnpm dev errors', fix: 'Run pnpm install again and make sure you\u2019re on Node 20+.' },
-  { problem: 'Env vars not working', fix: 'The file must be .env.local — save it and restart the dev server.' },
-]
+  { problem: 'Env vars not working', fix: 'The file must be .env.local — save it and restart the dev server.' },  { problem: 'v0 can’t pull — GitHub looks connected but fails', fix: 'In v0 Settings → Git, fully disconnect and reconnect GitHub, re-grant repo access, then use Pull changes.' },]
 
 function BlockerCard({ blocker }: Readonly<{ blocker: Blocker }>) {
   return (

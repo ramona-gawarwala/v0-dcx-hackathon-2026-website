@@ -31,7 +31,7 @@ export function ScrollProgress() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-0.5 origin-left bg-primary transition-transform duration-150 ease-out"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-1 origin-left bg-gradient-to-r from-seed via-harvest to-sprout transition-transform duration-150 ease-out"
       style={{ transform: `scaleX(${progress})` }}
     />
   )
