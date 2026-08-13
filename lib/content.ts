@@ -21,15 +21,15 @@ import {
 } from 'lucide-react'
 
 export const REPO_URL = 'https://github.com/ramona-gawarwala/v0-dcx-hackathon-2026-website'
-export const LIVE_URL = 'https://v0-dcx-hackathon-2026-website.vercel.app'
-export const V0_COMMUNITY_URL = 'https://v0.dev/community'
-export const VERCEL_TEMPLATES_URL = 'https://vercel.com/templates'
+export const LIVE_URL = 'https://v0-dcx-hackathon-2026.vercel.app'
+export const V0_COMMUNITY_URL = 'https://v0.app/community'
+export const VERCEL_TEMPLATES_URL = 'https://vercel.com/templates?type=ai'
 
-// Microsoft Forms registration for the AI Playground Hackathon.
+// Microsoft Forms registration for the DCX AI Hackathon 2026.
 export const REGISTER_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUOUpIUjVVMURHR0gwM1dRTFpRWkRaVE40SC4u'
 
-// Microsoft Forms — anonymous "Report a problem" form (Code of Conduct / safety).
+// Microsoft Forms — confidential "Report a problem" form (Code of Conduct / safety).
 export const REPORT_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUMjA2TlNNTkdVQ0ZIS1lTRVIySUpPNTQ3UC4u'
 
@@ -37,7 +37,7 @@ export const REPORT_URL =
 export const PULSE_CHECK_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUREpHNTA0Nlg1VU5OSTk2Q0NIVlA4WE9LTi4u'
 
-// Microsoft Teams — "General | Innovation Hackathon 2026" team and its channels
+// Microsoft Teams team and channels used by the DCX AI Hackathon 2026.
 export const TEAMS_TEAM_URL =
   'https://teams.microsoft.com/l/team/19%3A6VZc0lYnAVy-qh6prOW7bX4V4yAcAyzRikL3TJPp85A1%40thread.tacv2/conversations?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 export const TEAMS_ANNOUNCEMENTS_URL =
@@ -118,24 +118,24 @@ export const navMenu: NavEntry[] = [
 ]
 
 export const schedule = [
-  { when: 'Mon 1 Sep', what: 'Kickoff + team formation' },
-  { when: 'Week 1 (1–7 Sep)', what: 'Pick a challenge, start building' },
-  { when: 'Throughout', what: 'Mentors available in the team channel' },
+  { when: 'Tue 1 Sep, 09:00 BST', what: 'Kickoff + team formation' },
+  { when: 'Week 1 (1–7 Sep)', what: 'Pick an idea, start building' },
+  { when: 'Throughout', what: 'Mentors available in the Help channel' },
   { when: 'Week 2 (8–14 Sep)', what: 'Keep building, wrap up your demo' },
-  { when: 'Mon 14 Sep', what: 'Submissions due' },
-  { when: 'Demo day (TBC)', what: 'Demos + judging' },
+  { when: 'Mon 14 Sep, 23:59 BST', what: 'Submissions due' },
+  { when: 'Date to be confirmed', what: 'Demo day + judging' },
 ]
 
 export const startSteps = [
   {
     step: '01',
-    title: 'Describe it on v0.dev',
-    body: 'Go to v0.dev and describe what you want to build in plain language.',
+    title: 'Describe it in v0',
+    body: 'Open v0.app and describe what you want to build in plain language.',
   },
   {
     step: '02',
     title: 'Deploy to Vercel',
-    body: 'Click Deploy to publish it — you get a live URL instantly, no setup.',
+    body: 'Use Deploy to publish it, complete any account prompts, and open the resulting live URL.',
   },
   {
     step: '03',
@@ -152,7 +152,12 @@ export type ProjectType = {
   examples: string
   checklist: string[]
   goodFor: string
-  ideas: string[]
+  ideas: {
+    stage: 'Start simple' | 'Go further' | 'Creative stretch'
+    title: string
+    body: string
+    runtimeAi: 'No model call needed' | 'Runtime AI optional' | 'Runtime AI core'
+  }[]
 }
 
 export const projectTypes: ProjectType[] = [
@@ -164,7 +169,26 @@ export const projectTypes: ProjectType[] = [
     examples: 'Internal productivity tool, learning platform, accessibility solution, sustainability dashboard.',
     checklist: ['UI', 'Business logic', 'Data storage', 'Deployment'],
     goodFor: 'POs · BAs · Designers · Full-stack devs',
-    ideas: ['Onboarding checklist app', 'Accessibility contrast checker', 'Team skills directory', 'Expense-policy helper'],
+    ideas: [
+      {
+        stage: 'Start simple',
+        title: 'Handoff board',
+        body: 'Pass work between teammates with an owner, status, next action, and due date.',
+        runtimeAi: 'No model call needed',
+      },
+      {
+        stage: 'Go further',
+        title: 'Accessibility rehearsal',
+        body: 'Choose a user need, then walk through a task with focused checks and prompts.',
+        runtimeAi: 'Runtime AI optional',
+      },
+      {
+        stage: 'Creative stretch',
+        title: 'Reverse onboarding',
+        body: 'New joiners capture confusing moments; teams turn repeated friction into trackable fixes.',
+        runtimeAi: 'Runtime AI optional',
+      },
+    ],
   },
   {
     icon: Bot,
@@ -174,17 +198,55 @@ export const projectTypes: ProjectType[] = [
     examples: 'Knowledge assistant, meeting assistant, documentation assistant, support chatbot.',
     checklist: ['Chat UI', 'Model', 'Prompt', 'Tool(s)', 'Deployment'],
     goodFor: 'Developers · AI enthusiasts',
-    ideas: ['Docs Q&A assistant', 'Meeting-notes summariser', 'New-joiner onboarding buddy', 'Ticket-reply drafter'],
+    ideas: [
+      {
+        stage: 'Start simple',
+        title: 'Source scout',
+        body: 'Search approved sources, answer with citations, and stop when evidence is missing.',
+        runtimeAi: 'Runtime AI core',
+      },
+      {
+        stage: 'Go further',
+        title: 'Meeting follow-through agent',
+        body: 'Read sample notes, check a mock task board, ask for missing details, and draft updates for approval.',
+        runtimeAi: 'Runtime AI core',
+      },
+      {
+        stage: 'Creative stretch',
+        title: 'Scenario rehearsal agent',
+        body: 'Role-play a stakeholder, use a scoring tool to adapt to choices, then run a rubric-based debrief.',
+        runtimeAi: 'Runtime AI core',
+      },
+    ],
   },
   {
     icon: Workflow,
     emoji: '🔄',
-    title: 'AI Workflow Automation',
+    title: 'Workflow Automation',
     goal: 'Automate a business process.',
     examples: 'Ticket triage, email classification, report generation, approval workflows.',
-    checklist: ['Trigger', 'Workflow', 'AI step', 'Output action'],
+    checklist: ['Trigger', 'Workflow', 'Rules or AI step', 'Output action'],
     goodFor: 'Developers · BAs · Process specialists',
-    ideas: ['Inbox triage & routing', 'Weekly report generator', 'Bug-report classifier', 'Approval reminders'],
+    ideas: [
+      {
+        stage: 'Start simple',
+        title: 'Request-to-brief',
+        body: 'Validate a form, format the answers into a standard brief, and store the result.',
+        runtimeAi: 'No model call needed',
+      },
+      {
+        stage: 'Go further',
+        title: 'Triage with confidence',
+        body: 'Classify sample requests, route confident matches, and send uncertain ones to a person.',
+        runtimeAi: 'Runtime AI core',
+      },
+      {
+        stage: 'Creative stretch',
+        title: 'Meeting-to-momentum',
+        body: 'Turn sample notes into decisions and actions, pause for approval, then publish a digest.',
+        runtimeAi: 'Runtime AI core',
+      },
+    ],
   },
   {
     icon: Network,
@@ -194,7 +256,26 @@ export const projectTypes: ProjectType[] = [
     examples: 'Product Owner Agent, Architect Agent, Developer Agent, Tester Agent.',
     checklist: ['Coordinator', 'Specialist agents', 'Shared context', 'Final response'],
     goodFor: 'Advanced participants — keep scope small',
-    ideas: ['PO → Dev → Tester pipeline', 'Researcher + writer + reviewer', 'Planner + solver + checker'],
+    ideas: [
+      {
+        stage: 'Start simple',
+        title: 'Maker + checker',
+        body: 'One agent drafts with a template tool; another checks a clear rubric; the loop stops after two revisions.',
+        runtimeAi: 'Runtime AI core',
+      },
+      {
+        stage: 'Go further',
+        title: 'Research desk',
+        body: 'A source finder, analyst, and fact-checker hand off work to produce one cited briefing.',
+        runtimeAi: 'Runtime AI core',
+      },
+      {
+        stage: 'Creative stretch',
+        title: 'Incident rehearsal room',
+        body: 'Specialist agents inspect mock logs and status tools under human direction, then create a postmortem.',
+        runtimeAi: 'Runtime AI core',
+      },
+    ],
   },
   {
     icon: BarChart3,
@@ -204,7 +285,26 @@ export const projectTypes: ProjectType[] = [
     examples: 'Dashboards, analytics, AI insights, forecasting.',
     checklist: ['Data source', 'Processing', 'Visualisation', 'Deployment'],
     goodFor: 'Anyone working with data',
-    ideas: ['CSV → chart explainer', 'Survey theme finder', 'Simple forecast dashboard', 'Anomaly spotter'],
+    ideas: [
+      {
+        stage: 'Start simple',
+        title: 'Team pulse explorer',
+        body: 'Load sample survey data, filter groups, and chart how responses change over time.',
+        runtimeAi: 'No model call needed',
+      },
+      {
+        stage: 'Go further',
+        title: 'What changed?',
+        body: 'Compare two periods, reveal the largest shifts, and let users annotate likely causes.',
+        runtimeAi: 'Runtime AI optional',
+      },
+      {
+        stage: 'Creative stretch',
+        title: 'Decision replay',
+        body: 'Scrub through a project timeline and reveal only the signals available at each moment.',
+        runtimeAi: 'Runtime AI optional',
+      },
+    ],
   },
   {
     icon: Palette,
@@ -212,9 +312,28 @@ export const projectTypes: ProjectType[] = [
     title: 'Experience & Creativity',
     goal: 'Create something engaging.',
     examples: 'Games, interactive stories, visualisations, AI-powered experiences.',
-    checklist: ['Interactive UI', 'AI / content engine', 'Content or assets', 'Deployment'],
+    checklist: ['Interactive UI', 'Content or AI engine', 'Content or assets', 'Deployment'],
     goodFor: 'Designers and anyone having fun with it',
-    ideas: ['Text-to-slides generator', 'Illustrated story maker', 'Quick quiz game', 'List-to-diagram tool'],
+    ideas: [
+      {
+        stage: 'Start simple',
+        title: 'One-minute quiz show',
+        body: 'Use AI while building the questions and visual assets, then run a polished interactive game.',
+        runtimeAi: 'No model call needed',
+      },
+      {
+        stage: 'Go further',
+        title: 'Choice-reactive story',
+        body: 'Let decisions reshape the scene, sound, characters, and ending in real time.',
+        runtimeAi: 'Runtime AI optional',
+      },
+      {
+        stage: 'Creative stretch',
+        title: 'Future postcard wall',
+        body: 'Visitors add text, sketches, or voice; the experience remixes them into a shared live exhibit.',
+        runtimeAi: 'Runtime AI optional',
+      },
+    ],
   },
 ]
 
@@ -235,8 +354,8 @@ export const levels: Level[] = [
     n: 1,
     name: 'Seed',
     codeword: 'Answers or creates',
-    does: 'You prompt it, it responds',
-    meaning: 'Answer, summarise, rewrite, generate. The fastest way to a working demo.',
+    does: 'One prompt produces one useful response',
+    meaning: 'A direct model call answers, summarises, rewrites, or generates.',
     colorClass: 'text-seed',
     chipClass: 'bg-seed/10 text-seed border-seed/30',
   },
@@ -244,9 +363,9 @@ export const levels: Level[] = [
     icon: Leaf,
     n: 2,
     name: 'Sprout',
-    codeword: 'Works with your stuff',
-    does: 'It uses your documents, data, or a tool/API',
-    meaning: 'Give the AI your content or a tool so it does something real — not just chat.',
+    codeword: 'Uses evidence or a tool',
+    does: 'It grounds a response or calls a tool',
+    meaning: 'Approved documents, data, or an API provide real-world context.',
     colorClass: 'text-sprout',
     chipClass: 'bg-sprout/10 text-sprout border-sprout/30',
   },
@@ -254,18 +373,18 @@ export const levels: Level[] = [
     icon: Wheat,
     n: 3,
     name: 'Harvest',
-    codeword: 'Does it for you',
-    does: 'It takes several steps on its own',
-    meaning: 'An agent, a workflow, or a chain that reaches a result mostly hands-off.',
+    codeword: 'Completes a process',
+    does: 'It runs a bounded multi-step process',
+    meaning: 'A code-controlled workflow or model-directed agent reaches a result.',
     colorClass: 'text-harvest',
     chipClass: 'bg-harvest/10 text-harvest border-harvest/30',
   },
 ]
 
 export const flavours = [
-  { icon: Mic, name: 'Voice', body: 'Speak to it (speech-to-text) or have it speak back (text-to-speech).' },
-  { icon: ImageIcon, name: 'Images', body: 'Read a photo, screenshot, or diagram (image-to-text).' },
-  { icon: Video, name: 'Video', body: 'Pull a summary or key moments from a clip (video-to-text).' },
+  { icon: Mic, name: 'Voice', body: 'Accept spoken input or return a spoken response.' },
+  { icon: ImageIcon, name: 'Images', body: 'Understand or create an image, screenshot, or diagram.' },
+  { icon: Video, name: 'Video', body: 'Analyse a clip, find key moments, or create a short video.' },
 ]
 
 export type GrowthIdea = {
@@ -298,8 +417,11 @@ export const growthIdeas: GrowthIdea[] = [
     tagline: 'Build and reuse better prompts.',
     steps: [
       { level: 'Seed', what: 'Writes a tailored prompt from your goal and constraints.' },
-      { level: 'Sprout', what: 'Saves, searches, and reuses your own prompt library.' },
-      { level: 'Harvest', what: 'Picks the right prompt for a task, runs it, and refines until it fits.' },
+      { level: 'Sprout', what: 'Ranks your saved prompts for a task and suggests the best match.' },
+      {
+        level: 'Harvest',
+        what: 'Runs an approved prompt, checks the result, and stops after a set number of refinements.',
+      },
     ],
   },
   {
@@ -321,34 +443,65 @@ export type Challenge = {
   done: string[]
 }
 
+export const challengeQualityBar = [
+  {
+    title: 'Prove the outcome',
+    body: 'Demo one representative task from input to a result you can verify.',
+  },
+  {
+    title: 'Test more than the happy path',
+    body: 'Try at least three cases, including one edge or failure case, and share what happened.',
+  },
+  {
+    title: 'Make failure visible',
+    body: 'Show uncertainty, missing evidence, and tool errors instead of guessing or silently continuing.',
+  },
+  {
+    title: 'Keep people in control',
+    body: 'Use public, dummy, or approved data and require approval before consequential actions.',
+  },
+]
+
 export const challenges: Challenge[] = [
   {
     level: 'Seed',
     title: 'Rewrite Helper',
     problem: 'A message, summary, or note takes too long to get right.',
     build: 'An assistant that summarises, rewrites, translates, or reformats text.',
-    done: ['It does its one job on a real example.', 'Anyone can use it without instructions.'],
+    done: [
+      'It completes one clear job on a representative example.',
+      'A first-time user can provide input and understand the result without extra instructions.',
+    ],
   },
   {
     level: 'Seed',
     title: 'Draft It',
     problem: 'Starting from a blank page is the hardest part.',
     build: 'Generate a first draft — an email, a plan, a snippet — from a short brief.',
-    done: ['It turns a one-line brief into something usable.', 'The result is a real head-start, not just filler.'],
+    done: [
+      'A one-line brief produces a draft with the requested purpose, audience, and format.',
+      'Changing one detail in the brief changes the draft in the expected way.',
+    ],
   },
   {
     level: 'Sprout',
     title: 'Ask My Docs',
     problem: 'The answer is buried in documents nobody wants to read.',
     build: 'Point it at your own docs and ask questions grounded in them.',
-    done: ['It answers from your content, not general knowledge.', 'It says "I don\'t know" instead of making things up.'],
+    done: [
+      'Each answer cites or links to the source passage it used.',
+      'It declines when the answer is not supported by the supplied content.',
+    ],
   },
   {
     level: 'Sprout',
     title: 'Live Lookup',
-    problem: 'A useful answer needs fresh or private data the model does not have.',
+    problem: 'A useful answer needs current or approved data the model does not have.',
     build: 'Give the AI a tool — an API, a search, a database — it can call to fetch what it needs.',
-    done: ['It calls the tool and uses the result in its answer.', 'It works on a real, current example.'],
+    done: [
+      'It calls an approved data source and shows when the result was retrieved.',
+      'A failed or empty lookup produces a clear fallback instead of a made-up answer.',
+    ],
   },
   {
     level: 'Harvest',
@@ -356,17 +509,23 @@ export const challenges: Challenge[] = [
     problem: 'A repetitive, multi-step task eats time that could go elsewhere.',
     build: 'An agent or workflow that completes the task end to end.',
     done: [
-      'It runs end to end on a real example.',
-      'A human only steps in for the tricky bits.',
-      'It handles at least one obvious edge case gracefully.',
+      'One representative task reaches the intended result and exposes the steps taken.',
+      'The run has a completion condition and a hard step, time, or retry limit.',
+      'A failed step is reported and stops or follows a defined fallback.',
+      'Any action that sends, changes, deletes, spends, or publishes waits for explicit approval.',
     ],
   },
   {
     level: 'Harvest',
     title: 'The Team Play',
-    problem: 'One assistant is not enough — the task needs different skills or steps.',
-    build: 'A workflow or multiple agents that collaborate toward a result.',
-    done: ['Each step or agent has a clear job.', 'They combine into one coherent result you can demo.'],
+    problem: 'One component cannot reliably finish a task that needs distinct skills, tools, or boundaries.',
+    build: 'A workflow or small set of specialised agents that hand off or combine work toward one result.',
+    done: [
+      'Each agent or step has a distinct responsibility with a defined input and output.',
+      'The demo shows at least one handoff and how a failed handoff is handled.',
+      'You can explain why one agent or a simpler workflow would be less reliable.',
+      'The full run has a completion condition and a hard step, time, or retry limit.',
+    ],
   },
 ]
 
@@ -414,12 +573,12 @@ export const benefits: Benefit[] = [
   {
     icon: GraduationCap,
     title: 'Real AI skills you keep',
-    body: 'Learn to build and ship a working AI app with v0 + Vercel, hands-on — skills that carry into your day job.',
+    body: 'Learn to build and ship a working app with v0 + Vercel and AI-assisted development — skills that carry into your day job.',
   },
   {
     icon: Trophy,
     title: 'Awards to win',
-    body: 'Best Overall, Best Use of AI, Best Design, Best First-Timer, and a People\u2019s Choice voted by everyone — beginners and non-engineers can win too.',
+    body: 'Best Overall, Best Use of AI, Best Design, Best First-Timer / Beginner, and a People\u2019s Choice voted by everyone — beginners and non-engineers can win too.',
   },
   {
     icon: HeartHandshake,
@@ -429,16 +588,17 @@ export const benefits: Benefit[] = [
   {
     icon: Users,
     title: 'Teammates & connections',
-    body: 'Team up across roles — engineers, POs, BAs, and designers. Mixed teams build the best products.',
+    body: 'Team up across roles — engineers, POs, BAs, and designers — to combine complementary skills and perspectives.',
   },
 ]
 
 export const submitChecklist = [
-  { title: 'Live URL', body: 'Your deployed Vercel app — public, with no password or login wall (must open and work).' },
+  { title: 'Live URL', body: 'Your deployed app — public, with no password or login wall (must open and work).' },
   { title: 'Public repo or v0 link', body: 'Public, not private or password-protected, so judges can see how you built it.' },
   { title: 'Title + one-line pitch', body: 'What it does, in plain words.' },
   { title: 'Demo video (2–3 min)', body: 'A screen recording of the app working — a demo, not a presentation.' },
   { title: 'Project type', body: 'Which of the 6 project types you built — the form asks for this.' },
-  { title: 'Team + challenge', body: 'Who you are and which challenge you picked.' },
+  { title: 'How you used AI', body: 'How AI helped you build, plus None, Seed, Sprout, or Harvest for runtime AI.' },
+  { title: 'Team', body: 'Who built it.' },
   { title: 'Optional: enter People\u2019s Choice', body: 'Share your app in the Submissions channel so other participants can vote for their favourite.' },
 ]

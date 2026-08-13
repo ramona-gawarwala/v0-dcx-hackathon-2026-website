@@ -1,15 +1,15 @@
 # AI SDK guide
 
-The [AI SDK](https://ai-sdk.dev) is the TypeScript toolkit for talking to AI models. This is the fast path.
+The [AI SDK](https://ai-sdk.dev) is a TypeScript toolkit for building AI applications and agents. This guide follows AI SDK v7. For a new local project, use **Node.js 22+** and pnpm, matching the current [Next.js App Router quickstart](https://ai-sdk.dev/docs/getting-started/nextjs-app-router).
 
 ## Get a model key
 
-Use the **[Vercel AI Gateway](https://vercel.com/docs/ai-gateway)** — one key works with many models (OpenAI, Anthropic, Google, xAI, and more).
+Use the **[Vercel AI Gateway](https://vercel.com/docs/ai-gateway)** — one API gives you access to supported models from multiple providers.
 
-1. In your Vercel project, create an **AI Gateway** key.
-2. Add it to your env: `AI_GATEWAY_API_KEY=...` (on Vercel it's set automatically).
+1. For local or non-Vercel development, create an **AI Gateway API key**.
+2. Add it to `.env.local`: `AI_GATEWAY_API_KEY=...`.
 
-Never commit keys. Local keys go in `.env.local`.
+Vercel deployments can authenticate automatically through `VERCEL_OIDC_TOKEN`; local development still needs the API key. Never commit keys or `.env.local`. See [Authentication & BYOK](https://vercel.com/docs/ai-gateway/authentication-and-byok).
 
 ## Minimal chatbot (Next.js App Router)
 
@@ -21,15 +21,23 @@ pnpm add ai @ai-sdk/react zod
 Server route — `app/api/chat/route.ts`:
 
 ```ts
-import { streamText, UIMessage, convertToModelMessages } from 'ai';
+import {
+  streamText,
+  UIMessage,
+  convertToModelMessages,
+  createUIMessageStreamResponse,
+  toUIMessageStream,
+} from 'ai';
 
 export async function POST(req: Request) {
   const { messages }: { messages: UIMessage[] } = await req.json();
   const result = streamText({
-    model: 'openai/gpt-4.1',            // any model via AI Gateway
-    messages: convertToModelMessages(messages),
+    model: 'xai/grok-4.5',
+    messages: await convertToModelMessages(messages),
   });
-  return result.toUIMessageStreamResponse();
+  return createUIMessageStreamResponse({
+    stream: toUIMessageStream({ stream: result.stream }),
+  });
 }
 ```
 
@@ -52,7 +60,7 @@ const weather = tool({
 });
 ```
 
-Pass `tools: { weather }` to `streamText`, and add `stopWhen` for multi-step calls.
+Pass `tools: { weather }` to `streamText`. For multi-step calls, import `isStepCount` from `ai` and add `stopWhen: isStepCount(5)`. See [Tool calling](https://ai-sdk.dev/docs/ai-sdk-core/tools-and-tool-calling).
 
 ## Starter templates
 
@@ -60,19 +68,18 @@ Don't start from a blank file — get something running, then make it yours.
 
 **Copy-paste examples** — one small, working thing you can read in minutes:
 
-- [AI SDK — Getting Started](https://ai-sdk.dev/docs/getting-started) — build a working chatbot in about 5 minutes.
-- [Node HTTP server example](https://github.com/vercel/ai/tree/main/examples/node-http-server) — no framework, just a model call.
-- [Express example](https://github.com/vercel/ai/tree/main/examples/express) — the same idea inside a familiar server.
-- [All AI SDK examples](https://github.com/vercel/ai/tree/main/examples) — Next.js, Nuxt, SvelteKit, and more.
+- [Next.js App Router quickstart](https://ai-sdk.dev/docs/getting-started/nextjs-app-router) — current end-to-end chat and tools tutorial.
+- [Call tools in Next.js](https://ai-sdk.dev/resources/recipes/next/call-tools) — a focused tool-calling example.
+- [RAG Agent guide](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot) — retrieve from a knowledge base and use the result as context.
+- [AI SDK recipes](https://ai-sdk.dev/resources/recipes) — runnable examples across supported frameworks and use cases.
 
 **Full starter apps** — clone a whole app and swap in your idea ([full gallery](https://vercel.com/templates?type=ai)):
 
 | Template | Good for |
 |---|---|
-| **[AI Chatbot](https://github.com/vercel/chatbot)** | Most teams — chat + persistence, multimodal |
-| **[Internal Knowledge Base (RAG)](https://vercel.com/templates/next.js/nextjs-openai-doc-search-starter)** | "Chat with our docs" ideas |
-| **Natural Language → PostgreSQL** | Querying data in plain English |
-| **Multi-Modal / Semantic Image Search** | Image input or search |
+| **[AI Gateway Demo](https://vercel.com/templates/next.js/vercel-ai-gateway-demo)** | A smaller open-source chatbot using Next.js, AI SDK, and AI Gateway |
+| **[AI Chatbot](https://github.com/vercel/chatbot)** | Full-featured chat with persistence and authentication; follow its database and environment setup |
+| **[RAG Agent guide](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot)** | "Chat with our docs" ideas; verify package versions before copying older guide code |
 
 ### Use a template in 5 steps
 
@@ -80,11 +87,13 @@ Take the following steps to go from template to live app:
 
 1. Pick the example or template above that's closest to your idea.
 2. Clone it, or click **Deploy** on its page to get your own copy.
-3. Add your `AI_GATEWAY_API_KEY` to `.env.local` — see [Get a model key](#get-a-model-key).
+3. Follow the starter's environment-variable instructions. Local AI Gateway calls need `AI_GATEWAY_API_KEY` — see [Get a model key](#get-a-model-key).
 4. Run it with `pnpm install` then `pnpm dev`, and open http://localhost:3000.
 5. Deploy it and open the live URL — see the [Deployment guide](deployment-guide.md).
 
 Then replace the template's content with your idea, one piece at a time.
+
+Use only public, synthetic, or explicitly approved sample data in prompts, uploads, logs, and vector stores. Never use client data, personal information, or company secrets in a hackathon demo.
 
 ## Let your AI assistant help
 

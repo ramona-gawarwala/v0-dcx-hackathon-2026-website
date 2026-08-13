@@ -8,9 +8,9 @@ export function ProjectTypeCard({ type: t }: Readonly<{ type: ProjectType }>) {
   const [flipped, setFlipped] = useState(false)
 
   return (
-    <div className="[perspective:1200px]">
+    <div className="h-full [perspective:1200px]">
       <div
-        className={`relative grid transition-transform duration-500 [transform-style:preserve-3d] ${
+        className={`relative grid h-full transition-transform duration-500 [transform-style:preserve-3d] ${
           flipped ? '[transform:rotateY(180deg)]' : ''
         }`}
       >
@@ -71,17 +71,25 @@ export function ProjectTypeCard({ type: t }: Readonly<{ type: ProjectType }>) {
           </div>
           <h3 className="mt-2 font-display text-lg font-semibold">{t.title}</h3>
 
-          <ul className="mt-4 flex-1 space-y-2.5">
+          <ol className="mt-4 flex-1 space-y-4">
             {t.ideas.map((idea) => (
-              <li key={idea} className="flex items-start gap-2 text-sm text-foreground">
-                <span aria-hidden="true" className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
-                {idea}
+              <li key={idea.title}>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-primary">
+                    {idea.stage}
+                  </span>
+                  <span className="rounded-sm bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">
+                    {idea.runtimeAi}
+                  </span>
+                </div>
+                <p className="mt-1 text-sm font-semibold text-foreground">{idea.title}</p>
+                <p className="mt-0.5 text-xs leading-relaxed text-muted-foreground">{idea.body}</p>
               </li>
             ))}
-          </ul>
+          </ol>
 
           <p className="mt-4 text-xs text-muted-foreground">
-            Scope one to a Seed you can demo, then grow it.
+            Start with the first useful interaction, then add only what improves it.
           </p>
 
           <button

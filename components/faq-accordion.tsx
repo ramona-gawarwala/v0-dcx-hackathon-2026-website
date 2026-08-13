@@ -2,8 +2,9 @@
 
 import { useMemo, useState, type ReactNode } from 'react'
 import { ChevronDown, ChevronsDownUp, ChevronsUpDown } from 'lucide-react'
+import { MermaidDiagram } from '@/components/mermaid-diagram'
 
-export type FaqItem = { q: string; a: string }
+export type FaqItem = { q: string; a: string; diagram?: string }
 export type FaqGroup = { group: string; items: FaqItem[] }
 
 // Renders inline markdown links [text](url) and `code` from answer strings.
@@ -25,7 +26,26 @@ function renderCode(text: string, keyBase: number): ReactNode[] {
   return nodes
 }
 
-// Renders inline markdown links [text](url) and `code` within a single paragraph.
+// Renders **bold** and `code` within a plain-text slice (no links).
+function renderFormatting(text: string, keyBase: number): ReactNode[] {
+  const nodes: ReactNode[] = []
+  const parts = text.split(/\*\*([^*]+)\*\*/)
+  parts.forEach((part, i) => {
+    if (part === '') return
+    if (i % 2 === 1) {
+      nodes.push(
+        <strong key={`${keyBase}-b${i}`} className="font-semibold text-foreground">
+          {renderCode(part, keyBase * 100 + i)}
+        </strong>,
+      )
+    } else {
+      nodes.push(...renderCode(part, keyBase * 100 + i))
+    }
+  })
+  return nodes
+}
+
+// Renders inline markdown links [text](url), **bold**, and `code` within a single paragraph.
 function renderInline(text: string): ReactNode[] {
   const nodes: ReactNode[] = []
   let last = 0
@@ -46,14 +66,14 @@ function renderInline(text: string): ReactNode[] {
     }
     const label = text.slice(open + 1, close)
     const href = text.slice(close + 2, end)
-    if (open > last) nodes.push(...renderCode(text.slice(last, open), key++))
+    if (open > last) nodes.push(...renderFormatting(text.slice(last, open), key++))
     const external = href.startsWith('http://') || href.startsWith('https://')
     nodes.push(
       <a
         key={`l${key++}`}
         href={href}
         {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className="font-medium text-primary underline underline-offset-2 hover:text-primary/80"
+        className="font-medium text-primary underline underline-offset-2 hover:text-primary/80 dark:text-harvest dark:hover:text-harvest/80"
       >
         {label}
       </a>,
@@ -61,7 +81,7 @@ function renderInline(text: string): ReactNode[] {
     last = end + 1
     cursor = end + 1
   }
-  if (last < text.length) nodes.push(...renderCode(text.slice(last), key++))
+  if (last < text.length) nodes.push(...renderFormatting(text.slice(last), key++))
   return nodes
 }
 
@@ -82,22 +102,33 @@ function FaqRow({ item, id, open, onToggle }: Readonly<{ item: FaqItem; id: stri
         type="button"
         onClick={() => onToggle(id)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-4 py-5 text-left"
+        className="group flex w-full items-start justify-between gap-4 rounded-lg py-5 text-left"
       >
         <span
-          className={`font-display text-[15px] font-medium leading-snug transition-colors sm:text-base ${
-            open ? 'text-primary' : 'text-foreground'
+          className={`min-w-0 font-display text-[17px] font-semibold leading-6 transition-colors sm:text-lg sm:leading-7 ${
+            open
+              ? 'text-primary dark:text-harvest'
+              : 'text-foreground group-hover:text-primary dark:group-hover:text-harvest'
           }`}
         >
           {item.q}
         </span>
         <ChevronDown
-          className={`size-5 shrink-0 text-primary transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+          className={`mt-0.5 size-5 shrink-0 transition-[color,transform] duration-200 sm:mt-1 ${
+            open
+              ? 'rotate-180 text-primary dark:text-harvest'
+              : 'text-muted-foreground group-hover:text-primary dark:group-hover:text-harvest'
+          }`}
         />
       </button>
       {open && (
-        <div className="max-w-[68ch] space-y-3.5 pb-6 pr-2 text-[15px] leading-7 text-muted-foreground sm:pr-6">
+        <div className="mx-auto max-w-[84ch] space-y-3.5 pb-6 text-[15px] leading-7 text-muted-foreground">
           {renderAnswer(item.a)}
+          {item.diagram && (
+            <div className="pt-1">
+              <MermaidDiagram chart={item.diagram} breakout={false} />
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -129,7 +160,7 @@ export function FaqAccordion({ groups }: Readonly<{ groups: FaqGroup[] }>) {
           type="button"
           onClick={toggleAll}
           aria-expanded={allOpen}
-          className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-primary underline-offset-4 hover:underline dark:text-harvest"
         >
           {allOpen ? <ChevronsDownUp className="size-4" /> : <ChevronsUpDown className="size-4" />}
           {allOpen ? 'Collapse all' : 'Expand all'}
@@ -138,7 +169,7 @@ export function FaqAccordion({ groups }: Readonly<{ groups: FaqGroup[] }>) {
 
       {groups.map((g) => (
         <div key={g.group}>
-          <h2 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          <h2 className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary dark:text-harvest">
             {g.group}
           </h2>
           <div className="mt-3 rounded-2xl border border-border bg-card px-5 sm:px-6">

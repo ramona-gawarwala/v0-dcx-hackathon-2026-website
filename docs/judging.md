@@ -19,7 +19,7 @@ Multiple awards, and beginners and non-engineers can win too.
 | Experience | 10% | Is it clear and pleasant to use? |
 | Demo | 10% | Was the pitch clear and to the point? |
 
-Weights are a guide — adjust to your event goal.
+**Both AI paths are judged fairly.** Runtime AI is optional, and adding model calls does not earn an automatic bonus. Judges score the problem, idea, working result, experience, and how deliberately AI helped you build or enhance it. **Best Use of AI** specifically recognises standout runtime AI.
 
 ## Awards
 
@@ -28,7 +28,6 @@ Weights are a guide — adjust to your event goal.
 - Best Design
 - Best First-Timer / Beginner
 - People's Choice — voted by participants
-- [Add your own]
 
 ## People's Choice
 

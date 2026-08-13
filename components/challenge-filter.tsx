@@ -15,9 +15,9 @@ type Filter = (typeof FILTERS)[number]
 
 const filterHint: Record<Filter, string> = {
   All: 'Every challenge',
-  Seed: 'Beginner-friendly',
-  Sprout: 'Uses your data or a tool',
-  Harvest: 'Multi-step / agentic',
+  Seed: 'One model response',
+  Sprout: 'Uses evidence or a tool',
+  Harvest: 'Runs bounded steps',
 }
 
 export function ChallengeFilter() {

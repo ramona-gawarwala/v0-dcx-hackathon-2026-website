@@ -3,10 +3,10 @@ import { SectionHeading } from '@/components/section-heading'
 import { schedule } from '@/lib/content'
 
 const basics = [
-  { icon: Users, title: 'Teams', body: 'Enter solo or as a team of 2–5 — both are free to join. A team is more fun, and mixed teams tend to build better products.' },
+  { icon: Users, title: 'Teams', body: 'Enter solo or as a team of 2–5 — both are free to join. A team can bring complementary skills and perspectives.' },
   { icon: Clock, title: 'Duration', body: 'Two weeks, 1–14 September. Part-time and self-paced — no daily session and no full days blocked. Work with your team around your day job.' },
-  { icon: Target, title: 'Goal', body: 'Ship a working, demoable AI app. Aim to finish ~25% of your big idea — small enough to demo.' },
-  { icon: Wrench, title: 'Tools', body: 'v0 + Vercel. Use any AI model available via the AI Gateway.' },
+  { icon: Target, title: 'Goal', body: 'Ship a working, demoable app built with AI. Runtime AI is optional. Aim to finish ~25% of your big idea.' },
+  { icon: Wrench, title: 'Tools', body: 'Build with v0 and deploy on Vercel. Use AI Gateway only if your finished app needs model calls.' },
 ]
 
 export function HowItWorks() {
@@ -16,7 +16,7 @@ export function HowItWorks() {
         <SectionHeading
           eyebrow="How it works"
           title="The format, the schedule, the goal"
-          description="A part-time, two-week sprint. Pick a challenge, build a slice, and demo it."
+          description="A part-time, two-week sprint. Pick an idea, build a slice, and demo it."
         />
 
         <div className="reveal-stagger mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

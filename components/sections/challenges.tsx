@@ -1,7 +1,7 @@
 import { SectionHeading } from '@/components/section-heading'
 import { GrowIt } from '@/components/grow-it'
 import { ChallengeFilter } from '@/components/challenge-filter'
-import { levels, flavours, type Challenge } from '@/lib/content'
+import { challengeQualityBar, levels, flavours, type Challenge } from '@/lib/content'
 
 const levelStyles: Record<
   Challenge['level'],
@@ -45,8 +45,8 @@ export function Challenges() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Challenges"
-          title="Choose your level — Seed, Sprout, or Harvest"
-          description="Your level is about how much the AI does for you, not how technical it looks. A sharp Seed beats a broken Harvest. Start where you're comfortable and climb if you have time."
+          title="Choose a runtime AI level — if your app needs one"
+          description="Seed, Sprout, and Harvest describe AI that runs inside your finished app, not how much AI helped you build. No model call? You can still enter as an AI-assisted build and skip the ladder."
         />
 
         {/* Levels */}
@@ -84,13 +84,14 @@ export function Challenges() {
           })}
         </div>
 
-        {/* Flavours + growth example */}
+        {/* Modalities + growth example */}
         <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
           <div>
-            <h3 className="font-display text-lg font-semibold">Add a flavour (optional)</h3>
+            <h3 className="font-display text-lg font-semibold">Add a modality (optional)</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Modality — voice, images, or video — is a flavour you can add at any level, not a
-              level of its own. A great way to stand out.
+              Voice, images, and video are input or output choices you can add at any level. They do
+              not raise the level or score by themselves, so use one only when it improves the
+              experience.
             </p>
             <ul className="mt-5 space-y-3">
               {flavours.map((f) => (
@@ -107,6 +108,34 @@ export function Challenges() {
           </div>
 
           <GrowIt />
+        </div>
+
+        {/* Shared quality bar */}
+        <div className="mt-16 border-y border-border py-8">
+          <div className="grid gap-6 lg:grid-cols-[0.7fr_1.8fr] lg:gap-10">
+            <div>
+              <p className="font-mono text-xs font-semibold uppercase tracking-widest text-primary">
+                Every level
+              </p>
+              <h3 className="mt-2 font-display text-xl font-semibold">Meet the same quality bar</h3>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                Complexity is optional. Evidence, safe behaviour, and a working outcome are not.
+              </p>
+            </div>
+            <ol className="grid gap-x-8 gap-y-5 sm:grid-cols-2">
+              {challengeQualityBar.map((item, index) => (
+                <li key={item.title} className="grid grid-cols-[2rem_1fr] gap-3">
+                  <span className="flex size-8 items-center justify-center rounded-md bg-primary/10 font-mono text-xs font-bold text-primary">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{item.title}</p>
+                    <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
 
         {/* Challenge cards */}

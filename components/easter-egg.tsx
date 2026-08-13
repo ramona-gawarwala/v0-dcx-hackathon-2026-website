@@ -83,6 +83,12 @@ const JOKES = [
   'Why did the callback feel ignored? Nobody ever invoked it.',
 ]
 
+function randomFraction() {
+  const value = new Uint32Array(1)
+  crypto.getRandomValues(value)
+  return value[0] / 4294967296
+}
+
 // Green "digital rain" behind the joke window. Skipped when the user prefers reduced motion.
 function MatrixRain() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -93,6 +99,8 @@ function MatrixRain() {
     const ctx = canvas.getContext('2d')
     if (!ctx) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const canvasElement: HTMLCanvasElement = canvas
+    const context: CanvasRenderingContext2D = ctx
 
     const fontSize = 16
     const glyphs = 'アイウエオカキクケコサシスセソタチツテトナニヌネ0123456789ABCDEFZ<>*+'.split('')
@@ -100,23 +108,23 @@ function MatrixRain() {
     let raf = 0
 
     function resize() {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-      const columns = Math.floor(canvas.width / fontSize)
-      drops = Array.from({ length: columns }, () => Math.floor((Math.random() * canvas.height) / fontSize))
+      canvasElement.width = window.innerWidth
+      canvasElement.height = window.innerHeight
+      const columns = Math.floor(canvasElement.width / fontSize)
+      drops = Array.from({ length: columns }, () => Math.floor((randomFraction() * canvasElement.height) / fontSize))
     }
     resize()
     window.addEventListener('resize', resize)
 
     function draw() {
-      ctx.fillStyle = 'rgba(0, 0, 0, 0.08)'
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
-      ctx.fillStyle = '#00ff41'
-      ctx.font = `${fontSize}px monospace`
+      context.fillStyle = 'rgba(0, 0, 0, 0.08)'
+      context.fillRect(0, 0, canvasElement.width, canvasElement.height)
+      context.fillStyle = '#00ff41'
+      context.font = `${fontSize}px monospace`
       for (let i = 0; i < drops.length; i++) {
-        const text = glyphs[Math.floor(Math.random() * glyphs.length)]
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize)
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0
+        const text = glyphs[Math.floor(randomFraction() * glyphs.length)]
+        context.fillText(text, i * fontSize, drops[i] * fontSize)
+        if (drops[i] * fontSize > canvasElement.height && randomFraction() > 0.975) drops[i] = 0
         drops[i] += 1
       }
       raf = requestAnimationFrame(draw)
@@ -214,7 +222,7 @@ export function EasterEgg() {
       if (bag.current.length === 0) {
         const indices = JOKES.map((_, i) => i)
         for (let i = indices.length - 1; i > 0; i -= 1) {
-          const j = Math.floor(Math.random() * (i + 1))
+          const j = Math.floor(randomFraction() * (i + 1))
           const tmp = indices[i]
           indices[i] = indices[j]
           indices[j] = tmp

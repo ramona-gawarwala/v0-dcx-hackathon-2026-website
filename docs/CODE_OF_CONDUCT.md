@@ -37,6 +37,6 @@ Capgemini's seven Values shape this hackathon:
 
 Something felt off? Please tell us. You won't be overreacting, and you won't be causing trouble — if you see or experience harassment, feel unsafe, or something just doesn't sit right, we want to know so we can help.
 
-We follow the same principles as Capgemini's SpeakUp ethics helpline: raise concerns in good faith, and we'll listen, investigate fairly, keep it confidential, and protect you from any form of retaliation. The form is anonymous — we don't record your name, and you only share your name and email if you'd like us to follow up.
+Raise concerns in good faith and we'll listen, investigate fairly, keep reports confidential, and protect reporters from retaliation. The event uses a Microsoft Form, but its account-recording settings cannot be verified from the public link, so do not describe it as guaranteed anonymous.
 
-For serious or work-related concerns, you can also use Capgemini's [SpeakUp](https://www.capgemini.com/speakup/) helpline, available 24×7.
+For a formally anonymous route, or for serious or work-related concerns, use Capgemini's [SpeakUp](https://capgemini.integrityline.com/) ethics helpline. Its official page states that reporting is confidential and allows anonymity.

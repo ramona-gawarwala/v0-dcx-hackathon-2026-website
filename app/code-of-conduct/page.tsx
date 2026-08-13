@@ -47,8 +47,8 @@ export default function CodeOfConductPage() {
           <div className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-6 sm:p-8">
             <h2 className="font-display text-xl font-semibold">Need to report something?</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              Use the anonymous report form &mdash; we don&rsquo;t record your name, and you only
-              share it if you&rsquo;d like us to follow up.
+              Use the confidential event report form, or use Capgemini SpeakUp when you need a
+              formally anonymous reporting route.
             </p>
             <Link
               href="/report"

@@ -8,17 +8,18 @@ const readmeTemplate = `# [Project name]
 
 [One-line pitch — what it does, for whom.]
 
-- Live app (public): [your Vercel URL]
+- Live app (public): [your live URL]
 - Demo video: [link]
 - Project type: [which one]
-- Challenge: [which one]
+- AI-assisted build: [how AI helped you build]
+- Runtime AI: [None / Seed / Sprout / Harvest]
 - Team: [names]`
 
 const peoplesChoicePost = `🚀 [Project name] — [one-line pitch]
 
 👉 Try it: [live app URL]
-🎬 Demo (2 min): [video link]
-🧩 Project type: [which one] · Challenge: [which one]
+🎬 Demo (2–3 min): [video link]
+🧩 Project type: [which one] · Runtime AI: [None / Seed / Sprout / Harvest]
 👥 Team: [names]
 
 React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.`
@@ -36,9 +37,9 @@ export function Submit() {
             <CalendarClock className="size-4" />
             Deadline
           </div>
-          <h2 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Monday 14 September 2026
-          </h2>
+          <h1 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl">
+            Monday 14 September 2026, 23:59 BST
+          </h1>
           <Countdown />
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
             On the morning of Monday 14 September we&apos;ll post the submission form in the
@@ -96,7 +97,7 @@ export function Submit() {
               </p>
             </div>
             <a
-              href="https://vercel.com"
+              href="/guides/deployment-guide"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-september group mt-6 inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-semibold text-primary-foreground"
