@@ -1,6 +1,8 @@
 # DCX AI Hackathon 2026
 
-Build and ship an AI-powered app over **2 weeks (1–14 September 2026)**, part-time, using **[v0](https://v0.dev)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
+Build and ship an app with AI over **2 weeks (1–14 September 2026)**, part-time, using **[v0](https://v0.app)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
+
+Every team uses AI to help shape, design, code, test, or deploy the project. Putting AI inside the finished app is optional — you do not need a model key or model API call to participate.
 
 **New here? Start with [How it works](docs/how-it-works.md).**
 
@@ -12,10 +14,10 @@ This repo holds **both** the hackathon documentation and the event website (a Ne
 
 ## Start building in 5 minutes
 
-No setup, no local install needed.
+No local install needed for the browser-based path.
 
-1. Go to **[v0.dev](https://v0.dev)** and describe what you want to build.
-2. Click **Deploy** to publish it to Vercel — you get a live URL instantly.
+1. Go to **[v0.app](https://v0.app)** and describe what you want to build.
+2. Click **Deploy**, complete any account prompts, and open the resulting Vercel URL.
 3. Keep iterating in v0 (or open in your editor) until it's demo-ready.
 
 That's your working app. Everything else is optional.
@@ -25,14 +27,14 @@ That's your working app. Everything else is optional.
 Only if you want to edit code directly.
 
 ```bash
-git clone https://github.com/ramona-gawarwala/v0-DCX-hackathon-2026.git
-cd v0-DCX-hackathon-2026
+git clone https://github.com/ramona-gawarwala/v0-dcx-hackathon-2026-website.git
+cd v0-dcx-hackathon-2026-website
 pnpm install
 cp .env.example .env.local   # add your keys
 pnpm dev                     # http://localhost:3000
 ```
 
-You need [Node.js 20+](https://nodejs.org) and [pnpm](https://pnpm.io). Never commit `.env.local`.
+You need [Node.js 20.9+](https://nodejs.org) and [pnpm](https://pnpm.io) to run this website. The current AI SDK v7 quickstart requires Node.js 22+. Never commit `.env.local`.
 
 ---
 
@@ -44,7 +46,7 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 |---|---|---|
 | 🚀 Product Builder | Solve a user problem with an app | POs, BAs, designers, full-stack devs |
 | 🤖 AI Agent | An assistant that performs tasks | Developers, AI enthusiasts |
-| 🔄 AI Workflow Automation | Automate a business process | Developers, BAs, process specialists |
+| 🔄 Workflow Automation | Automate a business process | Developers, BAs, process specialists |
 | 🤖🤖 Multi-Agent System | Multiple agents collaborate | Advanced participants |
 | 📊 Data & Insights | Help users understand data | Anyone working with data |
 | 🎨 Experience & Creativity | Build something engaging | Designers, anyone having fun |
@@ -58,7 +60,7 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 | Understand the format, teams, and schedule | [How it works](docs/how-it-works.md) |
 | Build my first app (no experience) | [Beginner guide](docs/beginner-guide.md) |
 | Pick something to build | [Project types](docs/project-types.md) · [Challenges](docs/challenges.md) |
-| Wire up AI models and code | [AI SDK guide](docs/ai-sdk-guide.md) |
+| Add runtime AI to my app (optional) | [AI SDK guide](docs/ai-sdk-guide.md) |
 | Get my app live | [Deployment guide](docs/deployment-guide.md) |
 | Browse curated links | [Resources](resources/README.md) |
 | Submit my project | [Submit](docs/submission.md) |
@@ -85,7 +87,7 @@ pnpm install
 pnpm dev     # http://localhost:3000
 ```
 
-This repository is linked to a [v0](https://v0.app) project — start new chats there to make changes, and v0 will push commits directly to this repo. Every merge to `main` automatically deploys to Vercel.
+This repository is linked to a [v0](https://v0.app) project. Use the current Git controls in that project to sync changes with this repo. Because this Vercel project tracks `main` as its production branch, merges to `main` create production deployments.
 
 [Continue working on v0 →](https://v0.app/chat/projects/prj_9agUHEjhrViIr4wKEDmNnUbpgnTE)
 

@@ -12,7 +12,7 @@ export default function FaqPage() {
   return (
     <main>
       <section>
-        <div className="mx-auto max-w-3xl px-4 pt-16 sm:px-6 md:pt-20">
+        <div className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 md:pt-20">
           <div className="flex items-center gap-2.5">
             <span aria-hidden="true" className="h-px w-6 bg-harvest/60" />
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest">
@@ -30,7 +30,7 @@ export default function FaqPage() {
       </section>
 
       <section>
-        <div className="mx-auto max-w-3xl px-4 pb-14 pt-12 sm:px-6">
+        <div className="mx-auto max-w-5xl px-4 pb-14 pt-12 sm:px-6">
           <FaqAccordion groups={faqGroups} />
         </div>
       </section>

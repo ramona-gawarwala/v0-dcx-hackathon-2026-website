@@ -13,16 +13,16 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="relative mx-auto max-w-6xl px-4 pt-20 pb-14 sm:px-6 md:pt-28 md:pb-16">
         <h1 className="max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          Build and ship an
+          <span className="block">Build and ship</span>
           <span className="block bg-gradient-to-r from-harvest via-primary to-sprout bg-clip-text text-transparent">
-            AI-powered app
+            with AI
           </span>
-          in two weeks
+          <span className="block">in two weeks</span>
         </h1>
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          Part-time, around your day job, using v0 + Vercel. Open to everyone — engineers, POs, BAs,
-          designers, and first-timers. Done beats perfect.
+          Use AI to shape, code, test, and deploy your idea. Add AI inside the app if it improves the
+          experience, but no model API call is required. Part-time and open to everyone.
         </p>
 
         <dl className="mt-12 flex flex-wrap gap-x-12 gap-y-6">

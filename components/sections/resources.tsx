@@ -81,7 +81,7 @@ const submit: ResourceLink[] = [
 ]
 
 const build: ResourceLink[] = [
-  { icon: Rocket, label: 'v0.dev', desc: 'Describe your app in plain language and get a working build.', href: 'https://v0.dev' },
+  { icon: Rocket, label: 'v0', desc: 'Prompt, edit, and deploy an application in the browser.', href: 'https://v0.app' },
   { icon: Sparkles, label: 'v0 Community', desc: 'Browse real builds for inspiration and starting points.', href: V0_COMMUNITY_URL },
   { icon: LayoutTemplate, label: 'Vercel templates', desc: 'Ready-made starters you can deploy in a click.', href: VERCEL_TEMPLATES_URL },
   { icon: Blocks, label: 'AI SDK examples', desc: 'Small, runnable examples to copy — chat, tools, and more.', href: 'https://github.com/vercel/ai/tree/main/examples' },
@@ -149,7 +149,7 @@ export function Resources() {
               >
                 <Image
                   src="/register-qr.png"
-                  alt="QR code to open the AI Playground Hackathon registration form"
+                  alt="QR code to open the DCX AI Hackathon 2026 registration form"
                   width={160}
                   height={160}
                   className="rounded-xl border border-border"
@@ -160,7 +160,7 @@ export function Resources() {
 
           <div>
             <h3 className="font-display text-lg font-semibold">Join &amp; connect</h3>
-            <p className="mt-1 text-sm text-muted-foreground">The Innovation Hackathon 2026 Team on Microsoft Teams.</p>
+            <p className="mt-1 text-sm text-muted-foreground">The DCX AI Hackathon 2026 space on Microsoft Teams.</p>
             <div className="mt-6">
               {connect.map((item) => (
                 <ResourceRow key={item.label} item={item} />
@@ -173,7 +173,7 @@ export function Resources() {
                 <Link href="/report" className="font-medium text-primary underline-offset-4 hover:underline">
                   Report a problem
                 </Link>{' '}
-                &mdash; anonymous, handled confidentially.
+                &mdash; handled confidentially. For a verified anonymous route, use Capgemini SpeakUp.
               </span>
             </p>
           </div>

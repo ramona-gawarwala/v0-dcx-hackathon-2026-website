@@ -4,7 +4,8 @@ import { useEffect, useId, useState } from 'react'
 import { ZoomableFigure } from '@/components/zoomable-figure'
 
 // Renders a ```mermaid code fence into an inline SVG. Client-only: mermaid touches the DOM.
-export function MermaidDiagram({ chart }: Readonly<{ chart: string }>) {
+// `breakout` lets wide diagrams extend past the text column; disable it in narrow containers.
+export function MermaidDiagram({ chart, breakout = true }: Readonly<{ chart: string; breakout?: boolean }>) {
   const rawId = useId()
   const id = `mermaid-${rawId.replace(/[^a-zA-Z0-9]/g, '')}`
   const [svg, setSvg] = useState('')
@@ -54,7 +55,7 @@ export function MermaidDiagram({ chart }: Readonly<{ chart: string }>) {
   }
 
   return (
-    <ZoomableFigure label="diagram" className="my-8 lg:-mx-10 xl:-mx-24">
+    <ZoomableFigure label="diagram" className={breakout ? 'my-8 lg:-mx-10 xl:-mx-24' : 'my-8'}>
       {/* mermaid renders with securityLevel 'strict', so the SVG string is sanitized. */}
       <div dangerouslySetInnerHTML={{ __html: svg }} />
     </ZoomableFigure>

@@ -1,15 +1,16 @@
 # Submit
 
-Deadline: **Mon 14 Sep 2026, [time]**. Late = not judged, so submit early and update if needed.
+Deadline: **Mon 14 Sep 2026, 23:59 BST (UTC+1)**. Late = not judged, so submit early and update if needed.
 
 ## Checklist
 
-- [ ] **Live URL** — your deployed Vercel app; public, with no password or login wall (must open and work).
+- [ ] **Live URL** — your deployed app; public, with no password or login wall (must open and work).
 - [ ] **Public repo or v0 link** — public, not private or password-protected, so judges can see how you built it.
 - [ ] **Title + one-line pitch** — what it does, in plain words.
 - [ ] **Demo video (2–3 min)** — screen recording of the app working. A demo, not a presentation.
 - [ ] **Project type** — which of the [6 project types](project-types.md) you built (the form asks for this).
-- [ ] **Team + challenge** — who you are and which [challenge](challenges.md) you picked.
+- [ ] **How you used AI** — how AI helped you build, plus **None, Seed, Sprout, or Harvest** for [runtime AI](challenges.md#choose-your-runtime-ai-level-optional).
+- [ ] **Team** — who built it.
 - [ ] **Optional: enter People's Choice** — share your app in the Submissions channel so other participants can vote for their favourite.
 
 ## Where to submit
@@ -24,8 +25,8 @@ Use this format so people can try it and vote with a 👍 reaction:
 🚀 [Project name] — [one-line pitch]
 
 👉 Try it: [live app URL]
-🎬 Demo (2 min): [video link]
-🧩 Project type: [which one] · Challenge: [which one]
+🎬 Demo (2–3 min): [video link]
+🧩 Project type: [which one] · Runtime AI: [None / Seed / Sprout / Harvest]
 👥 Team: [names]
 
 React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.
@@ -40,10 +41,11 @@ So judges find everything fast, drop a short README at the top of your project r
 
 [One-line pitch — what it does, for whom.]
 
-- Live app (public): [your Vercel URL]
+- Live app (public): [your live URL]
 - Demo video: [link]
 - Project type: [which one]
-- Challenge: [which one]
+- AI-assisted build: [how AI helped you build]
+- Runtime AI: [None / Seed / Sprout / Harvest]
 - Team: [names]
 ```
 

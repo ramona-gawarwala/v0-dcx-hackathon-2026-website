@@ -50,6 +50,13 @@ export function Judging() {
                 ))}
               </ul>
             </div>
+            <p className="mt-7 border-l-2 border-primary pl-4 text-sm leading-relaxed text-muted-foreground">
+              <span className="font-semibold text-foreground">Both AI paths are judged fairly.</span>{' '}
+              Runtime AI is optional, and adding model calls does not earn an automatic bonus.
+              Judges score the problem, idea, working result, experience, and how deliberately AI
+              helped you build or enhance it. Best Use of AI specifically recognises standout
+              runtime AI.
+            </p>
           </div>
 
           <div className="rounded-2xl border border-border bg-secondary/30 p-6 sm:p-8">

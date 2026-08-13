@@ -6,18 +6,18 @@ import { BenefitsBanner } from '@/components/sections/benefits-banner'
 const steps = [
   {
     n: '01',
-    title: 'Pick a challenge',
-    body: 'Choose a level that fits where you are — Seed, Sprout, or Harvest — and an idea to build.',
+    title: 'Pick an idea',
+    body: 'Choose a project type and one useful problem. Add a runtime AI level only if your app needs one.',
   },
   {
     n: '02',
     title: 'Build and ship',
-    body: 'Use v0 + Vercel to build a working slice and deploy it to a live URL. No setup needed.',
+    body: 'Use v0 + Vercel to build a working slice and deploy it to a live URL, with no local setup required.',
   },
   {
     n: '03',
     title: 'Demo it',
-    body: 'Show your app doing one thing well, then submit before 14 September. Done beats perfect.',
+    body: 'Show your app doing one thing well, then submit by 23:59 BST on 14 September. Done beats perfect.',
   },
 ]
 

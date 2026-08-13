@@ -9,8 +9,8 @@ export function StartBuilding() {
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Start in 5 minutes"
-          title="No setup. No local install. Just build."
-          description="Describe what you want, deploy it, and get a live URL instantly. Everything else is optional."
+          title="No local install. Just build."
+          description="Describe what you want, deploy it, and open the live URL. Complete any account prompts along the way."
         />
 
         <ol className="mt-12 grid gap-8 md:grid-cols-3">
@@ -38,7 +38,7 @@ export function StartBuilding() {
             <div className="rounded-lg border border-border bg-card p-5">
               <h4 className="font-display text-base font-semibold">All on v0 + Vercel &mdash; no local setup</h4>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Describe your app on v0.dev, refine it in the browser, and hit Deploy for a live URL.
+                Describe your app in v0, refine it in the browser, and deploy it for a live URL.
                 Best if you want to do the whole build and deploy on Vercel and have enough v0
                 credits.
               </p>
@@ -46,9 +46,9 @@ export function StartBuilding() {
             <div className="rounded-lg border border-border bg-card p-5">
               <h4 className="font-display text-base font-semibold">Start on v0, refine locally</h4>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                Generate the app on v0, then pull it to your machine to refine in your own editor
-                &mdash; this needs a local setup &mdash; and publish from Vercel when you&rsquo;re
-                ready. Best if you want more control or to save credits.
+                Generate the app in v0, connect the intended GitHub repository, then pull it to
+                your machine to refine in your own editor &mdash; this needs a local setup &mdash;
+                and publish from Vercel when you&rsquo;re ready. Best if you want more control.
               </p>
             </div>
           </div>

@@ -4,7 +4,7 @@ import { ArrowUpRight, ShieldCheck } from 'lucide-react'
 import { REPORT_URL } from '@/lib/content'
 
 const description =
-  "Report harassment, unsafe behaviour, or anything that doesn't feel right. We don't track your name, so the form is anonymous — sharing your name is optional."
+  "Report harassment, unsafe behaviour, or anything that doesn't feel right. Event reports are handled confidentially; Capgemini SpeakUp provides a verified anonymous route."
 
 export const metadata: Metadata = {
   title: 'Report a problem · DCX AI Hackathon 2026',
@@ -34,9 +34,17 @@ export default function ReportPage() {
           <div className="mt-6 flex items-start gap-3 rounded-xl border border-primary/20 bg-primary/5 p-4 text-sm leading-relaxed text-muted-foreground">
             <ShieldCheck className="mt-0.5 size-5 shrink-0 text-primary" />
             <p>
-              The form is <span className="font-medium text-foreground">anonymous</span> &mdash; we
-              don&rsquo;t record your name. You only share your name and email if you&rsquo;d like us to
-              follow up with you. Every report is handled confidentially and taken seriously.
+              Event reports are handled <span className="font-medium text-foreground">confidentially</span>.
+              The Microsoft Form&rsquo;s account-recording settings cannot be verified from its public
+              link. If you need a formally anonymous route, use{' '}
+              <a
+                href="https://capgemini.integrityline.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary underline-offset-4 hover:underline"
+              >
+                Capgemini SpeakUp
+              </a>, which explicitly allows anonymity.
             </p>
           </div>
         </div>
@@ -48,8 +56,8 @@ export default function ReportPage() {
             <h2 className="font-display text-xl font-semibold">Fill in the report form</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
               It takes a couple of minutes. Tell us what happened in your own words &mdash; add as
-              much or as little detail as you&rsquo;re comfortable with. Leave your name and email only
-              if you&rsquo;d like a reply.
+              much or as little detail as you&rsquo;re comfortable with. Add contact details only if the
+              form offers them and you would like a reply.
             </p>
             <a
               href={REPORT_URL}
