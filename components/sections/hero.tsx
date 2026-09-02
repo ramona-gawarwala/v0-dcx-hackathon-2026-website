@@ -13,17 +13,27 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="relative mx-auto max-w-6xl px-4 pt-20 pb-14 sm:px-6 md:pt-28 md:pb-16">
         <h1 className="max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          <span className="block">Build and ship</span>
+          <span className="block">DCX AI Hackathon</span>
           <span className="block bg-gradient-to-r from-harvest via-primary to-sprout bg-clip-text text-transparent">
-            with AI
+            2026
           </span>
-          <span className="block">in two weeks</span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
-          Use AI to shape, code, test, and deploy your idea. Add AI inside the app if it improves the
-          experience, but no model API call is required. Part-time and open to everyone.
-        </p>
+        <div className="mt-6 max-w-2xl space-y-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+          <p>
+            AI is reshaping how we deliver value for clients and the pace of change is fast. Those who
+            thrive in the future won&rsquo;t be those who simply use AI, they&rsquo;ll be those who know how
+            to combine their expertise with AI to solve problems, innovate faster, and create better
+            outcomes.
+          </p>
+          <p>The capabilities of the latest tools are ever evolving and it can be hard to keep up.</p>
+          <p>
+            That&rsquo;s why we&rsquo;re launching the DCX AI Hackathon. A lightweight two-week sprint
+            designed to create momentum and give you a chance to wrestle with some of the latest tooling,
+            experiment with AI without worrying about running out of tokens for client work, and without
+            needing to request time off of account work.
+          </p>
+        </div>
 
         <dl className="mt-12 flex flex-wrap gap-x-12 gap-y-6">
           {facts.map((f) => (
