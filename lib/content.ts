@@ -12,6 +12,15 @@ import {
   GraduationCap,
   HeartHandshake,
   Users,
+  Landmark,
+  ShoppingBag,
+  RadioTower,
+  Zap,
+  Stethoscope,
+  Car,
+  ShieldCheck,
+  Activity,
+  Plane,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -182,6 +191,7 @@ export const projectTypes: ProjectType[] = [
 export const DEGREED_CAMPUSES_URL = 'https://degreed.com/explore/2504635'
 
 export type IndustryInspiration = {
+  icon: LucideIcon
   campus: string
   segment: string
   body: string
@@ -189,51 +199,61 @@ export type IndustryInspiration = {
 
 export const industryInspirations: IndustryInspiration[] = [
   {
+    icon: Landmark,
     campus: 'Banking',
     segment: 'Payments',
     body: 'A digital payments journey visualiser: a customer sending a payment, the bank routing, FX conversion, and arrival — beautiful, animated, educational.',
   },
   {
+    icon: Landmark,
     campus: 'Banking',
     segment: 'Retail Banking',
     body: 'A personal finance dashboard with spending categories, savings goals, and a credit health score — the kind of thing a challenger bank would ship.',
   },
   {
+    icon: ShoppingBag,
     campus: 'Retail',
     segment: 'Selling / Consumer Products',
     body: 'A shoppable product discovery experience: browse, filter, get AI recommendations, add to basket — focused on the quality of the digital shopping journey.',
   },
   {
+    icon: RadioTower,
     campus: 'Telecom',
     segment: '5G & Edge',
     body: 'A network coverage map experience: explore 5G availability, latency stats, and use cases (connected cars, smart factories) — data-rich but beautifully presented.',
   },
   {
+    icon: Zap,
     campus: 'Energy',
     segment: 'Energy Transition',
     body: 'A renewable energy portfolio dashboard for a utility: solar/wind output, grid load balancing, and carbon offset tracking.',
   },
   {
+    icon: Stethoscope,
     campus: 'Public Sector',
     segment: 'Healthcare',
     body: 'A patient portal experience: appointment booking, test results, and GP messaging — the kind of digital service government is trying (and often failing) to build well.',
   },
   {
+    icon: Car,
     campus: 'Automotive',
     segment: 'Supply Chain',
     body: 'A live supply chain visibility tool for EV battery components: factory status, shipment tracking, and risk alerts.',
   },
   {
+    icon: ShieldCheck,
     campus: 'Insurance',
     segment: 'Health',
     body: 'A health insurance quote and compare experience: personalised, transparent pricing, and a claims submission flow.',
   },
   {
+    icon: Activity,
     campus: 'Life Sciences',
     segment: 'MedTech',
     body: 'A clinical device dashboard: real-time patient vitals from a wearable, with alerts and a care team view.',
   },
   {
+    icon: Plane,
     campus: 'Aerospace & Defense',
     segment: 'Civil Aeronautics',
     body: 'An aircraft maintenance scheduling tool: upcoming checks, component lifetimes, and engineer allocation.',
