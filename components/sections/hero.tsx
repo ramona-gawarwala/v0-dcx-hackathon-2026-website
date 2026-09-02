@@ -31,7 +31,8 @@ export function Hero() {
             That&rsquo;s why we&rsquo;re launching the DCX AI Hackathon. A lightweight two-week sprint
             designed to create momentum and give you a chance to wrestle with some of the latest tooling,
             experiment with AI without worrying about running out of tokens for client work, and without
-            needing to request time off account work.
+            needing to request time off account work. Work with your team (or solo) over the 2 weeks
+            iterating and prompting asynchronously.
           </p>
         </div>
 
