@@ -5,12 +5,7 @@ import {
   Network,
   BarChart3,
   Palette,
-  Sprout,
-  Leaf,
-  Wheat,
-  Mic,
-  Image as ImageIcon,
-  Video,
+  Sparkles,
   Award,
   TrendingUp,
   Trophy,
@@ -52,9 +47,9 @@ export const TEAMS_SUBMISSIONS_URL =
 export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'How it works', href: '/how-it-works' },
-  { label: 'Start building', href: '/start-building' },
-  { label: 'Project types', href: '/project-types' },
-  { label: 'Challenges', href: '/challenges' },
+  { label: 'Why join', href: '/why-join' },
+  { label: 'How to build', href: '/how-to-build' },
+  { label: 'What to build', href: '/what-to-build' },
   { label: 'What you get', href: '/benefits' },
   { label: 'Judging', href: '/judging' },
   { label: 'Submit', href: '/submit' },
@@ -76,12 +71,12 @@ export function isNavGroup(entry: NavEntry): entry is NavGroup {
 export const navMenu: NavEntry[] = [
   { label: 'Home', href: '/' },
   { label: 'How it works', href: '/how-it-works' },
+  { label: 'Why join', href: '/why-join' },
   {
     label: 'Build',
     items: [
-      { label: 'Start building', href: '/start-building' },
-      { label: 'Project types', href: '/project-types' },
-      { label: 'Challenges', href: '/challenges' },
+      { label: 'How to build', href: '/how-to-build' },
+      { label: 'What to build', href: '/what-to-build' },
     ],
   },
   {
@@ -118,11 +113,11 @@ export const navMenu: NavEntry[] = [
 ]
 
 export const schedule = [
-  { when: 'Tue 1 Sep, 09:00 BST', what: 'Kickoff + team formation' },
-  { when: 'Week 1 (1–7 Sep)', what: 'Pick an idea, start building' },
+  { when: 'Wed 23 Sep, 09:00 BST', what: 'Kickoff + team formation' },
+  { when: 'Week 1 (23–29 Sep)', what: 'Pick an idea, start building' },
   { when: 'Throughout', what: 'Mentors available in the Help channel' },
-  { when: 'Week 2 (8–14 Sep)', what: 'Keep building, wrap up your demo' },
-  { when: 'Mon 14 Sep, 23:59 BST', what: 'Submissions due' },
+  { when: 'Week 2 (30 Sep – 7 Oct)', what: 'Keep building, wrap up your demo' },
+  { when: 'Wed 7 Oct, 23:59 BST', what: 'Submissions due' },
   { when: 'Date to be confirmed', what: 'Demo day + judging' },
 ]
 
@@ -146,386 +141,102 @@ export const startSteps = [
 
 export type ProjectType = {
   icon: LucideIcon
-  emoji: string
   title: string
   goal: string
-  examples: string
-  checklist: string[]
-  goodFor: string
-  ideas: {
-    stage: 'Start simple' | 'Go further' | 'Creative stretch'
-    title: string
-    body: string
-    runtimeAi: 'No model call needed' | 'Runtime AI optional' | 'Runtime AI core'
-  }[]
 }
 
 export const projectTypes: ProjectType[] = [
   {
     icon: Rocket,
-    emoji: '🚀',
     title: 'Product Builder',
     goal: 'Solve a user problem with an app.',
-    examples: 'Internal productivity tool, learning platform, accessibility solution, sustainability dashboard.',
-    checklist: ['UI', 'Business logic', 'Data storage', 'Deployment'],
-    goodFor: 'POs · BAs · Designers · Full-stack devs',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Handoff board',
-        body: 'Pass work between teammates with an owner, status, next action, and due date.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'Accessibility rehearsal',
-        body: 'Choose a user need, then walk through a task with focused checks and prompts.',
-        runtimeAi: 'Runtime AI optional',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Reverse onboarding',
-        body: 'New joiners capture confusing moments; teams turn repeated friction into trackable fixes.',
-        runtimeAi: 'Runtime AI optional',
-      },
-    ],
   },
   {
     icon: Bot,
-    emoji: '🤖',
     title: 'AI Agent',
     goal: 'An AI assistant that performs tasks.',
-    examples: 'Knowledge assistant, meeting assistant, documentation assistant, support chatbot.',
-    checklist: ['Chat UI', 'Model', 'Prompt', 'Tool(s)', 'Deployment'],
-    goodFor: 'Developers · AI enthusiasts',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Source scout',
-        body: 'Search approved sources, answer with citations, and stop when evidence is missing.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Go further',
-        title: 'Meeting follow-through agent',
-        body: 'Read sample notes, check a mock task board, ask for missing details, and draft updates for approval.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Scenario rehearsal agent',
-        body: 'Role-play a stakeholder, use a scoring tool to adapt to choices, then run a rubric-based debrief.',
-        runtimeAi: 'Runtime AI core',
-      },
-    ],
   },
   {
     icon: Workflow,
-    emoji: '🔄',
     title: 'Workflow Automation',
     goal: 'Automate a business process.',
-    examples: 'Ticket triage, email classification, report generation, approval workflows.',
-    checklist: ['Trigger', 'Workflow', 'Rules or AI step', 'Output action'],
-    goodFor: 'Developers · BAs · Process specialists',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Request-to-brief',
-        body: 'Validate a form, format the answers into a standard brief, and store the result.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'Triage with confidence',
-        body: 'Classify sample requests, route confident matches, and send uncertain ones to a person.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Meeting-to-momentum',
-        body: 'Turn sample notes into decisions and actions, pause for approval, then publish a digest.',
-        runtimeAi: 'Runtime AI core',
-      },
-    ],
   },
   {
     icon: Network,
-    emoji: '🤖🤖',
     title: 'Multi-Agent System',
     goal: 'Multiple agents collaborate.',
-    examples: 'Product Owner Agent, Architect Agent, Developer Agent, Tester Agent.',
-    checklist: ['Coordinator', 'Specialist agents', 'Shared context', 'Final response'],
-    goodFor: 'Advanced participants — keep scope small',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Maker + checker',
-        body: 'One agent drafts with a template tool; another checks a clear rubric; the loop stops after two revisions.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Go further',
-        title: 'Research desk',
-        body: 'A source finder, analyst, and fact-checker hand off work to produce one cited briefing.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Incident rehearsal room',
-        body: 'Specialist agents inspect mock logs and status tools under human direction, then create a postmortem.',
-        runtimeAi: 'Runtime AI core',
-      },
-    ],
   },
   {
     icon: BarChart3,
-    emoji: '📊',
     title: 'Data & Insights',
     goal: 'Help users understand data.',
-    examples: 'Dashboards, analytics, AI insights, forecasting.',
-    checklist: ['Data source', 'Processing', 'Visualisation', 'Deployment'],
-    goodFor: 'Anyone working with data',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Team pulse explorer',
-        body: 'Load sample survey data, filter groups, and chart how responses change over time.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'What changed?',
-        body: 'Compare two periods, reveal the largest shifts, and let users annotate likely causes.',
-        runtimeAi: 'Runtime AI optional',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Decision replay',
-        body: 'Scrub through a project timeline and reveal only the signals available at each moment.',
-        runtimeAi: 'Runtime AI optional',
-      },
-    ],
   },
   {
     icon: Palette,
-    emoji: '🎨',
     title: 'Experience & Creativity',
     goal: 'Create something engaging.',
-    examples: 'Games, interactive stories, visualisations, AI-powered experiences.',
-    checklist: ['Interactive UI', 'Content or AI engine', 'Content or assets', 'Deployment'],
-    goodFor: 'Designers and anyone having fun with it',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'One-minute quiz show',
-        body: 'Use AI while building the questions and visual assets, then run a polished interactive game.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'Choice-reactive story',
-        body: 'Let decisions reshape the scene, sound, characters, and ending in real time.',
-        runtimeAi: 'Runtime AI optional',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Future postcard wall',
-        body: 'Visitors add text, sketches, or voice; the experience remixes them into a shared live exhibit.',
-        runtimeAi: 'Runtime AI optional',
-      },
-    ],
   },
 ]
 
-export type Level = {
-  icon: LucideIcon
-  n: number
-  name: string
-  codeword: string
-  does: string
-  meaning: string
-  colorClass: string
-  chipClass: string
+// Degreed Industry Campuses — 10 focus industries for Capgemini.
+export const DEGREED_CAMPUSES_URL = 'https://degreed.com/explore/2504635'
+
+export type IndustryInspiration = {
+  campus: string
+  segment: string
+  body: string
 }
 
-export const levels: Level[] = [
+export const industryInspirations: IndustryInspiration[] = [
   {
-    icon: Sprout,
-    n: 1,
-    name: 'Seed',
-    codeword: 'Answers or creates',
-    does: 'One prompt produces one useful response',
-    meaning: 'A direct model call answers, summarises, rewrites, or generates.',
-    colorClass: 'text-seed',
-    chipClass: 'bg-seed/10 text-seed border-seed/30',
+    campus: 'Banking',
+    segment: 'Payments',
+    body: 'A digital payments journey visualiser: a customer sending a payment, the bank routing, FX conversion, and arrival — beautiful, animated, educational.',
   },
   {
-    icon: Leaf,
-    n: 2,
-    name: 'Sprout',
-    codeword: 'Uses evidence or a tool',
-    does: 'It grounds a response or calls a tool',
-    meaning: 'Approved documents, data, or an API provide real-world context.',
-    colorClass: 'text-sprout',
-    chipClass: 'bg-sprout/10 text-sprout border-sprout/30',
+    campus: 'Banking',
+    segment: 'Retail Banking',
+    body: 'A personal finance dashboard with spending categories, savings goals, and a credit health score — the kind of thing a challenger bank would ship.',
   },
   {
-    icon: Wheat,
-    n: 3,
-    name: 'Harvest',
-    codeword: 'Completes a process',
-    does: 'It runs a bounded multi-step process',
-    meaning: 'A code-controlled workflow or model-directed agent reaches a result.',
-    colorClass: 'text-harvest',
-    chipClass: 'bg-harvest/10 text-harvest border-harvest/30',
-  },
-]
-
-export const flavours = [
-  { icon: Mic, name: 'Voice', body: 'Accept spoken input or return a spoken response.' },
-  { icon: ImageIcon, name: 'Images', body: 'Understand or create an image, screenshot, or diagram.' },
-  { icon: Video, name: 'Video', body: 'Analyse a clip, find key moments, or create a short video.' },
-]
-
-export type GrowthIdea = {
-  name: string
-  tagline: string
-  steps: { level: 'Seed' | 'Sprout' | 'Harvest'; what: string }[]
-}
-
-export const growthIdeas: GrowthIdea[] = [
-  {
-    name: 'Language helper',
-    tagline: 'Learn a language with a little help.',
-    steps: [
-      { level: 'Seed', what: 'Generates example sentences from a word.' },
-      { level: 'Sprout', what: 'Quizzes you on your own vocab list.' },
-      { level: 'Harvest', what: 'Plans lessons, quizzes you, and tracks your progress.' },
-    ],
+    campus: 'Retail',
+    segment: 'Selling / Consumer Products',
+    body: 'A shoppable product discovery experience: browse, filter, get AI recommendations, add to basket — focused on the quality of the digital shopping journey.',
   },
   {
-    name: 'Learning buddy',
-    tagline: 'Prep for an exam with an AI coach.',
-    steps: [
-      { level: 'Seed', what: 'Turns a topic into practice questions and a case scenario.' },
-      { level: 'Sprout', what: 'Quizzes you from your own notes and syllabus.' },
-      { level: 'Harvest', what: 'Tracks weak spots, schedules revision, and sets fresh scenarios up to exam day.' },
-    ],
+    campus: 'Telecom',
+    segment: '5G & Edge',
+    body: 'A network coverage map experience: explore 5G availability, latency stats, and use cases (connected cars, smart factories) — data-rich but beautifully presented.',
   },
   {
-    name: 'Prompt library',
-    tagline: 'Build and reuse better prompts.',
-    steps: [
-      { level: 'Seed', what: 'Writes a tailored prompt from your goal and constraints.' },
-      { level: 'Sprout', what: 'Ranks your saved prompts for a task and suggests the best match.' },
-      {
-        level: 'Harvest',
-        what: 'Runs an approved prompt, checks the result, and stops after a set number of refinements.',
-      },
-    ],
+    campus: 'Energy',
+    segment: 'Energy Transition',
+    body: 'A renewable energy portfolio dashboard for a utility: solar/wind output, grid load balancing, and carbon offset tracking.',
   },
   {
-    name: 'Activity by weather',
-    tagline: 'Find something to do, rain or shine.',
-    steps: [
-      { level: 'Seed', what: 'Suggests activities from the weather and who you’re with.' },
-      { level: 'Sprout', what: 'Checks a live weather API for your location.' },
-      { level: 'Harvest', what: 'Sends a daily plan that adapts to the forecast and who’s free.' },
-    ],
-  },
-]
-
-export type Challenge = {
-  level: 'Seed' | 'Sprout' | 'Harvest'
-  title: string
-  problem: string
-  build: string
-  done: string[]
-}
-
-export const challengeQualityBar = [
-  {
-    title: 'Prove the outcome',
-    body: 'Demo one representative task from input to a result you can verify.',
+    campus: 'Public Sector',
+    segment: 'Healthcare',
+    body: 'A patient portal experience: appointment booking, test results, and GP messaging — the kind of digital service government is trying (and often failing) to build well.',
   },
   {
-    title: 'Test more than the happy path',
-    body: 'Try at least three cases, including one edge or failure case, and share what happened.',
+    campus: 'Automotive',
+    segment: 'Supply Chain',
+    body: 'A live supply chain visibility tool for EV battery components: factory status, shipment tracking, and risk alerts.',
   },
   {
-    title: 'Make failure visible',
-    body: 'Show uncertainty, missing evidence, and tool errors instead of guessing or silently continuing.',
+    campus: 'Insurance',
+    segment: 'Health',
+    body: 'A health insurance quote and compare experience: personalised, transparent pricing, and a claims submission flow.',
   },
   {
-    title: 'Keep people in control',
-    body: 'Use public, dummy, or approved data and require approval before consequential actions.',
-  },
-]
-
-export const challenges: Challenge[] = [
-  {
-    level: 'Seed',
-    title: 'Rewrite Helper',
-    problem: 'A message, summary, or note takes too long to get right.',
-    build: 'An assistant that summarises, rewrites, translates, or reformats text.',
-    done: [
-      'It completes one clear job on a representative example.',
-      'A first-time user can provide input and understand the result without extra instructions.',
-    ],
+    campus: 'Life Sciences',
+    segment: 'MedTech',
+    body: 'A clinical device dashboard: real-time patient vitals from a wearable, with alerts and a care team view.',
   },
   {
-    level: 'Seed',
-    title: 'Draft It',
-    problem: 'Starting from a blank page is the hardest part.',
-    build: 'Generate a first draft — an email, a plan, a snippet — from a short brief.',
-    done: [
-      'A one-line brief produces a draft with the requested purpose, audience, and format.',
-      'Changing one detail in the brief changes the draft in the expected way.',
-    ],
-  },
-  {
-    level: 'Sprout',
-    title: 'Ask My Docs',
-    problem: 'The answer is buried in documents nobody wants to read.',
-    build: 'Point it at your own docs and ask questions grounded in them.',
-    done: [
-      'Each answer cites or links to the source passage it used.',
-      'It declines when the answer is not supported by the supplied content.',
-    ],
-  },
-  {
-    level: 'Sprout',
-    title: 'Live Lookup',
-    problem: 'A useful answer needs current or approved data the model does not have.',
-    build: 'Give the AI a tool — an API, a search, a database — it can call to fetch what it needs.',
-    done: [
-      'It calls an approved data source and shows when the result was retrieved.',
-      'A failed or empty lookup produces a clear fallback instead of a made-up answer.',
-    ],
-  },
-  {
-    level: 'Harvest',
-    title: 'Do It For Me',
-    problem: 'A repetitive, multi-step task eats time that could go elsewhere.',
-    build: 'An agent or workflow that completes the task end to end.',
-    done: [
-      'One representative task reaches the intended result and exposes the steps taken.',
-      'The run has a completion condition and a hard step, time, or retry limit.',
-      'A failed step is reported and stops or follows a defined fallback.',
-      'Any action that sends, changes, deletes, spends, or publishes waits for explicit approval.',
-    ],
-  },
-  {
-    level: 'Harvest',
-    title: 'The Team Play',
-    problem: 'One component cannot reliably finish a task that needs distinct skills, tools, or boundaries.',
-    build: 'A workflow or small set of specialised agents that hand off or combine work toward one result.',
-    done: [
-      'Each agent or step has a distinct responsibility with a defined input and output.',
-      'The demo shows at least one handoff and how a failed handoff is handled.',
-      'You can explain why one agent or a simpler workflow would be less reliable.',
-      'The full run has a completion condition and a hard step, time, or retry limit.',
-    ],
+    campus: 'Aerospace & Defense',
+    segment: 'Civil Aeronautics',
+    body: 'An aircraft maintenance scheduling tool: upcoming checks, component lifetimes, and engineer allocation.',
   },
 ]
 
@@ -555,7 +266,7 @@ export const benefitHighlights: { icon: LucideIcon; label: string }[] = [
   { icon: Award, label: 'Certificate of participation' },
   { icon: TrendingUp, label: 'Feedback on SuccessFactors' },
   { icon: GraduationCap, label: 'Hands-on AI skills' },
-  { icon: Sprout, label: 'Grow outside your comfort zone' },
+  { icon: Sparkles, label: 'Try something new, low-risk' },
   { icon: Trophy, label: 'A shot at an award' },
 ]
 
@@ -598,7 +309,7 @@ export const submitChecklist = [
   { title: 'Title + one-line pitch', body: 'What it does, in plain words.' },
   { title: 'Demo video (2–3 min)', body: 'A screen recording of the app working — a demo, not a presentation.' },
   { title: 'Project type', body: 'Which of the 6 project types you built — the form asks for this.' },
-  { title: 'How you used AI', body: 'How AI helped you build, plus None, Seed, Sprout, or Harvest for runtime AI.' },
+  { title: 'How you used AI', body: 'How AI helped you build, plus whether the shipped app calls a model at runtime.' },
   { title: 'Team', body: 'Who built it.' },
   { title: 'Optional: enter People\u2019s Choice', body: 'Share your app in the Submissions channel so other participants can vote for their favourite.' },
 ]

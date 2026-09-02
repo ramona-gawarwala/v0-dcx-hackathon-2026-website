@@ -23,7 +23,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Do I need to register, and by when?',
-        a: 'Yes — sign up before the kickoff at 09:00 BST on Tuesday 1 September. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don\u2019t have a team yet, post in the team-forming channel (see [How it works](/how-it-works)).',
+        a: 'Yes — sign up before the kickoff at 09:00 BST on Wednesday 23 September. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don\u2019t have a team yet, post in the team-forming channel (see [How it works](/how-it-works)).',
       },
       {
         q: 'Do I need a team, or can I go solo?',
@@ -35,7 +35,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'How much time do I need to commit?',
-        a: 'It\u2019s part-time and self-paced — there\u2019s no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (1–14 September): deploy something small early, then improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.',
+        a: 'It\u2019s part-time and self-paced — there\u2019s no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (23 September – 7 October): deploy something small early, then improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.',
       },
       {
         q: 'How finished does my project need to be?',
