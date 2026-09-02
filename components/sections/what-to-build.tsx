@@ -6,11 +6,27 @@ export function WhatToBuild() {
   return (
     <section id="what-to-build" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
-        <SectionHeading
-          eyebrow="What to build"
-          title="Pick a type, then make it yours"
-          description="Start from the project type closest to your idea, then draw inspiration from a real Capgemini industry. Keep it small enough to demo."
-        />
+        <SectionHeading eyebrow="What to build" title="What to build?" />
+
+        {/* Idea guidance */}
+        <div className="mt-10 grid gap-8 md:grid-cols-2 md:gap-0">
+          <div className="md:pr-8">
+            <h3 className="font-display text-lg font-semibold">Have your own idea?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              Go for it. But keep it small enough to demo and remember that half finished projects
+              are common at the end of a hackathon so start with an MVP and go from there.
+            </p>
+          </div>
+          <div className="border-border md:border-l md:pl-8">
+            <h3 className="font-display text-lg font-semibold">If you don&apos;t have an idea?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              While we&apos;d love to see apps that can add value to your BU or your account from day
+              one, a project that simply explores the capabilities of Vercel combined with an
+              Industry Campus is also valid. Use this page to consider the kinds of project you might
+              want to build. Explore the Capgemini Industry Campuses for inspiration.
+            </p>
+          </div>
+        </div>
 
         {/* Two ways to use AI */}
         <div className="mt-12 border-y border-border py-8">
@@ -44,7 +60,7 @@ export function WhatToBuild() {
 
         {/* Project types */}
         <div className="mt-16">
-          <h3 className="font-display text-xl font-semibold">Six project types</h3>
+          <h3 className="font-display text-xl font-semibold">Consider the following project types</h3>
           <p className="mt-1 text-sm text-muted-foreground">
             Answering &ldquo;what kind of thing am I making?&rdquo; Start from the one closest to your idea.
           </p>
@@ -121,12 +137,6 @@ export function WhatToBuild() {
             <ArrowUpRight className="size-4 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
         </div>
-
-        <p className="mt-12 border-l-2 border-primary pl-5 text-sm leading-relaxed text-muted-foreground">
-          <span className="font-semibold text-foreground">Bring your own idea?</span> Go for it. Keep
-          it small enough to demo and check it against the judging criteria. Everyone who takes part
-          gets a certificate of participation and personal feedback on SuccessFactors.
-        </p>
       </div>
     </section>
   )
