@@ -256,11 +256,43 @@ export const awards = [
   'People\u2019s Choice (voted by participants)',
 ]
 
-export type Benefit = {
+  export type WhyJoinReason = {
   icon: LucideIcon
   title: string
   body: string
-}
+  }
+
+  export const whyJoinIntro =
+  'AI is changing how software gets built. This is a low-risk, part-time way to try it on a real project, ship something live, and pick up skills that carry straight into your day job — no experience required.'
+
+  export const whyJoinReasons: WhyJoinReason[] = [
+  {
+  icon: GraduationCap,
+  title: 'Learn by shipping, not watching',
+  body: 'Two weeks, one live app. You learn AI-assisted development by actually building and deploying something — the fastest way the skills stick.',
+  },
+  {
+  icon: HeartHandshake,
+  title: 'Genuinely open to everyone',
+  body: 'Engineers, POs, BAs, designers, first-timers. No setup, no prior AI experience, and beginners and non-engineers can win their own awards.',
+  },
+  {
+  icon: Users,
+  title: 'Meet people across the business',
+  body: 'Team up across roles and disciplines. You will finish with new connections and a shared thing you built together.',
+  },
+  {
+  icon: TrendingUp,
+  title: 'Evidence of your growth',
+  body: 'A certificate for everyone who takes part, plus personal feedback recorded on SuccessFactors — real proof of your commitment to growing your skills.',
+  },
+  ]
+
+  export type Benefit = {
+  icon: LucideIcon
+  title: string
+  body: string
+  }
 
 export const benefitHighlights: { icon: LucideIcon; label: string }[] = [
   { icon: Award, label: 'Certificate of participation' },

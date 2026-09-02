@@ -63,7 +63,7 @@ Every DCX staff member is welcome — whatever your role, you don't need to be a
 
 ### 3. Do I need to register, and by when?
 
-Yes — sign up before the kickoff at **09:00 BST on Tuesday 1 September**. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don't have a team yet, post in the team-forming channel (see [How it works](how-it-works.md)).
+Yes — sign up before the kickoff at **09:00 BST on Tuesday 23 September**. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don't have a team yet, post in the team-forming channel (see [How it works](how-it-works.md)).
 ### 4. Do I need a team, or can I go solo?
 
 Teams of **2–5** are encouraged — solo is allowed, but a team is more fun and usually ships more. No team yet? Post what you want to build and what you bring (dev, design, product, domain) in the team-forming channel, or we'll help group you at kickoff. See [How it works](how-it-works.md).
@@ -91,7 +91,7 @@ Rule of thumb: start with an approved free or funded option, use only sample/syn
 
 ### 6. How much time do I need to commit?
 
-It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (1–14 September), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
+It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (23 September – 7 October), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
 
 ### 7. How finished does my project need to be?
 
@@ -139,7 +139,7 @@ Match the model to the modality, quality, latency, and cost you need. The [AI SD
 
 ### 10. What makes something an "AI agent" (not just a chatbot)?
 
-The [AI SDK definition](https://ai-sdk.dev/docs/agents/overview) is an LLM that uses **tools in a loop** to accomplish a task. Tools let it search, query a database, or call an API; the loop manages context and stopping conditions while the model chooses the next action. A simple chatbot may answer once without tools, while an agent can take several tool-backed steps. That's the 🍂 Harvest level in [Challenges](challenges.md).
+The [AI SDK definition](https://ai-sdk.dev/docs/agents/overview) is an LLM that uses **tools in a loop** to accomplish a task. Tools let it search, query a database, or call an API; the loop manages context and stopping conditions while the model chooses the next action. A simple chatbot may answer once without tools, while an agent can take several tool-backed steps. See the **AI Agent** type in [What to build](project-types.md).
 
 ### 11. What's the difference between an agent and a skill?
 
@@ -229,7 +229,7 @@ No. This starter path uses **Next.js + React** because they work smoothly with [
 Both approaches are valid:
 
 - **Build with AI.** Use [v0](https://v0.app), [GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot), or another approved assistant to shape, design, code, test, and deploy your project. That is enough to participate. The finished app can use normal code and data with **no model key or model API call**.
-- **Build AI into the experience (optional).** Let the running app call a model, use data or tools, or run an agent. [Seed, Sprout, and Harvest](challenges.md#choose-your-runtime-ai-level-optional) measure only that runtime AI depth, not how much AI helped you build.
+- **Build AI into the experience (optional).** Let the running app call a model, use data or tools, or run an agent. This is about whether the finished app uses AI at runtime — a separate thing from how much AI helped you build it, and never required.
 
 This follows the build-tool pattern used by the [World's Largest Hackathon presented by Bolt](https://worldslargesthackathon.devpost.com/rules) and the AI-assistance disclosure used by [NASA Space Apps](https://www.spaceappschallenge.org/resources/project-submission-guide/). Product-specific events can instead require embedded AI, as Google's [Gemini API Developer Competition](https://ai.google.dev/competition) and Microsoft's [AI Agents Hackathon](https://microsoft.github.io/AI_Agents_Hackathon/) did.
 
@@ -250,13 +250,13 @@ Not much. Create **[v0](https://v0.app)** and **[Vercel](https://vercel.com)** a
 
 ### 20. Can I ground the AI in my own documents or data?
 
-Yes — that's the 🌿 Sprout level. A few related pieces work together:
+Yes — grounding the app in your own content is a great optional step. A few related pieces work together:
 
 - **RAG (retrieval-augmented generation)** — retrieve relevant, non-sensitive content and pass it to the model as context. → [AI SDK RAG Agent guide](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot)
 - **Controls** — add clear instructions for missing evidence, validate structured outputs, require approval before sensitive tools run, and set loop limits. → [Build and constrain agents](https://ai-sdk.dev/docs/agents/building-agents) · [Tool approvals](https://ai-sdk.dev/docs/agents/tool-approvals)
 - **Callbacks** — log model calls, tool execution, timing, token use, and errors for observability. Callback errors are caught and the AI SDK call continues, so callbacks do **not** block or stop a run. → [Lifecycle callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks)
 
-See also *Ask My Docs* and *Live Lookup* in [Challenges](challenges.md).
+See also the **AI Agent** and **Data & Insights** types in [What to build](project-types.md).
 
 ### 21. How do I reduce the model's hallucinations?
 
@@ -286,7 +286,7 @@ You and your team keep your work and can carry on building after the event — t
 
 ### 23. Can I use real client or company data?
 
-No — use sample, synthetic, or public data instead. Keep confidential client information and personal data (PII) out of your prompts, your app, and any external AI tool. To make the AI answer from *your* content, use a small, non-sensitive sample with [RAG](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot). When in doubt, leave it out.
+No ��� use sample, synthetic, or public data instead. Keep confidential client information and personal data (PII) out of your prompts, your app, and any external AI tool. To make the AI answer from *your* content, use a small, non-sensitive sample with [RAG](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot). When in doubt, leave it out.
 
 ### 24. Are my prompts used to train the AI models?
 
@@ -304,11 +304,11 @@ Yes. Be respectful, inclusive, and supportive — this is a welcoming space for 
 
 ### 26. Can I start early or reuse an existing project?
 
-Build during the hackathon window (**1–14 September**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
+Build during the hackathon window (**23 September – 7 October**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
 
 ### 27. Do I have to attend live or present in person?
 
-It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Monday 14 September** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
+It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Tuesday 7 October** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
 
 ## Troubleshooting & deployment
 

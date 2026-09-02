@@ -4,8 +4,8 @@ import { V0_COMMUNITY_URL, REGISTER_URL } from '@/lib/content'
 import { CelebrateLink } from '@/components/celebrate-link'
 
 const facts = [
-  { icon: Calendar, label: 'When', value: '1–14 Sep 2026', tone: 'bg-seed/20 text-harvest' },
-  { icon: Users, label: 'Teams', value: 'Solo or 2–5', tone: 'bg-sprout/15 text-sprout' },
+  { icon: Calendar, label: 'When', value: '23 Sep – 7 Oct 2026', tone: 'bg-primary/15 text-primary' },
+  { icon: Users, label: 'Teams', value: 'Solo or 2–5', tone: 'bg-accent/15 text-accent-foreground' },
 ]
 
 export function Hero() {
@@ -58,10 +58,10 @@ export function Hero() {
             <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <Link
-            href="/start-building"
+            href="/how-to-build"
             className="btn-september-outline group inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold"
           >
-            Start building
+            How to build
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
         </div>

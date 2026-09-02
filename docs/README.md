@@ -15,8 +15,7 @@ Everything you need to take part in the **DCX AI Hackathon 2026**, organised by 
 
 | Doc | What it covers |
 |---|---|
-| [Project types](project-types.md) | Pick the kind of thing you're making |
-| [Challenges](challenges.md) | Themed prompts to scope your idea |
+| [What to build](project-types.md) | Pick the kind of thing you're making, with industry inspiration |
 
 ## Build it
 

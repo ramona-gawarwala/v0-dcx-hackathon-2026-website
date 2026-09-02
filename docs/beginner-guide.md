@@ -27,7 +27,7 @@ You build the app on the left. Gateway model IDs are easy to change, but models 
 
 ## Your first hour
 
-1. Pick a scoped idea from [Challenges](challenges.md).
+1. Pick a scoped idea from [What to build](project-types.md).
 2. Copy a small example or clone a matching starter — see [starter templates](ai-sdk-guide.md#starter-templates).
 3. Deploy it and open the live URL in a private/incognito window to confirm it works.
 
@@ -39,7 +39,7 @@ You build the app on the left. Gateway model IDs are easy to change, but models 
 
 ## Make it visible to judges
 
-Judges need your **live URL** and to **see the code**, so deploy your app and put it on GitHub as a **public** repo (or share your v0 project link). Both easy paths start on v0 — the same two ways as the [Start building](/start-building) page:
+Judges need your **live URL** and to **see the code**, so deploy your app and put it on GitHub as a **public** repo (or share your v0 project link). Both easy paths start on v0 — the same two ways as the [How to build](/how-to-build) page:
 
 - **All on v0 + Vercel (no local setup)** — build in [v0](https://v0.app), deploy for a live URL, then use the current Git controls to connect and push to the intended public repo.
 - **Start on v0, then refine locally** — build in v0, connect the intended GitHub repo, pull it to your machine, and publish from Vercel when you're ready.

@@ -3,9 +3,9 @@ import Link from 'next/link'
 import { SectionHeading } from '@/components/section-heading'
 import { startSteps, V0_COMMUNITY_URL, VERCEL_TEMPLATES_URL } from '@/lib/content'
 
-export function StartBuilding() {
+export function HowToBuild() {
   return (
-    <section id="start-building" className="scroll-mt-16">
+    <section id="how-to-build" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
           eyebrow="Start in 5 minutes"

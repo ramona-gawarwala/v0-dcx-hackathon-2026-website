@@ -56,7 +56,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'What makes something an "AI agent" (not just a chatbot)?',
-        a: 'The [AI SDK definition](https://ai-sdk.dev/docs/agents/overview) is an LLM that uses tools in a loop to accomplish a task. Tools let it search, query a database, or call an API; the loop manages context and stopping conditions while the model chooses the next action. A simple chatbot may answer once without tools, while an agent can take several tool-backed steps. That\u2019s the Harvest level in [Challenges](/challenges).',
+        a: 'The [AI SDK definition](https://ai-sdk.dev/docs/agents/overview) is an LLM that uses tools in a loop to accomplish a task. Tools let it search, query a database, or call an API; the loop manages context and stopping conditions while the model chooses the next action. A simple chatbot may answer once without tools, while an agent can take several tool-backed steps. See the tool-using agent examples in [What to build](/what-to-build).',
       },
       {
         q: 'What\u2019s the difference between an agent and a skill?',
@@ -99,7 +99,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Do I need AI inside my app, or can it just help me build?',
-        a: 'Both approaches are valid. **Build with AI:** use [v0](https://v0.app), [GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot), or another approved assistant to shape, design, code, test, and deploy your project. That is enough to participate; the finished app can use normal code and data with no model key or model API call. **Build AI into the experience (optional):** let the running app call a model, use data or tools, or run an agent. [Seed, Sprout, and Harvest](/challenges) measure only that runtime AI depth. This follows the build-tool pattern used by the [Bolt hackathon](https://worldslargesthackathon.devpost.com/rules) and the AI-assistance disclosure used by [NASA Space Apps](https://www.spaceappschallenge.org/resources/project-submission-guide/). Keep confidential client and company data out of external tools.',
+        a: 'Both approaches are valid. **Build with AI:** use [v0](https://v0.app), [GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot), or another approved assistant to shape, design, code, test, and deploy your project. That is enough to participate; the finished app can use normal code and data with no model key or model API call. **Build AI into the experience (optional):** let the running app call a model, use data or tools, or run an agent. That runtime AI depth is optional — see [What to build](/what-to-build). This follows the build-tool pattern used by the [Bolt hackathon](https://worldslargesthackathon.devpost.com/rules) and the AI-assistance disclosure used by [NASA Space Apps](https://www.spaceappschallenge.org/resources/project-submission-guide/). Keep confidential client and company data out of external tools.',
       },
       {
         q: 'Is there a starter template or repo I can build from?',
@@ -117,7 +117,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Can I ground the AI in my own documents or data?',
-        a: 'Yes — that\u2019s the Sprout level. Use [RAG](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot) to retrieve relevant, non-sensitive content and pass it to the model as context. Add clear instructions for missing evidence, validate structured outputs, require approval for sensitive tools, and set loop limits with [agent controls](https://ai-sdk.dev/docs/agents/building-agents). Use [lifecycle callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks) for logging and observability; callbacks do not block or stop a run. See Ask My Docs and Live Lookup in [Challenges](/challenges).',
+        a: 'Yes. Use [RAG](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot) to retrieve relevant, non-sensitive content and pass it to the model as context. Add clear instructions for missing evidence, validate structured outputs, require approval for sensitive tools, and set loop limits with [agent controls](https://ai-sdk.dev/docs/agents/building-agents). Use [lifecycle callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks) for logging and observability; callbacks do not block or stop a run. See the grounded-answers examples in [What to build](/what-to-build).',
       },
       {
         q: 'How do I reduce the model\u2019s hallucinations?',
@@ -146,11 +146,11 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Can I start early or reuse an existing project?',
-        a: 'Build during the hackathon window (1–14 September) — it keeps things fair. Bringing an idea, sketches, or a problem is fine; starting from a codebase you wrote earlier isn\u2019t. Open-source libraries, templates, and v0 starters are fair game.',
+        a: 'Build during the hackathon window (23 September – 7 October) — it keeps things fair. Bringing an idea, sketches, or a problem is fine; starting from a codebase you wrote earlier isn\u2019t. Open-source libraries, templates, and v0 starters are fair game.',
       },
       {
         q: 'Do I have to attend live or present in person?',
-        a: 'It\u2019s part-time, so you don\u2019t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)). You submit through a form — we post the link in the Submissions channel on the morning of Monday 14 September — with your repo, live app URL, project type, and video. There are two ways to be recognised: judges\u2019 awards from the demo, and People\u2019s Choice, voted by everyone.',
+        a: 'It\u2019s part-time, so you don\u2019t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)). You submit through a form — we post the link in the Submissions channel on the morning of Tuesday 7 October — with your repo, live app URL, project type, and video. There are two ways to be recognised: judges\u2019 awards from the demo, and People\u2019s Choice, voted by everyone.',
       },
     ],
   },
@@ -189,9 +189,9 @@ export const faqGroups: FaqGroup[] = [
       {
         q: 'How do I share my project so judges can see it?',
         a:
-          'Judges need two things: a public live URL (no login wall, so it opens in an incognito window) and your code \u2014 a public GitHub repo or your v0 project link. Never commit `.env.local`, API keys, or secrets to the repo. The [Start building](/start-building) page covers both routes: start in v0 and push to GitHub, or build locally and connect the repo to Vercel. For exact deploy steps, see the [Deployment guide](' +
+          'Judges need two things: a public live URL (no login wall, so it opens in an incognito window) and your code \u2014 a public GitHub repo or your v0 project link. Never commit `.env.local`, API keys, or secrets to the repo. The [How to build](/how-to-build) page covers both routes: start in v0 and push to GitHub, or build locally and connect the repo to Vercel. For exact deploy steps, see the [Deployment guide](' +
           doc('deployment-guide') +
-          '). When you\u2019re ready, enter everything in the submission form (posted in the Submissions channel on Monday 14 September) \u2014 the full checklist lives on the [Submit page](/submit).',
+          '). When you\u2019re ready, enter everything in the submission form (posted in the Submissions channel on Tuesday 7 October) \u2014 the full checklist lives on the [Submit page](/submit).',
       },
       {
         q: 'How do we save our work and collaborate as a team with version control?',
