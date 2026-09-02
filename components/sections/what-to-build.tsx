@@ -21,7 +21,7 @@ export function WhatToBuild() {
           <h3 className="font-display text-xl font-semibold">If you don&apos;t have an idea?</h3>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-muted-foreground">
             While we&apos;d love to see apps that can add value to your BU or your account from day
-            one, a project that simply explores the capabilities of Vercel combined with an Industry
+            one, a project that simply explores the capabilities of Vercel combined with an exploration of an Industry
             Campus is also valid. Use this page to consider the kinds of project you might want to
             build. Explore the Capgemini Industry Campuses for inspiration.
           </p>
