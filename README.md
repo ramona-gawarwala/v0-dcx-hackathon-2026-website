@@ -1,12 +1,12 @@
 # DCX AI Hackathon 2026
 
-Build and ship an app with AI over **2 weeks (1–14 September 2026)**, part-time, using **[v0](https://v0.app)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
+Build and ship an app with AI over **2 weeks (23 September – 7 October 2026)**, part-time, using **[v0](https://v0.app)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
 
 Every team uses AI to help shape, design, code, test, or deploy the project. Putting AI inside the finished app is optional — you do not need a model key or model API call to participate.
 
 **New here? Start with [How it works](docs/how-it-works.md).**
 
-Quick links: [How it works](docs/how-it-works.md) · [Challenges](docs/challenges.md) · [Submit](docs/submission.md) · [Judging](docs/judging.md) · [FAQ](docs/faq.md)
+Quick links: [How it works](docs/how-it-works.md) · [What to build](docs/project-types.md) · [Submit](docs/submission.md) · [Judging](docs/judging.md) · [FAQ](docs/faq.md)
 
 This repo holds **both** the hackathon documentation and the event website (a Next.js app deployed on Vercel). See [The website](#the-website) below.
 
@@ -44,12 +44,12 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 
 | Type | Goal | Good for |
 |---|---|---|
-| 🚀 Product Builder | Solve a user problem with an app | POs, BAs, designers, full-stack devs |
-| 🤖 AI Agent | An assistant that performs tasks | Developers, AI enthusiasts |
-| 🔄 Workflow Automation | Automate a business process | Developers, BAs, process specialists |
-| 🤖🤖 Multi-Agent System | Multiple agents collaborate | Advanced participants |
-| 📊 Data & Insights | Help users understand data | Anyone working with data |
-| 🎨 Experience & Creativity | Build something engaging | Designers, anyone having fun |
+| Product Builder | Solve a user problem with an app | POs, BAs, designers, full-stack devs |
+| AI Agent | An assistant that performs tasks | Developers, AI enthusiasts |
+| Workflow Automation | Automate a business process | Developers, BAs, process specialists |
+| Multi-Agent System | Multiple agents collaborate | Advanced participants |
+| Data & Insights | Help users understand data | Anyone working with data |
+| Experience & Creativity | Build something engaging | Designers, anyone having fun |
 
 ---
 
@@ -59,7 +59,7 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 |---|---|
 | Understand the format, teams, and schedule | [How it works](docs/how-it-works.md) |
 | Build my first app (no experience) | [Beginner guide](docs/beginner-guide.md) |
-| Pick something to build | [Project types](docs/project-types.md) · [Challenges](docs/challenges.md) |
+| Pick something to build | [What to build](docs/project-types.md) |
 | Add runtime AI to my app (optional) | [AI SDK guide](docs/ai-sdk-guide.md) |
 | Get my app live | [Deployment guide](docs/deployment-guide.md) |
 | Browse curated links | [Resources](resources/README.md) |

@@ -13,11 +13,11 @@ Every team uses AI during development — to shape the idea, design, code, test,
 
 | When | What |
 |---|---|
-| Tue 23 Sep, 09:00 BST | Kickoff + team formation |
-| Week 1 (23–30 Sep) | Pick an idea, start building |
+| Wed 23 Sep, 09:00 BST | Kickoff + team formation |
+| Week 1 (23–29 Sep) | Pick an idea, start building |
 | Throughout | Mentors available in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel |
-| Week 2 (1–7 Oct) | Keep building, wrap up your demo |
-| Tue 7 Oct, 23:59 BST | Submissions due — see [Submit](submission.md) |
+| Week 2 (30 Sep – 7 Oct) | Keep building, wrap up your demo |
+| Wed 7 Oct, 23:59 BST | Submissions due — see [Submit](submission.md) |
 | Date to be confirmed | Demo day + judging — see [Judging](judging.md) |
 
 ## Forming a team

@@ -12,14 +12,14 @@ const readmeTemplate = `# [Project name]
 - Demo video: [link]
 - Project type: [which one]
 - AI-assisted build: [how AI helped you build]
-- Runtime AI: [None / Seed / Sprout / Harvest]
+- Runtime AI in the app: [None, or what the app calls a model to do]
 - Team: [names]`
 
 const peoplesChoicePost = `🚀 [Project name] — [one-line pitch]
 
 👉 Try it: [live app URL]
 🎬 Demo (2–3 min): [video link]
-🧩 Project type: [which one] · Runtime AI: [None / Seed / Sprout / Harvest]
+🧩 Project type: [which one] · Runtime AI in the app: [None, or what it does]
 👥 Team: [names]
 
 React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.`
@@ -38,11 +38,11 @@ export function Submit() {
             Deadline
           </div>
           <h1 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Monday 14 September 2026, 23:59 BST
+            Wednesday 7 October 2026, 23:59 BST
           </h1>
           <Countdown />
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-            On the morning of Monday 14 September we&apos;ll post the submission form in the
+            On the morning of Wednesday 7 October we&apos;ll post the submission form in the
             Submissions channel — much like the registration form. Fill it in with your public
             repo, live app URL, project type, and demo video; that form is your official entry,
             and judges score from it. Both the repo and the URL must be public — no password or

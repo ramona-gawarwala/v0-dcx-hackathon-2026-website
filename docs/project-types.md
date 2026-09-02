@@ -26,7 +26,7 @@ Each type gives you three quick views — enough to start, not enough to overwhe
 
 ---
 
-## 🚀 Product Builder
+## Product Builder
 
 **Goal:** solve a user problem with an app.
 
@@ -56,7 +56,7 @@ User → Frontend → API → Database
 
 ---
 
-## 🤖 AI Agent
+## AI Agent
 
 **Goal:** an AI assistant that performs tasks.
 
@@ -89,7 +89,7 @@ User → Agent → LLM → Tools / APIs
 
 ---
 
-## 🔄 Workflow Automation
+## Workflow Automation
 
 **Goal:** automate a business process.
 
@@ -121,7 +121,7 @@ Trigger → Workflow → Rules / optional model → Action
 
 ---
 
-## 🤖🤖 Multi-Agent System
+## Multi-Agent System
 
 **Goal:** multiple agents collaborate.
 
@@ -155,7 +155,7 @@ User → task → specialists collaborate → result
 
 ---
 
-## 📊 Data & Insights
+## Data & Insights
 
 **Goal:** help users understand data.
 
@@ -185,7 +185,7 @@ Data Source → Processing → Dashboard
 
 ---
 
-## 🎨 Experience & Creativity
+## Experience & Creativity
 
 **Goal:** create something engaging.
 
