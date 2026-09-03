@@ -1,6 +1,6 @@
 # Documentation
 
-Everything you need to take part in the **DCX AI Hackathon 2026**, organised by what you're trying to do.
+Everything you need to take part in the **DCX AI Playground Hackathon 2026**, organised by what you're trying to do.
 
 > New here? Read **[How it works](how-it-works.md)** first, then jump to whatever you need below.
 
@@ -15,8 +15,7 @@ Everything you need to take part in the **DCX AI Hackathon 2026**, organised by 
 
 | Doc | What it covers |
 |---|---|
-| [Project types](project-types.md) | Pick the kind of thing you're making |
-| [Challenges](challenges.md) | Themed prompts to scope your idea |
+| [What to build](project-types.md) | Pick the kind of thing you're making, with industry inspiration |
 
 ## Build it
 

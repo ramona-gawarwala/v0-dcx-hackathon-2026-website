@@ -12,14 +12,14 @@ const readmeTemplate = `# [Project name]
 - Demo video: [link]
 - Project type: [which one]
 - AI-assisted build: [how AI helped you build]
-- Runtime AI: [None / Seed / Sprout / Harvest]
+- Runtime AI in the app: [None, or what the app calls a model to do]
 - Team: [names]`
 
 const peoplesChoicePost = `🚀 [Project name] — [one-line pitch]
 
 👉 Try it: [live app URL]
 🎬 Demo (2–3 min): [video link]
-🧩 Project type: [which one] · Runtime AI: [None / Seed / Sprout / Harvest]
+🧩 Project type: [which one] · Runtime AI in the app: [None, or what it does]
 👥 Team: [names]
 
 React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.`

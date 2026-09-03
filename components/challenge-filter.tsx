@@ -26,28 +26,29 @@ export function ChallengeFilter() {
 
   return (
     <>
-      <fieldset className="mt-5 flex flex-wrap items-center gap-2 border-0 p-0">
+      <fieldset className="mt-5 border-0 p-0">
         <legend className="sr-only">Filter challenges by level</legend>
-        {FILTERS.map((f) => {
-          const isActive = f === active
-          return (
-            <button
-              key={f}
-              type="button"
-              onClick={() => setActive(f)}
-              aria-pressed={isActive}
-              title={filterHint[f]}
-              className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
-                isActive
-                  ? 'border-primary bg-primary/10 text-primary'
-                  : 'border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'
-              }`}
-            >
-              {f}
-            </button>
-          )
-        })}
-        <span className="ml-1 text-xs text-muted-foreground">{filterHint[active]}</span>
+        <div className="flex flex-wrap items-center gap-2">
+          {FILTERS.map((f) => {
+            const isActive = f === active
+            return (
+              <button
+                key={f}
+                type="button"
+                onClick={() => setActive(f)}
+                aria-pressed={isActive}
+                title={filterHint[f]}
+                className={`rounded-full border px-3.5 py-1.5 text-sm font-medium transition-colors ${
+                  isActive
+                    ? 'border-primary bg-primary/10 text-primary'
+                    : 'border-border text-muted-foreground hover:border-primary/40 hover:text-foreground'
+                }`}
+              >
+                {f}
+              </button>
+            )
+          })}
+        </div>
       </fieldset>
 
       <div className="reveal-stagger mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

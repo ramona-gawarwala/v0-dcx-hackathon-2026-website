@@ -56,18 +56,18 @@ export default async function BuildLabChapterPage({ params }: Readonly<Params>) 
             <span aria-hidden="true">·</span>
             <span>{current.levels}</span>
           </div>
-          <h1 className="mt-3 text-balance font-display text-4xl font-bold tracking-tight sm:text-5xl">
+          <div className="mt-4 flex flex-col gap-2 rounded-xl border border-harvest/30 bg-harvest/5 p-4 sm:flex-row sm:items-center sm:gap-4">
+            <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest">
+              Jump to section
+            </span>
+            <BuildLabChapterSelect current={current.slug} />
+          </div>
+          <h1 className="mt-6 text-balance font-display text-4xl font-bold tracking-tight sm:text-5xl">
             {current.title}
           </h1>
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
             {current.summary}
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
-            <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
-              Jump to
-            </span>
-            <BuildLabChapterSelect current={current.slug} />
-          </div>
         </div>
       </section>
 
@@ -86,33 +86,33 @@ export default async function BuildLabChapterPage({ params }: Readonly<Params>) 
             {prev ? (
               <Link
                 href={`/guides/build-lab/${prev.slug}`}
-                className="rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary/50"
+                className="group rounded-xl border-2 border-harvest/30 bg-harvest/5 p-5 transition-colors hover:border-harvest hover:bg-harvest/10"
               >
-                <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest transition-transform group-hover:-translate-x-0.5">
                   ← Previous
                 </span>
-                <span className="mt-1 block font-display font-semibold">{prev.title}</span>
+                <span className="mt-2 block font-display text-lg font-semibold">{prev.title}</span>
               </Link>
             ) : (
               <Link
                 href="/guides/build-lab"
-                className="rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary/50"
+                className="group rounded-xl border-2 border-harvest/30 bg-harvest/5 p-5 transition-colors hover:border-harvest hover:bg-harvest/10"
               >
-                <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest transition-transform group-hover:-translate-x-0.5">
                   ← Overview
                 </span>
-                <span className="mt-1 block font-display font-semibold">Build lab</span>
+                <span className="mt-2 block font-display text-lg font-semibold">Build lab</span>
               </Link>
             )}
             {next && (
               <Link
                 href={`/guides/build-lab/${next.slug}`}
-                className="rounded-lg border border-border bg-card p-4 text-right transition-colors hover:border-primary/50 sm:col-start-2"
+                className="group rounded-xl border-2 border-harvest/30 bg-harvest/5 p-5 text-right transition-colors hover:border-harvest hover:bg-harvest/10 sm:col-start-2"
               >
-                <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-harvest transition-transform group-hover:translate-x-0.5">
                   Next →
                 </span>
-                <span className="mt-1 block font-display font-semibold">{next.title}</span>
+                <span className="mt-2 block font-display text-lg font-semibold">{next.title}</span>
               </Link>
             )}
           </nav>

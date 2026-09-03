@@ -3,7 +3,7 @@
 ## The basics
 
 - **Teams:** 2–5 people. Solo is allowed but a team is more fun.
-- **Duration:** 2 weeks — **7–21 September 2026**. Part-time: build around your day job, no need to drop everything.
+- **Duration:** 2 weeks — **7 September – 21 September 2026**. Part-time: build around your day job, no need to drop everything.
 - **Goal:** ship a working, demoable app built with AI. Runtime AI inside the app is optional. Done beats perfect.
 - **Tools:** build with [v0](https://v0.app) and deploy on [Vercel](https://vercel.com). Use [AI Gateway](https://vercel.com/docs/ai-gateway) only if your finished app needs model calls.
 
@@ -28,6 +28,6 @@ Mixed teams can bring complementary skills and perspectives.
 
 ## Not sure what to build?
 
-Start by picking a [project type](project-types.md), then scope a [challenge](challenges.md). Aim to finish ~25% of your big idea — pick something small enough to demo.
+Start by picking a [project type](project-types.md) and scoping it to one useful slice. Aim to finish ~25% of your big idea — pick something small enough to demo.
 
 Questions? See the [FAQ](faq.md).

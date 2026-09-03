@@ -9,7 +9,7 @@ Deadline: **Mon 21 Sep 2026, 23:59 BST (UTC+1)**. Late = not judged, so submit e
 - [ ] **Title + one-line pitch** — what it does, in plain words.
 - [ ] **Demo video (2–3 min)** — screen recording of the app working. A demo, not a presentation.
 - [ ] **Project type** — which of the [6 project types](project-types.md) you built (the form asks for this).
-- [ ] **How you used AI** — how AI helped you build, plus **None, Seed, Sprout, or Harvest** for [runtime AI](challenges.md#choose-your-runtime-ai-level-optional).
+- [ ] **How you used AI** — how AI helped you build, and whether the finished app itself calls a model at runtime (yes or no).
 - [ ] **Team** — who built it.
 - [ ] **Optional: enter People's Choice** — share your app in the Submissions channel so other participants can vote for their favourite.
 
@@ -26,7 +26,7 @@ Use this format so people can try it and vote with a 👍 reaction:
 
 👉 Try it: [live app URL]
 🎬 Demo (2–3 min): [video link]
-🧩 Project type: [which one] · Runtime AI: [None / Seed / Sprout / Harvest]
+🧩 Project type: [which one] · Runtime AI in the app: [yes / no]
 👥 Team: [names]
 
 React with 👍 to every project you'd love to try — most reactions wins. One post per team; give others a look, not just your own.
@@ -45,7 +45,7 @@ So judges find everything fast, drop a short README at the top of your project r
 - Demo video: [link]
 - Project type: [which one]
 - AI-assisted build: [how AI helped you build]
-- Runtime AI: [None / Seed / Sprout / Harvest]
+- Runtime AI in the app: [yes / no]
 - Team: [names]
 ```
 

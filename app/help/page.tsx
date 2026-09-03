@@ -18,7 +18,7 @@ const description =
   "Stuck? Classify the problem, capture the useful evidence, and try the smallest relevant fix. If you're still blocked, post a clear report in the Help channel."
 
 export const metadata: Metadata = {
-  title: 'Help · DCX AI Hackathon 2026',
+  title: 'Help · DCX AI Playground Hackathon 2026',
   description,
 }
 

@@ -24,9 +24,9 @@ const atkinson = Atkinson_Hyperlegible({
 })
 
 export const metadata: Metadata = {
-  title: 'DCX AI Hackathon 2026',
+  title: 'DCX AI Playground Hackathon 2026',
   description:
-    'Build and ship an app with AI over two weeks (7–21 September 2026), part-time, using v0 + Vercel. Runtime model integration is optional. Open to everyone.',
+    'Build and ship an app with AI over two weeks (7 September – 21 September 2026), part-time, using v0 + Vercel. Runtime model integration is optional. Open to everyone. The DCX AI Playground Hackathon.',
   generator: 'v0.app',
   icons: {
     icon: [

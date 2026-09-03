@@ -19,35 +19,36 @@ Quick answers, grouped by topic. Jump to a question below.
 10. [What makes something an "AI agent" (not just a chatbot)?](#10-what-makes-something-an-ai-agent-not-just-a-chatbot)
 11. [What's the difference between an agent and a skill?](#11-whats-the-difference-between-an-agent-and-a-skill)
 12. [What are the main types of AI agent: deterministic, generative, and hybrid?](#12-what-are-the-main-types-of-ai-agent-deterministic-generative-and-hybrid)
+13. [How does an agent actually decide what to do inside the loop?](#13-how-does-an-agent-actually-decide-what-to-do-inside-the-loop)
 
 **Building your app**
-13. [Which AI model should I use?](#13-which-ai-model-should-i-use)
-14. [Do I have to use the AI SDK?](#14-do-i-have-to-use-the-ai-sdk)
-15. [Can I use GPT, Claude, or Gemini models with Vercel and v0?](#15-can-i-use-gpt-claude-or-gemini-models-with-vercel-and-v0)
-16. [Do I have to use Next.js or React?](#16-do-i-have-to-use-nextjs-or-react)
-17. [Do I need AI inside my app, or can it just help me build?](#17-do-i-need-ai-inside-my-app-or-can-it-just-help-me-build)
-18. [Is there a starter template or repo I can build from?](#18-is-there-a-starter-template-or-repo-i-can-build-from)
-19. [What do I need to get set up?](#19-what-do-i-need-to-get-set-up)
-20. [Can I ground the AI in my own documents or data?](#20-can-i-ground-the-ai-in-my-own-documents-or-data)
-21. [How do I reduce the model's hallucinations?](#21-how-do-i-reduce-the-models-hallucinations)
+14. [Which AI model should I use?](#14-which-ai-model-should-i-use)
+15. [Do I have to use the AI SDK?](#15-do-i-have-to-use-the-ai-sdk)
+16. [Can I use GPT, Claude, or Gemini models with Vercel and v0?](#16-can-i-use-gpt-claude-or-gemini-models-with-vercel-and-v0)
+17. [Do I have to use Next.js or React?](#17-do-i-have-to-use-nextjs-or-react)
+18. [Do I need AI inside my app, or can it just help me build?](#18-do-i-need-ai-inside-my-app-or-can-it-just-help-me-build)
+19. [Is there a starter template or repo I can build from?](#19-is-there-a-starter-template-or-repo-i-can-build-from)
+20. [What do I need to get set up?](#20-what-do-i-need-to-get-set-up)
+21. [Can I ground the AI in my own documents or data?](#21-can-i-ground-the-ai-in-my-own-documents-or-data)
+22. [How do I reduce the model's hallucinations?](#22-how-do-i-reduce-the-models-hallucinations)
 
 **Rules & logistics**
-22. [Who owns what I build?](#22-who-owns-what-i-build)
-23. [Can I use real client or company data?](#23-can-i-use-real-client-or-company-data)
-24. [Are my prompts used to train the AI models?](#24-are-my-prompts-used-to-train-the-ai-models)
-25. [Is there a code of conduct?](#25-is-there-a-code-of-conduct)
-26. [Can I start early or reuse an existing project?](#26-can-i-start-early-or-reuse-an-existing-project)
-27. [Do I have to attend live or present in person?](#27-do-i-have-to-attend-live-or-present-in-person)
+23. [Who owns what I build?](#23-who-owns-what-i-build)
+24. [Can I use real client or company data?](#24-can-i-use-real-client-or-company-data)
+25. [Are my prompts used to train the AI models?](#25-are-my-prompts-used-to-train-the-ai-models)
+26. [Is there a code of conduct?](#26-is-there-a-code-of-conduct)
+27. [Can I start early or reuse an existing project?](#27-can-i-start-early-or-reuse-an-existing-project)
+28. [Do I have to attend live or present in person?](#28-do-i-have-to-attend-live-or-present-in-person)
 
 **Troubleshooting & deployment**
-28. [My AI calls fail. Why?](#28-my-ai-calls-fail-why)
-29. [My app works locally but breaks when deployed.](#29-my-app-works-locally-but-breaks-when-deployed)
-30. [Can I host on GitHub Pages?](#30-can-i-host-on-github-pages)
-31. [Why won't Vercel connect my company repo?](#31-why-wont-vercel-connect-my-company-repo)
-32. [What if I only have the free tier on Vercel?](#32-what-if-i-only-have-the-free-tier-on-vercel)
-33. [How do I share my project so judges can see it?](#33-how-do-i-share-my-project-so-judges-can-see-it)
-34. [How do we save our work and collaborate as a team with version control?](#34-how-do-we-save-our-work-and-collaborate-as-a-team-with-version-control)
-35. [v0 says GitHub is connected but the pull or sync fails.](#35-v0-says-github-is-connected-but-the-pull-or-sync-fails)
+29. [My AI calls fail. Why?](#29-my-ai-calls-fail-why)
+30. [My app works locally but breaks when deployed.](#30-my-app-works-locally-but-breaks-when-deployed)
+31. [Can I host on GitHub Pages?](#31-can-i-host-on-github-pages)
+32. [Why won't Vercel connect my company repo?](#32-why-wont-vercel-connect-my-company-repo)
+33. [What if I only have the free tier on Vercel?](#33-what-if-i-only-have-the-free-tier-on-vercel)
+34. [How do I share my project so judges can see it?](#34-how-do-i-share-my-project-so-judges-can-see-it)
+35. [How do we save our work and collaborate as a team with version control?](#35-how-do-we-save-our-work-and-collaborate-as-a-team-with-version-control)
+36. [v0 says GitHub is connected but the pull or sync fails.](#36-v0-says-github-is-connected-but-the-pull-or-sync-fails)
 
 ---
 
@@ -91,7 +92,7 @@ Rule of thumb: start with an approved free or funded option, use only sample/syn
 
 ### 6. How much time do I need to commit?
 
-It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (7–21 September), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
+It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (7 September – 21 September), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
 
 ### 7. How finished does my project need to be?
 
@@ -139,7 +140,7 @@ Match the model to the modality, quality, latency, and cost you need. The [AI SD
 
 ### 10. What makes something an "AI agent" (not just a chatbot)?
 
-The [AI SDK definition](https://ai-sdk.dev/docs/agents/overview) is an LLM that uses **tools in a loop** to accomplish a task. Tools let it search, query a database, or call an API; the loop manages context and stopping conditions while the model chooses the next action. A simple chatbot may answer once without tools, while an agent can take several tool-backed steps. That's the 🍂 Harvest level in [Challenges](challenges.md).
+The [AI SDK definition](https://ai-sdk.dev/docs/agents/overview) is an LLM that uses **tools in a loop** to accomplish a task. Tools let it search, query a database, or call an API; the loop manages context and stopping conditions while the model chooses the next action. A simple chatbot may answer once without tools, while an agent can take several tool-backed steps. See the **AI Agent** type in [What to build](project-types.md).
 
 ### 11. What's the difference between an agent and a skill?
 
@@ -171,11 +172,28 @@ Anthropic's [workflows-versus-agents distinction](https://www.anthropic.com/engi
 | **Generative** | open-ended, natural language | chat, drafting, Q&A over your docs (RAG), a research assistant |
 | **Hybrid** | understand *then* act | read a request generatively, then run a fixed workflow to action it |
 
-Lowering temperature can make a supporting model call more consistent when that model exposes the setting, but it does not turn an LLM into a deterministic workflow. See [How do I reduce the model's hallucinations?](#21-how-do-i-reduce-the-models-hallucinations).
+Lowering temperature can make a supporting model call more consistent when that model exposes the setting, but it does not turn an LLM into a deterministic workflow. See [How do I reduce the model's hallucinations?](#22-how-do-i-reduce-the-models-hallucinations).
+
+### 13. How does an agent actually decide what to do inside the loop?
+
+Most agents follow a simple, repeating pattern often called **ReAct** — reason, act, observe. Each turn the model reasons about the goal, picks one action (call a tool, query data, or answer), then reads the result as a new **observation** before deciding the next step. The loop repeats until the goal is met or a stopping condition — a step limit or a "done" signal — ends it.
+
+A related idea, **chain-of-thought**, is simply asking the model to work through intermediate steps instead of jumping straight to an answer.
+
+```mermaid
+flowchart LR
+  R["Reason: what next?"] --> A["Act: call a tool"]
+  A --> O["Observe: read the result"]
+  O --> C{"Goal met or limit hit?"}
+  C -->|No| R
+  C -->|Yes| D["Respond / stop"]
+```
+
+You don't have to implement this by hand: a tool-using loop in the [AI SDK](https://ai-sdk.dev/docs/agents/overview) already works this way. Two practical takeaways — grounding each step in real tool results reduces made-up answers, and always set [loop limits](https://ai-sdk.dev/docs/agents/building-agents) so the agent reliably stops. See the Harvest examples in [What to build](project-types.md).
 
 ## Building your app
 
-### 13. Which AI model should I use?
+### 14. Which AI model should I use?
 
 Choose from the task, not the brand name. Start with the least expensive model that passes representative tests, and move up only when the results show a clear gap.
 
@@ -194,7 +212,7 @@ Selection habits:
 
 Use the live [AI Gateway model catalogue](https://vercel.com/ai-gateway/models) for supported capabilities and pricing. Gateway models often swap by changing the model ID, but capabilities and parameters differ, so they are not always drop-in equivalents.
 
-### 14. Do I have to use the AI SDK?
+### 15. Do I have to use the AI SDK?
 
 No — it is the recommended TypeScript path here, not a requirement. [AI SDK](https://ai-sdk.dev) gives you common model, tool, streaming, and UI primitives, and its default [AI Gateway](https://vercel.com/docs/ai-gateway) integration makes supported models easier to compare and switch. Provider and model capabilities still vary.
 
@@ -209,7 +227,7 @@ If you'd rather go another way:
 
 Rule of thumb: use the AI SDK for a common interface and UI/tooling support; go direct when you need a provider feature it does not expose.
 
-### 15. Can I use GPT, Claude, or Gemini models with Vercel and v0?
+### 16. Can I use GPT, Claude, or Gemini models with Vercel and v0?
 
 Yes. **[v0](https://v0.app)** helps you build the app and **Vercel** hosts it; neither locks you to one model family.
 
@@ -220,22 +238,22 @@ The names describe two different things:
 
 For the hackathon, the simplest route is the **[AI Gateway](https://vercel.com/docs/ai-gateway/models-and-providers)**: one API gives you access to hundreds of models from multiple providers, selected with a `creator/model-name` ID. You can also [bring your own provider key](https://vercel.com/docs/ai-gateway/authentication-and-byok/byok) after purchasing AI Gateway credits, or skip the Gateway and call a provider's SDK directly when you need a provider-specific feature.
 
-### 16. Do I have to use Next.js or React?
+### 17. Do I have to use Next.js or React?
 
 No. This starter path uses **Next.js + React** because they work smoothly with [v0](https://v0.app), the AI SDK, and Vercel. [Vercel supports many other frameworks](https://vercel.com/docs/frameworks), and you can use another host or backend as long as it runs the server-side code that protects your AI keys. For a two-week build, keep the default unless another stack clearly helps your team.
 
-### 17. Do I need AI inside my app, or can it just help me build?
+### 18. Do I need AI inside my app, or can it just help me build?
 
 Both approaches are valid:
 
 - **Build with AI.** Use [v0](https://v0.app), [GitHub Copilot](https://docs.github.com/en/copilot/get-started/what-is-github-copilot), or another approved assistant to shape, design, code, test, and deploy your project. That is enough to participate. The finished app can use normal code and data with **no model key or model API call**.
-- **Build AI into the experience (optional).** Let the running app call a model, use data or tools, or run an agent. [Seed, Sprout, and Harvest](challenges.md#choose-your-runtime-ai-level-optional) measure only that runtime AI depth, not how much AI helped you build.
+- **Build AI into the experience (optional).** Let the running app call a model, use data or tools, or run an agent. This is about whether the finished app uses AI at runtime — a separate thing from how much AI helped you build it, and never required.
 
 This follows the build-tool pattern used by the [World's Largest Hackathon presented by Bolt](https://worldslargesthackathon.devpost.com/rules) and the AI-assistance disclosure used by [NASA Space Apps](https://www.spaceappschallenge.org/resources/project-submission-guide/). Product-specific events can instead require embedded AI, as Google's [Gemini API Developer Competition](https://ai.google.dev/competition) and Microsoft's [AI Agents Hackathon](https://microsoft.github.io/AI_Agents_Hackathon/) did.
 
 One rule: keep confidential client and company data out of external tools.
 
-### 18. Is there a starter template or repo I can build from?
+### 19. Is there a starter template or repo I can build from?
 
 Yes — you rarely need a blank page. Two routes:
 
@@ -244,21 +262,21 @@ Yes — you rarely need a blank page. Two routes:
 
 More in the [AI SDK guide](ai-sdk-guide.md#starter-templates) and the [full template gallery](https://vercel.com/templates?type=ai).
 
-### 19. What do I need to get set up?
+### 20. What do I need to get set up?
 
 Not much. Create **[v0](https://v0.app)** and **[Vercel](https://vercel.com)** accounts; connect GitHub when you want version control and team collaboration. You can build and deploy in the browser with no local install. Vercel deployments can authenticate to AI Gateway automatically with OIDC, while local or non-Vercel development needs `AI_GATEWAY_API_KEY`. To run this Next.js 16 website locally, use Node 20.9+ and pnpm; the current AI SDK v7 quickstart requires Node 22+. Full walkthrough: [AI SDK guide](ai-sdk-guide.md) and [Deployment guide](deployment-guide.md).
 
-### 20. Can I ground the AI in my own documents or data?
+### 21. Can I ground the AI in my own documents or data?
 
-Yes — that's the 🌿 Sprout level. A few related pieces work together:
+Yes — grounding the app in your own content is a great optional step. A few related pieces work together:
 
 - **RAG (retrieval-augmented generation)** — retrieve relevant, non-sensitive content and pass it to the model as context. → [AI SDK RAG Agent guide](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot)
 - **Controls** — add clear instructions for missing evidence, validate structured outputs, require approval before sensitive tools run, and set loop limits. → [Build and constrain agents](https://ai-sdk.dev/docs/agents/building-agents) · [Tool approvals](https://ai-sdk.dev/docs/agents/tool-approvals)
 - **Callbacks** — log model calls, tool execution, timing, token use, and errors for observability. Callback errors are caught and the AI SDK call continues, so callbacks do **not** block or stop a run. → [Lifecycle callbacks](https://ai-sdk.dev/docs/ai-sdk-core/lifecycle-callbacks)
 
-See also *Ask My Docs* and *Live Lookup* in [Challenges](challenges.md).
+See also the **AI Agent** and **Data & Insights** types in [What to build](project-types.md).
 
-### 21. How do I reduce the model's hallucinations?
+### 22. How do I reduce the model's hallucinations?
 
 A **hallucination** is unsupported or false output presented as fact. You cannot remove this entirely, but you can reduce it and make failures easier to detect.
 
@@ -268,7 +286,7 @@ A **hallucination** is unsupported or false output presented as fact. You cannot
 - **Live tools** — call a trusted API or search service for facts that change.
 - **Citations** — store and display the source for each retrieved chunk; RAG does not create trustworthy citations automatically.
 
-More on wiring this up: [Can I ground the AI in my own documents or data?](#20-can-i-ground-the-ai-in-my-own-documents-or-data)
+More on wiring this up: [Can I ground the AI in my own documents or data?](#21-can-i-ground-the-ai-in-my-own-documents-or-data)
 
 **2. Make uncertainty explicit.** Tell the model to use only supplied evidence, distinguish evidence from inference, and say when information is missing. Validate structured output with a schema.
 
@@ -280,15 +298,15 @@ More on wiring this up: [Can I ground the AI in my own documents or data?](#20-c
 
 ## Rules & logistics
 
-### 22. Who owns what I build?
+### 23. Who owns what I build?
 
 You and your team keep your work and can carry on building after the event — that's encouraged. Treat what you ship as a learning prototype: anything you'd take further for real client or production use still goes through your normal company review. Standard DCX IP and confidentiality policies apply to anything work-related.
 
-### 23. Can I use real client or company data?
+### 24. Can I use real client or company data?
 
-No — use sample, synthetic, or public data instead. Keep confidential client information and personal data (PII) out of your prompts, your app, and any external AI tool. To make the AI answer from *your* content, use a small, non-sensitive sample with [RAG](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot). When in doubt, leave it out.
+No ��� use sample, synthetic, or public data instead. Keep confidential client information and personal data (PII) out of your prompts, your app, and any external AI tool. To make the AI answer from *your* content, use a small, non-sensitive sample with [RAG](https://ai-sdk.dev/resources/recipes/guides/rag-chatbot). When in doubt, leave it out.
 
-### 24. Are my prompts used to train the AI models?
+### 25. Are my prompts used to train the AI models?
 
 Vercel says **AI Gateway itself does not use your prompts or responses for training**. Downstream provider routing is separate:
 
@@ -296,23 +314,23 @@ Vercel says **AI Gateway itself does not use your prompts or responses for train
 - This filter does **not** apply to BYOK requests, which follow your direct agreement and configuration with that provider.
 - If you call the Gemini API directly, Google says its **free-tier** content is used to improve its products; paid-tier content is not.
 
-Read [Disallow Prompt Training](https://vercel.com/docs/ai-gateway/security-and-compliance/disallow-prompt-training). Even with controls enabled, do not paste confidential or client data into prompts — see [Can I use real client or company data?](#23-can-i-use-real-client-or-company-data).
+Read [Disallow Prompt Training](https://vercel.com/docs/ai-gateway/security-and-compliance/disallow-prompt-training). Even with controls enabled, do not paste confidential or client data into prompts — see [Can I use real client or company data?](#24-can-i-use-real-client-or-company-data).
 
-### 25. Is there a code of conduct?
+### 26. Is there a code of conduct?
 
 Yes. Be respectful, inclusive, and supportive — this is a welcoming space for people trying AI for the first time. Read the full [Code of conduct](CODE_OF_CONDUCT.md), and if something isn't right, raise it with the organisers or in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel.
 
-### 26. Can I start early or reuse an existing project?
+### 27. Can I start early or reuse an existing project?
 
-Build during the hackathon window (**7–21 September**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
+Build during the hackathon window (**7 September – 21 September**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
 
-### 27. Do I have to attend live or present in person?
+### 28. Do I have to attend live or present in person?
 
 It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Monday 21 September** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
 
 ## Troubleshooting & deployment
 
-### 28. My AI calls fail. Why?
+### 29. My AI calls fail. Why?
 
 Work through the common causes in order:
 
@@ -326,35 +344,35 @@ Read the actual error first. Handle regular errors and error chunks using the [A
 
 **If you call a provider directly** (e.g. OpenAI) instead of through the Gateway, use *their* docs — each has its own how-to-call guide and error reference, like [OpenAI's error codes](https://platform.openai.com/docs/guides/error-codes).
 
-### 29. My app works locally but breaks when deployed.
+### 30. My app works locally but breaks when deployed.
 
 Check the **first deployment error** rather than the last symptom. A common cause is a missing environment variable: add it to the correct Vercel environment, then create a **new deployment**, because variable changes do not affect old deployments.
 
 For local Next.js development, keep secrets in `.env.local`, restart `pnpm dev` after changes, and never commit that file. If the dev command itself fails, run `pnpm install` and confirm you are using Node 20.9+.
 
-### 30. Can I host on GitHub Pages?
+### 31. Can I host on GitHub Pages?
 
 Not by itself for a typical AI SDK app. [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) hosts static HTML, CSS, and JavaScript, so it cannot run the server-side route that keeps your AI key secret. You could put a static frontend there only if the backend runs somewhere else. The simplest path is Vercel or another full-stack host in the [Deployment guide](deployment-guide.md).
 
-### 31. Why won't Vercel connect my company repo?
+### 32. Why won't Vercel connect my company repo?
 
 Vercel Hobby cannot connect a project to a Git repository owned by a GitHub organisation, GitLab group, or Bitbucket workspace. Use a personal repository only when company policy permits it, or use the organiser-approved Pro/Enterprise setup. Do **not** change company repo visibility without approval.
 
 See [Vercel limits](https://vercel.com/docs/limits#connecting-a-project-to-a-git-repository), the [Deployment guide](deployment-guide.md), or ask in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel.
 
-### 32. What if I only have the free tier on Vercel?
+### 33. What if I only have the free tier on Vercel?
 
 Hobby technically supports full-stack apps and server-side routes, but Vercel restricts it to [personal, non-commercial use](https://vercel.com/docs/limits/fair-use-guidelines#commercial-usage). Its definition of commercial use can include a paid employee or consultant writing the code, so a personal repo does not automatically make a company-hackathon deployment eligible.
 
 Use the organiser-approved Vercel account or ask whether you should use Pro/Enterprise. You can still build with free development tools such as [VS Code](https://code.visualstudio.com), [GitHub Copilot Free](https://github.com/features/copilot/plans), or [Gemini CLI](https://github.com/google-gemini/gemini-cli). Technical plan limits are in the [Deployment guide](deployment-guide.md).
 
-### 33. How do I share my project so judges can see it?
+### 34. How do I share my project so judges can see it?
 
-Judges need two things: a **public live URL** (no login wall, so it opens in an incognito window) and your **code** — a public GitHub repo or your v0 project link. You can build either way, and the **Start building** page walks through both: start in v0 and **Push to GitHub**, or build locally and connect the repo to Vercel. Keep secrets out of a public repo — never commit `.env.local` or API keys; set them in Vercel instead. For the exact deploy steps, see the [Deployment guide](deployment-guide.md).
+Judges need two things: a **public live URL** (no login wall, so it opens in an incognito window) and your **code** — a public GitHub repo or your v0 project link. You can build either way, and the **How to build** page walks through both: start in v0 and **Push to GitHub**, or build locally and connect the repo to Vercel. Keep secrets out of a public repo — never commit `.env.local` or API keys; set them in Vercel instead. For the exact deploy steps, see the [Deployment guide](deployment-guide.md).
 
 When you're ready, enter everything in the **submission form** — we post the link in the Submissions channel on Monday 21 September, and that's your official entry. The full checklist lives on the [Submit page](submission.md). Want **People's Choice** too? Also share your app as a post in the same channel so other participants can vote.
 
-### 34. How do we save our work and collaborate as a team with version control?
+### 35. How do we save our work and collaborate as a team with version control?
 
 Use **GitHub** — that one habit gives you version control, a backup, and team collaboration all at once. Connect your v0/Vercel project to a GitHub repo, and every change is saved with full history. Don't trust a single browser tab: in v0 click **Push to GitHub**; if you build locally, `git commit` and `git push` often.
 
@@ -364,7 +382,7 @@ Use **GitHub** — that one habit gives you version control, a backup, and team 
 
 - Each person makes a **branch**, then opens a **pull request** (PR). After the project's first deployment, pushing a non-production branch creates a **preview deployment** with generated URLs. Merge into the configured production branch (usually `main`) and Vercel creates production.
 - Agree who looks after `main`, keep changes small, and push often — small, frequent commits are the easiest way to avoid clashing edits (merge conflicts).
-- **Hobby note:** Hobby has no additional Vercel team members, and private organisation repos require Pro. Keep collaboration and review in GitHub, then use the organiser-approved Vercel setup for deployment. See [Q31](#31-why-wont-vercel-connect-my-company-repo).
+- **Hobby note:** Hobby has no additional Vercel team members, and private organisation repos require Pro. Keep collaboration and review in GitHub, then use the organiser-approved Vercel setup for deployment. See [Q32](#32-why-wont-vercel-connect-my-company-repo).
 
 **Read further:**
 
@@ -375,7 +393,7 @@ Use **GitHub** — that one habit gives you version control, a backup, and team 
 
 Step-by-step deploy instructions are in the [Deployment guide](deployment-guide.md).
 
-### 35. v0 says GitHub is connected but the pull or sync fails.
+### 36. v0 says GitHub is connected but the pull or sync fails.
 
 Start with the parts that can be verified:
 

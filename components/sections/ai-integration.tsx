@@ -39,12 +39,12 @@ function GrowthMeter({ level }: Readonly<{ level: number }>) {
   )
 }
 
-export function Challenges() {
+export function AiIntegration() {
   return (
-    <section id="challenges" className="scroll-mt-16">
+    <section id="ai-integration" className="scroll-mt-16">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-24">
         <SectionHeading
-          eyebrow="Challenges"
+          eyebrow="AI Integration"
           title="Choose a runtime AI level — if your app needs one"
           description="Seed, Sprout, and Harvest describe AI that runs inside your finished app, not how much AI helped you build. No model call? You can still enter as an AI-assisted build and skip the ladder."
         />
@@ -144,12 +144,6 @@ export function Challenges() {
           Pick one — a scoped idea beats a big vague one. Each works for any project type.
         </p>
         <ChallengeFilter />
-
-        <p className="mt-8 border-l-2 border-primary pl-5 text-sm leading-relaxed text-muted-foreground">
-          <span className="font-semibold text-foreground">Bring your own idea?</span> Go for it. Pick
-          a level, keep it small enough to demo, and check it against the judging criteria. Everyone
-          who takes part gets a certificate of participation and personal feedback on SuccessFactors.
-        </p>
       </div>
     </section>
   )

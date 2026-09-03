@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, X, Sprout } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { navMenu, isNavGroup } from '@/lib/content'
 import { isNavLinkActive } from '@/lib/nav'
 import { ThemeToggle } from '@/components/theme-toggle'
@@ -19,12 +19,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/80 backdrop-blur-md">
       <ScrollProgress />
       <div className="flex h-16 items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2 font-display text-base font-bold tracking-tight">
-          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-            <Sprout className="size-5" />
-          </span>
+        <Link href="/" className="flex items-center gap-2.5 font-display text-base font-bold tracking-tight">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/capgemini-logo.svg"
+            alt="Capgemini"
+            className="h-[39px] w-auto"
+          />
           <span>
-            <span className="text-brand-blue">DCX</span> AI Hackathon 2026
+            <span className="text-brand-blue">DCX</span> AI Playground Hackathon 2026
           </span>
         </Link>
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Submit } from '@/components/sections/submit'
 
 export const metadata: Metadata = {
-  title: 'Submit · DCX AI Hackathon 2026',
+  title: 'Submit · DCX AI Playground Hackathon 2026',
   description: 'The submission deadline, checklist, and README template for your project.',
 }
 

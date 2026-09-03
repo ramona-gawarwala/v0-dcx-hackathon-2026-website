@@ -5,18 +5,28 @@ import {
   Network,
   BarChart3,
   Palette,
-  Sprout,
-  Leaf,
-  Wheat,
-  Mic,
-  Image as ImageIcon,
-  Video,
+  Sparkles,
   Award,
   TrendingUp,
   Trophy,
   GraduationCap,
   HeartHandshake,
   Users,
+  Landmark,
+  ShoppingBag,
+  RadioTower,
+  Zap,
+  Stethoscope,
+  Car,
+  ShieldCheck,
+  Activity,
+  Plane,
+  Sprout,
+  Leaf,
+  Wheat,
+  Mic,
+  Image as ImageIcon,
+  Video,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -25,7 +35,7 @@ export const LIVE_URL = 'https://v0-dcx-hackathon-2026.vercel.app'
 export const V0_COMMUNITY_URL = 'https://v0.app/community'
 export const VERCEL_TEMPLATES_URL = 'https://vercel.com/templates?type=ai'
 
-// Microsoft Forms registration for the DCX AI Hackathon 2026.
+// Microsoft Forms registration for the DCX AI Playground Hackathon 2026.
 export const REGISTER_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUOUpIUjVVMURHR0gwM1dRTFpRWkRaVE40SC4u'
 
@@ -37,7 +47,7 @@ export const REPORT_URL =
 export const PULSE_CHECK_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUREpHNTA0Nlg1VU5OSTk2Q0NIVlA4WE9LTi4u'
 
-// Microsoft Teams team and channels used by the DCX AI Hackathon 2026.
+// Microsoft Teams team and channels used by the DCX AI Playground Hackathon 2026.
 export const TEAMS_TEAM_URL =
   'https://teams.microsoft.com/l/team/19%3A6VZc0lYnAVy-qh6prOW7bX4V4yAcAyzRikL3TJPp85A1%40thread.tacv2/conversations?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 export const TEAMS_ANNOUNCEMENTS_URL =
@@ -52,9 +62,10 @@ export const TEAMS_SUBMISSIONS_URL =
 export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'How it works', href: '/how-it-works' },
-  { label: 'Start building', href: '/start-building' },
-  { label: 'Project types', href: '/project-types' },
-  { label: 'Challenges', href: '/challenges' },
+  { label: 'Why join', href: '/why-join' },
+  { label: 'How to build', href: '/how-to-build' },
+  { label: 'What to build', href: '/what-to-build' },
+  { label: 'AI Integration', href: '/ai-integration' },
   { label: 'What you get', href: '/benefits' },
   { label: 'Judging', href: '/judging' },
   { label: 'Submit', href: '/submit' },
@@ -76,12 +87,13 @@ export function isNavGroup(entry: NavEntry): entry is NavGroup {
 export const navMenu: NavEntry[] = [
   { label: 'Home', href: '/' },
   { label: 'How it works', href: '/how-it-works' },
+  { label: 'Why join', href: '/why-join' },
   {
     label: 'Build',
     items: [
-      { label: 'Start building', href: '/start-building' },
-      { label: 'Project types', href: '/project-types' },
-      { label: 'Challenges', href: '/challenges' },
+      { label: 'How to build', href: '/how-to-build' },
+      { label: 'What to build', href: '/what-to-build' },
+      { label: 'AI Integration', href: '/ai-integration' },
     ],
   },
   {
@@ -142,199 +154,6 @@ export const startSteps = [
     step: '03',
     title: 'Keep iterating',
     body: 'Refine in v0 (or your editor) until it is demo-ready. Done beats perfect.',
-  },
-]
-
-export type ProjectType = {
-  icon: LucideIcon
-  emoji: string
-  title: string
-  goal: string
-  examples: string
-  checklist: string[]
-  goodFor: string
-  ideas: {
-    stage: 'Start simple' | 'Go further' | 'Creative stretch'
-    title: string
-    body: string
-    runtimeAi: 'No model call needed' | 'Runtime AI optional' | 'Runtime AI core'
-  }[]
-}
-
-export const projectTypes: ProjectType[] = [
-  {
-    icon: Rocket,
-    emoji: '🚀',
-    title: 'Product Builder',
-    goal: 'Solve a user problem with an app.',
-    examples: 'Internal productivity tool, learning platform, accessibility solution, sustainability dashboard.',
-    checklist: ['UI', 'Business logic', 'Data storage', 'Deployment'],
-    goodFor: 'POs · BAs · Designers · Full-stack devs',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Handoff board',
-        body: 'Pass work between teammates with an owner, status, next action, and due date.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'Accessibility rehearsal',
-        body: 'Choose a user need, then walk through a task with focused checks and prompts.',
-        runtimeAi: 'Runtime AI optional',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Reverse onboarding',
-        body: 'New joiners capture confusing moments; teams turn repeated friction into trackable fixes.',
-        runtimeAi: 'Runtime AI optional',
-      },
-    ],
-  },
-  {
-    icon: Bot,
-    emoji: '🤖',
-    title: 'AI Agent',
-    goal: 'An AI assistant that performs tasks.',
-    examples: 'Knowledge assistant, meeting assistant, documentation assistant, support chatbot.',
-    checklist: ['Chat UI', 'Model', 'Prompt', 'Tool(s)', 'Deployment'],
-    goodFor: 'Developers · AI enthusiasts',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Source scout',
-        body: 'Search approved sources, answer with citations, and stop when evidence is missing.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Go further',
-        title: 'Meeting follow-through agent',
-        body: 'Read sample notes, check a mock task board, ask for missing details, and draft updates for approval.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Scenario rehearsal agent',
-        body: 'Role-play a stakeholder, use a scoring tool to adapt to choices, then run a rubric-based debrief.',
-        runtimeAi: 'Runtime AI core',
-      },
-    ],
-  },
-  {
-    icon: Workflow,
-    emoji: '🔄',
-    title: 'Workflow Automation',
-    goal: 'Automate a business process.',
-    examples: 'Ticket triage, email classification, report generation, approval workflows.',
-    checklist: ['Trigger', 'Workflow', 'Rules or AI step', 'Output action'],
-    goodFor: 'Developers · BAs · Process specialists',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Request-to-brief',
-        body: 'Validate a form, format the answers into a standard brief, and store the result.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'Triage with confidence',
-        body: 'Classify sample requests, route confident matches, and send uncertain ones to a person.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Meeting-to-momentum',
-        body: 'Turn sample notes into decisions and actions, pause for approval, then publish a digest.',
-        runtimeAi: 'Runtime AI core',
-      },
-    ],
-  },
-  {
-    icon: Network,
-    emoji: '🤖🤖',
-    title: 'Multi-Agent System',
-    goal: 'Multiple agents collaborate.',
-    examples: 'Product Owner Agent, Architect Agent, Developer Agent, Tester Agent.',
-    checklist: ['Coordinator', 'Specialist agents', 'Shared context', 'Final response'],
-    goodFor: 'Advanced participants — keep scope small',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Maker + checker',
-        body: 'One agent drafts with a template tool; another checks a clear rubric; the loop stops after two revisions.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Go further',
-        title: 'Research desk',
-        body: 'A source finder, analyst, and fact-checker hand off work to produce one cited briefing.',
-        runtimeAi: 'Runtime AI core',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Incident rehearsal room',
-        body: 'Specialist agents inspect mock logs and status tools under human direction, then create a postmortem.',
-        runtimeAi: 'Runtime AI core',
-      },
-    ],
-  },
-  {
-    icon: BarChart3,
-    emoji: '📊',
-    title: 'Data & Insights',
-    goal: 'Help users understand data.',
-    examples: 'Dashboards, analytics, AI insights, forecasting.',
-    checklist: ['Data source', 'Processing', 'Visualisation', 'Deployment'],
-    goodFor: 'Anyone working with data',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'Team pulse explorer',
-        body: 'Load sample survey data, filter groups, and chart how responses change over time.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'What changed?',
-        body: 'Compare two periods, reveal the largest shifts, and let users annotate likely causes.',
-        runtimeAi: 'Runtime AI optional',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Decision replay',
-        body: 'Scrub through a project timeline and reveal only the signals available at each moment.',
-        runtimeAi: 'Runtime AI optional',
-      },
-    ],
-  },
-  {
-    icon: Palette,
-    emoji: '🎨',
-    title: 'Experience & Creativity',
-    goal: 'Create something engaging.',
-    examples: 'Games, interactive stories, visualisations, AI-powered experiences.',
-    checklist: ['Interactive UI', 'Content or AI engine', 'Content or assets', 'Deployment'],
-    goodFor: 'Designers and anyone having fun with it',
-    ideas: [
-      {
-        stage: 'Start simple',
-        title: 'One-minute quiz show',
-        body: 'Use AI while building the questions and visual assets, then run a polished interactive game.',
-        runtimeAi: 'No model call needed',
-      },
-      {
-        stage: 'Go further',
-        title: 'Choice-reactive story',
-        body: 'Let decisions reshape the scene, sound, characters, and ending in real time.',
-        runtimeAi: 'Runtime AI optional',
-      },
-      {
-        stage: 'Creative stretch',
-        title: 'Future postcard wall',
-        body: 'Visitors add text, sketches, or voice; the experience remixes them into a shared live exhibit.',
-        runtimeAi: 'Runtime AI optional',
-      },
-    ],
   },
 ]
 
@@ -450,7 +269,7 @@ export const challengeQualityBar = [
     body: 'Demo one representative task from input to a result you can verify.',
   },
   {
-    title: 'Test more than the happy path',
+    title: 'Evaluate beyond the happy path',
     body: 'Try at least three cases, including one edge or failure case, and share what happened.',
   },
   {
@@ -470,8 +289,9 @@ export const challenges: Challenge[] = [
     problem: 'A message, summary, or note takes too long to get right.',
     build: 'An assistant that summarises, rewrites, translates, or reformats text.',
     done: [
-      'It completes one clear job on a representative example.',
-      'A first-time user can provide input and understand the result without extra instructions.',
+      'It completes one clear job — summarise, rewrite, translate, or reformat — on an example a judge can run live.',
+      'A first-time user can supply input and understand the result with no extra instructions.',
+      'A messy, empty, or off-topic input is handled gracefully instead of returning a broken or confusing result.',
     ],
   },
   {
@@ -480,18 +300,20 @@ export const challenges: Challenge[] = [
     problem: 'Starting from a blank page is the hardest part.',
     build: 'Generate a first draft — an email, a plan, a snippet — from a short brief.',
     done: [
-      'A one-line brief produces a draft with the requested purpose, audience, and format.',
-      'Changing one detail in the brief changes the draft in the expected way.',
+      'A one-line brief produces a usable first draft with the requested purpose, audience, and format.',
+      'Changing one detail in the brief visibly changes the draft as expected.',
+      'The output is offered as an editable starting point to refine, not a fixed final answer.',
     ],
   },
   {
     level: 'Sprout',
-    title: 'Ask My Docs',
-    problem: 'The answer is buried in documents nobody wants to read.',
-    build: 'Point it at your own docs and ask questions grounded in them.',
+    title: 'Company Concierge',
+    problem: 'Customers ask the same product and support questions over and over.',
+    build: 'A branded support chatbot with a defined persona that answers from one business’s own knowledge — products, policies, and FAQs.',
     done: [
-      'Each answer cites or links to the source passage it used.',
-      'It declines when the answer is not supported by the supplied content.',
+      'It holds a consistent persona and tone, and answers common questions from the supplied business knowledge.',
+      'A judge can trace each answer back to the business facts it was given — no invented prices, specs, or promises.',
+      'For anything out of scope or unknown, it admits it and points to a human or contact channel instead of guessing.',
     ],
   },
   {
@@ -500,8 +322,8 @@ export const challenges: Challenge[] = [
     problem: 'A useful answer needs current or approved data the model does not have.',
     build: 'Give the AI a tool — an API, a search, a database — it can call to fetch what it needs.',
     done: [
-      'It calls an approved data source and shows when the result was retrieved.',
-      'A failed or empty lookup produces a clear fallback instead of a made-up answer.',
+      'It calls an approved API, search, or database and shows the value plus when it was retrieved.',
+      'A failed, slow, or empty lookup shows a clear fallback message — never an invented answer.',
     ],
   },
   {
@@ -510,10 +332,10 @@ export const challenges: Challenge[] = [
     problem: 'A repetitive, multi-step task eats time that could go elsewhere.',
     build: 'An agent or workflow that completes the task end to end.',
     done: [
-      'One representative task reaches the intended result and exposes the steps taken.',
-      'The run has a completion condition and a hard step, time, or retry limit.',
-      'A failed step is reported and stops or follows a defined fallback.',
-      'Any action that sends, changes, deletes, spends, or publishes waits for explicit approval.',
+      'One representative task runs end to end to the intended result, with the steps it took visible.',
+      'The run has a completion condition and a hard step, time, or retry limit, so it always stops.',
+      'A failed step is reported and either stops or follows a defined fallback.',
+      'Any action that sends, changes, deletes, spends, or publishes waits for explicit human approval.',
     ],
   },
   {
@@ -527,6 +349,118 @@ export const challenges: Challenge[] = [
       'You can explain why one agent or a simpler workflow would be less reliable.',
       'The full run has a completion condition and a hard step, time, or retry limit.',
     ],
+  },
+]
+
+export type ProjectType = {
+  icon: LucideIcon
+  title: string
+  goal: string
+}
+
+export const projectTypes: ProjectType[] = [
+  {
+    icon: Rocket,
+    title: 'Product Builder',
+    goal: 'Solve a user problem with an app.',
+  },
+  {
+    icon: Bot,
+    title: 'AI Agent',
+    goal: 'An AI assistant that performs tasks.',
+  },
+  {
+    icon: Workflow,
+    title: 'Workflow Automation',
+    goal: 'Automate a business process.',
+  },
+  {
+    icon: Network,
+    title: 'Multi-Agent System',
+    goal: 'Multiple agents collaborate.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Data & Insights',
+    goal: 'Help users understand data.',
+  },
+  {
+    icon: Palette,
+    title: 'Experience & Creativity',
+    goal: 'Create something engaging.',
+  },
+]
+
+// Degreed Industry Campuses — 10 focus industries for Capgemini.
+export const DEGREED_CAMPUSES_URL = 'https://degreed.com/explore/2504635'
+
+export type IndustryInspiration = {
+  icon: LucideIcon
+  campus: string
+  segment: string
+  body: string
+}
+
+export const industryInspirations: IndustryInspiration[] = [
+  {
+    icon: Landmark,
+    campus: 'Banking',
+    segment: 'Payments',
+    body: 'A digital payments journey visualiser: a customer sending a payment, the bank routing, FX conversion, and arrival — beautiful, animated, educational.',
+  },
+  {
+    icon: Landmark,
+    campus: 'Banking',
+    segment: 'Retail Banking',
+    body: 'A personal finance dashboard with spending categories, savings goals, and a credit health score — the kind of thing a challenger bank would ship.',
+  },
+  {
+    icon: ShoppingBag,
+    campus: 'Retail',
+    segment: 'Selling / Consumer Products',
+    body: 'A shoppable product discovery experience: browse, filter, get AI recommendations, add to basket — focused on the quality of the digital shopping journey.',
+  },
+  {
+    icon: RadioTower,
+    campus: 'Telecom',
+    segment: '5G & Edge',
+    body: 'A network coverage map experience: explore 5G availability, latency stats, and use cases (connected cars, smart factories) — data-rich but beautifully presented.',
+  },
+  {
+    icon: Zap,
+    campus: 'Energy',
+    segment: 'Energy Transition',
+    body: 'A renewable energy portfolio dashboard for a utility: solar/wind output, grid load balancing, and carbon offset tracking.',
+  },
+  {
+    icon: Stethoscope,
+    campus: 'Public Sector',
+    segment: 'Healthcare',
+    body: 'A patient portal experience: appointment booking, test results, and GP messaging — the kind of digital service government is trying (and often failing) to build well.',
+  },
+  {
+    icon: Car,
+    campus: 'Automotive',
+    segment: 'Supply Chain',
+    body: 'A live supply chain visibility tool for EV battery components: factory status, shipment tracking, and risk alerts.',
+  },
+  {
+    icon: ShieldCheck,
+    campus: 'Insurance',
+    segment: 'Health',
+    body: 'A health insurance quote and compare experience: personalised, transparent pricing, and a claims submission flow.',
+  },
+  {
+    icon: Activity,
+    campus: 'Life Sciences',
+    segment: 'MedTech',
+    body: 'A clinical device dashboard: real-time patient vitals from a wearable, with alerts and a care team view.',
+  },
+  {
+    icon: Plane,
+    campus: 'Aerospace & Defense',
+    segment: 'Civil Aeronautics',
+    body: 'An aircraft maintenance scheduling tool: upcoming checks, component lifetimes, and engineer allocation.',
   },
 ]
 
@@ -546,17 +480,49 @@ export const awards = [
   'People\u2019s Choice (voted by participants)',
 ]
 
-export type Benefit = {
+  export type WhyJoinReason = {
   icon: LucideIcon
   title: string
   body: string
-}
+  }
+
+  export const whyJoinIntro =
+  'AI is changing how software gets built. This is a low-risk, part-time way to try it on a real project, ship something live, and pick up skills that carry straight into your day job — no experience required.'
+
+  export const whyJoinReasons: WhyJoinReason[] = [
+  {
+  icon: GraduationCap,
+  title: 'Learn by shipping, not watching',
+  body: 'Two weeks, one live app. You learn AI-assisted development by actually building and deploying something — the fastest way the skills stick.',
+  },
+  {
+  icon: HeartHandshake,
+  title: 'Genuinely open to everyone',
+  body: 'Engineers, POs, BAs, designers, first-timers. No setup, no prior AI experience, and beginners and non-engineers can win their own awards.',
+  },
+  {
+  icon: Users,
+  title: 'Meet people across the business',
+  body: 'Team up across roles and disciplines. You will finish with new connections and a shared thing you built together.',
+  },
+  {
+  icon: TrendingUp,
+  title: 'Evidence of your growth',
+  body: 'A certificate for everyone who takes part, plus personal feedback recorded on SuccessFactors — real proof of your commitment to growing your skills.',
+  },
+  ]
+
+  export type Benefit = {
+  icon: LucideIcon
+  title: string
+  body: string
+  }
 
 export const benefitHighlights: { icon: LucideIcon; label: string }[] = [
   { icon: Award, label: 'Certificate of participation' },
   { icon: TrendingUp, label: 'Feedback on SuccessFactors' },
   { icon: GraduationCap, label: 'Hands-on AI skills' },
-  { icon: Sprout, label: 'Grow outside your comfort zone' },
+  { icon: Sparkles, label: 'Try something new, low-risk' },
   { icon: Trophy, label: 'A shot at an award' },
 ]
 
@@ -599,7 +565,7 @@ export const submitChecklist = [
   { title: 'Title + one-line pitch', body: 'What it does, in plain words.' },
   { title: 'Demo video (2–3 min)', body: 'A screen recording of the app working — a demo, not a presentation.' },
   { title: 'Project type', body: 'Which of the 6 project types you built — the form asks for this.' },
-  { title: 'How you used AI', body: 'How AI helped you build, plus None, Seed, Sprout, or Harvest for runtime AI.' },
+  { title: 'How you used AI', body: 'How AI helped you build, plus whether the shipped app calls a model at runtime.' },
   { title: 'Team', body: 'Who built it.' },
   { title: 'Optional: enter People\u2019s Choice', body: 'Share your app in the Submissions channel so other participants can vote for their favourite.' },
 ]

@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Readonly<Params>): Promise<Me
   const guide = getGuide(slug)
   if (!guide) return {}
   return {
-    title: `${guide.title} · DCX AI Hackathon 2026`,
+    title: `${guide.title} · DCX AI Playground Hackathon 2026`,
     description: guide.description,
   }
 }

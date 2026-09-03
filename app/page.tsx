@@ -7,7 +7,7 @@ const steps = [
   {
     n: '01',
     title: 'Pick an idea',
-    body: 'Choose a project type and one useful problem. Add a runtime AI level only if your app needs one.',
+    body: 'Choose a project type and one useful problem. Add AI inside the app only if it improves the experience.',
   },
   {
     n: '02',
@@ -48,10 +48,10 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/start-building"
+              href="/how-to-build"
               className="btn-september group inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold text-primary-foreground"
             >
-              Start building
+              How to build
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
             <Link

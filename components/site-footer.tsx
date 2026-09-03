@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Sprout } from 'lucide-react'
 
 const linkClass = 'text-muted-foreground transition-colors hover:text-primary'
 
@@ -12,14 +11,11 @@ export function SiteFooter() {
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
               <div className="flex items-center gap-2 font-display text-sm font-semibold">
-                <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                  <Sprout className="size-5" />
-                </span>
-                <span>© 2026 DCX AI Hackathon</span>
+                <span>© 2026 DCX AI Playground Hackathon</span>
               </div>
               <span aria-hidden="true" className="h-5 w-px bg-border" />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/Capgemini-logo.svg" alt="Capgemini" className="h-6 w-auto" />
+              <img src="/capgemini-logo.svg" alt="Capgemini" className="h-6 w-auto" />
             </div>
             <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <nav aria-label="Footer" className="flex flex-wrap items-center gap-x-4 gap-y-2">

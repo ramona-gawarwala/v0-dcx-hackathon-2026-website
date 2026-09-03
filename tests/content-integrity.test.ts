@@ -3,10 +3,7 @@ import path from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
   awards,
-  challengeQualityBar,
-  challenges,
   judgingCriteria,
-  levels,
   projectTypes,
   schedule,
   submitChecklist,
@@ -65,8 +62,11 @@ describe('site content integrity', () => {
       /\[time\]/,
       /\[Add your own\]/,
       /Demo \(2 min\)/,
-      /Mon 1 Sep/,
-      /AI Playground Hackathon/,
+      /23 September/,
+      /7 October/,
+      /23 Sep[–-]29 Sep/,
+      /30 Sep[ –-]+7 Oct/,
+      /Seed \/ Sprout \/ Harvest/,
       /Innovation Hackathon 2026/,
       /next hackathon/,
       /public organisation repo can work/,
@@ -120,41 +120,14 @@ describe('site content integrity', () => {
     expect(scheduleRows).toEqual(schedule.map((item) => item.when))
   })
 
-  it('keeps project types and challenges aligned with their guides', () => {
+  it('keeps project types aligned with their guide', () => {
     const projectGuide = fs.readFileSync(path.join(root, 'docs/project-types.md'), 'utf8')
-    const challengeGuide = fs.readFileSync(path.join(root, 'docs/challenges.md'), 'utf8')
-    const normalizedChallengeGuide = normalizeText(challengeGuide)
 
     for (const projectType of projectTypes) {
-      expect(projectGuide).toContain(`## ${projectType.emoji} ${projectType.title}`)
+      expect(projectGuide).toContain(`## ${projectType.title}`)
       expect(normalizeText(projectGuide).toLowerCase()).toContain(
         normalizeText(projectType.goal).toLowerCase(),
       )
-      for (const idea of projectType.ideas) {
-        expect(normalizeText(projectGuide)).toContain(normalizeText(idea.stage))
-        expect(normalizeText(projectGuide)).toContain(normalizeText(idea.title))
-        expect(normalizeText(projectGuide)).toContain(normalizeText(idea.body))
-        expect(normalizeText(projectGuide)).toContain(normalizeText(idea.runtimeAi))
-      }
-    }
-
-    for (const level of levels) {
-      expect(normalizedChallengeGuide).toContain(normalizeText(level.does))
-      expect(normalizedChallengeGuide).toContain(normalizeText(level.meaning))
-    }
-
-    for (const item of challengeQualityBar) {
-      expect(normalizedChallengeGuide).toContain(normalizeText(item.title))
-      expect(normalizedChallengeGuide).toContain(normalizeText(item.body))
-    }
-
-    for (const challenge of challenges) {
-      expect(challengeGuide).toContain(`**${challenge.title}**`)
-      expect(normalizedChallengeGuide).toContain(normalizeText(challenge.problem))
-      expect(normalizedChallengeGuide).toContain(normalizeText(challenge.build))
-      for (const criterion of challenge.done) {
-        expect(normalizedChallengeGuide).toContain(normalizeText(criterion))
-      }
     }
   })
 

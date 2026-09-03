@@ -8,7 +8,7 @@ import { Markdown } from '@/components/markdown'
 const description = 'How we treat each other during the hackathon — be kind, be respectful, be safe.'
 
 export const metadata: Metadata = {
-  title: 'Code of Conduct · DCX AI Hackathon 2026',
+  title: 'Code of Conduct · DCX AI Playground Hackathon 2026',
   description,
 }
 

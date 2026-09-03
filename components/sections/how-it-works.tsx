@@ -4,7 +4,7 @@ import { schedule } from '@/lib/content'
 
 const basics = [
   { icon: Users, title: 'Teams', body: 'Enter solo or as a team of 2–5 — both are free to join. A team can bring complementary skills and perspectives.' },
-  { icon: Clock, title: 'Duration', body: 'Two weeks, 7–21 September. Part-time and self-paced — no daily session and no full days blocked. Work with your team around your day job.' },
+  { icon: Clock, title: 'Duration', body: 'Two weeks, 7 September – 21 September. Part-time and self-paced — no daily session and no full days blocked. Work with your team around your day job.' },
   { icon: Target, title: 'Goal', body: 'Ship a working, demoable app built with AI. Runtime AI is optional. Aim to finish ~25% of your big idea.' },
   { icon: Wrench, title: 'Tools', body: 'Build with v0 and deploy on Vercel. Use AI Gateway only if your finished app needs model calls.' },
 ]
