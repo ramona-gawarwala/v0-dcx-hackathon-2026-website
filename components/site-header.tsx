@@ -20,15 +20,12 @@ export function SiteHeader() {
       <ScrollProgress />
       <div className="flex h-16 items-center justify-between gap-4 px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2.5 font-display text-base font-bold tracking-tight">
-          <span className="flex h-8 items-center justify-center rounded-md bg-white px-2 shadow-sm ring-1 ring-black/5">
-            <img
-              src="/capgemini-logo.svg"
-              alt="Capgemini"
-              width={96}
-              height={22}
-              className="h-[18px] w-auto"
-            />
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/capgemini-logo.svg"
+            alt="Capgemini"
+            className="h-[39px] w-auto"
+          />
           <span>
             <span className="text-brand-blue">DCX</span> AI Playground Hackathon 2026
           </span>

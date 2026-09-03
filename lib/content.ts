@@ -269,7 +269,7 @@ export const challengeQualityBar = [
     body: 'Demo one representative task from input to a result you can verify.',
   },
   {
-    title: 'Test more than the happy path',
+    title: 'Evaluate beyond the happy path',
     body: 'Try at least three cases, including one edge or failure case, and share what happened.',
   },
   {
@@ -289,8 +289,9 @@ export const challenges: Challenge[] = [
     problem: 'A message, summary, or note takes too long to get right.',
     build: 'An assistant that summarises, rewrites, translates, or reformats text.',
     done: [
-      'It completes one clear job on a representative example.',
-      'A first-time user can provide input and understand the result without extra instructions.',
+      'It completes one clear job — summarise, rewrite, translate, or reformat — on an example a judge can run live.',
+      'A first-time user can supply input and understand the result with no extra instructions.',
+      'A messy, empty, or off-topic input is handled gracefully instead of returning a broken or confusing result.',
     ],
   },
   {
@@ -299,18 +300,20 @@ export const challenges: Challenge[] = [
     problem: 'Starting from a blank page is the hardest part.',
     build: 'Generate a first draft — an email, a plan, a snippet — from a short brief.',
     done: [
-      'A one-line brief produces a draft with the requested purpose, audience, and format.',
-      'Changing one detail in the brief changes the draft in the expected way.',
+      'A one-line brief produces a usable first draft with the requested purpose, audience, and format.',
+      'Changing one detail in the brief visibly changes the draft as expected.',
+      'The output is offered as an editable starting point to refine, not a fixed final answer.',
     ],
   },
   {
     level: 'Sprout',
-    title: 'Ask My Docs',
-    problem: 'The answer is buried in documents nobody wants to read.',
-    build: 'Point it at your own docs and ask questions grounded in them.',
+    title: 'Company Concierge',
+    problem: 'Customers ask the same product and support questions over and over.',
+    build: 'A branded support chatbot with a defined persona that answers from one business’s own knowledge — products, policies, and FAQs.',
     done: [
-      'Each answer cites or links to the source passage it used.',
-      'It declines when the answer is not supported by the supplied content.',
+      'It holds a consistent persona and tone, and answers common questions from the supplied business knowledge.',
+      'A judge can trace each answer back to the business facts it was given — no invented prices, specs, or promises.',
+      'For anything out of scope or unknown, it admits it and points to a human or contact channel instead of guessing.',
     ],
   },
   {
@@ -319,8 +322,8 @@ export const challenges: Challenge[] = [
     problem: 'A useful answer needs current or approved data the model does not have.',
     build: 'Give the AI a tool — an API, a search, a database — it can call to fetch what it needs.',
     done: [
-      'It calls an approved data source and shows when the result was retrieved.',
-      'A failed or empty lookup produces a clear fallback instead of a made-up answer.',
+      'It calls an approved API, search, or database and shows the value plus when it was retrieved.',
+      'A failed, slow, or empty lookup shows a clear fallback message — never an invented answer.',
     ],
   },
   {
@@ -329,10 +332,10 @@ export const challenges: Challenge[] = [
     problem: 'A repetitive, multi-step task eats time that could go elsewhere.',
     build: 'An agent or workflow that completes the task end to end.',
     done: [
-      'One representative task reaches the intended result and exposes the steps taken.',
-      'The run has a completion condition and a hard step, time, or retry limit.',
-      'A failed step is reported and stops or follows a defined fallback.',
-      'Any action that sends, changes, deletes, spends, or publishes waits for explicit approval.',
+      'One representative task runs end to end to the intended result, with the steps it took visible.',
+      'The run has a completion condition and a hard step, time, or retry limit, so it always stops.',
+      'A failed step is reported and either stops or follows a defined fallback.',
+      'Any action that sends, changes, deletes, spends, or publishes waits for explicit human approval.',
     ],
   },
   {
