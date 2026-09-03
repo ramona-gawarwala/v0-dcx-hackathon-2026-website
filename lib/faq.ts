@@ -10,15 +10,15 @@ export const faqGroups: FaqGroup[] = [
       {
         q: 'Do I need to know how to code?',
         a:
-          'No. Start in [v0](https://v0.app) — describe your app and deploy it. The [Beginner guide](' +
-          doc('beginner-guide') +
+          'No. Start in [v0](https://v0.app) — describe your app and deploy it. The [Quick Start](' +
+          doc('quick-start') +
           ') walks you through your first live app before you write real code.',
       },
       {
         q: 'Who can join? Do I need to be a developer?',
         a:
-          'Every DCX staff member is welcome — whatever your role, you don\u2019t need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing your expertise with AI, not hand-writing code, and mixed teams bring complementary perspectives. New to it all? Start with the [Beginner guide](' +
-          doc('beginner-guide') +
+          'Every DCX staff member is welcome — whatever your role, you don’t need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing your expertise with AI, not hand-writing code, and mixed teams bring complementary perspectives. New to it all? Start with the [Quick Start](' +
+          doc('quick-start') +
           ').',
       },
       {
@@ -75,6 +75,19 @@ export const faqGroups: FaqGroup[] = [
   Q -->|Deterministic| D["Fixed coded path — predictable, auditable"]
   Q -->|Generative| G["LLM chooses steps — flexible, natural"]
   Q -->|Hybrid| H["Generative reasoning + deterministic workflow"]`,
+      },
+      {
+        q: 'How does an agent actually decide what to do inside the loop?',
+        a:
+          'Most agents follow a simple, repeating pattern often called **ReAct** — reason, act, observe. Each turn the model reasons about the goal, picks one action (call a tool, query data, or answer), then reads the result as a new observation before deciding the next step. The loop repeats until the goal is met or a stopping condition — a step limit or a "done" signal — ends it.\n\n' +
+          'A related idea, **chain-of-thought**, is simply asking the model to work through intermediate steps instead of jumping straight to an answer.\n\n' +
+          'You don\u2019t have to implement this by hand: a tool-using loop in the [AI SDK](https://ai-sdk.dev/docs/agents/overview) already works this way. Two practical takeaways — grounding each step in real tool results reduces made-up answers, and always set [loop limits](https://ai-sdk.dev/docs/agents/building-agents) so the agent reliably stops. See the Harvest examples in [What to build](/what-to-build).',
+        diagram: `flowchart LR
+  R["Reason: what next?"] --> A["Act: call a tool"]
+  A --> O["Observe: read the result"]
+  O --> C{"Goal met or limit hit?"}
+  C -->|No| R
+  C -->|Yes| D["Respond / stop"]`,
       },
     ],
   },
