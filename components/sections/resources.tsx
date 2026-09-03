@@ -127,7 +127,7 @@ export function Resources() {
               <div className="max-w-md text-center sm:text-left">
                 <h3 className="font-display text-xl font-semibold">Register to join</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Fill in the short registration form to take part. Sign up by 1 September so we can
+                  Fill in the short registration form to take part. Sign up by 7 September so we can
                   add you to the Teams space before kickoff.
                 </p>
                 <a

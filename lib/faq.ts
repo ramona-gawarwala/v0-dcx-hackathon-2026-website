@@ -10,20 +10,20 @@ export const faqGroups: FaqGroup[] = [
       {
         q: 'Do I need to know how to code?',
         a:
-          'No. Start in [v0](https://v0.app) — describe your app and deploy it. The [Beginner guide](' +
-          doc('beginner-guide') +
+          'No. Start in [v0](https://v0.app) — describe your app and deploy it. The [Quick Start](' +
+          doc('quick-start') +
           ') walks you through your first live app before you write real code.',
       },
       {
         q: 'Who can join? Do I need to be a developer?',
         a:
-          'Every DCX staff member is welcome — whatever your role, you don\u2019t need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing your expertise with AI, not hand-writing code, and mixed teams bring complementary perspectives. New to it all? Start with the [Beginner guide](' +
-          doc('beginner-guide') +
+          'Every DCX staff member is welcome — whatever your role, you don\u2019t need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing your expertise with AI, not hand-writing code, and mixed teams bring complementary perspectives. New to it all? Start with the [Quick Start](' +
+          doc('quick-start') +
           ').',
       },
       {
         q: 'Do I need to register, and by when?',
-        a: 'Yes — sign up before the kickoff at 09:00 BST on Tuesday 1 September. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don\u2019t have a team yet, post in the team-forming channel (see [How it works](/how-it-works)).',
+        a: 'Yes — sign up before the kickoff at 09:00 BST on Monday 7 September. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don’t have a team yet, post in the team-forming channel (see [How it works](/how-it-works)).',
       },
       {
         q: 'Do I need a team, or can I go solo?',
@@ -35,7 +35,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'How much time do I need to commit?',
-        a: 'It\u2019s part-time and self-paced — there\u2019s no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (1–14 September): deploy something small early, then improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.',
+        a: 'It’s part-time and self-paced — there’s no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (7–21 September): deploy something small early, then improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.',
       },
       {
         q: 'How finished does my project need to be?',
@@ -146,11 +146,11 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: 'Can I start early or reuse an existing project?',
-        a: 'Build during the hackathon window (1–14 September) — it keeps things fair. Bringing an idea, sketches, or a problem is fine; starting from a codebase you wrote earlier isn\u2019t. Open-source libraries, templates, and v0 starters are fair game.',
+        a: 'Build during the hackathon window (7–21 September) — it keeps things fair. Bringing an idea, sketches, or a problem is fine; starting from a codebase you wrote earlier isn’t. Open-source libraries, templates, and v0 starters are fair game.',
       },
       {
         q: 'Do I have to attend live or present in person?',
-        a: 'It\u2019s part-time, so you don\u2019t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)). You submit through a form — we post the link in the Submissions channel on the morning of Monday 14 September — with your repo, live app URL, project type, and video. There are two ways to be recognised: judges\u2019 awards from the demo, and People\u2019s Choice, voted by everyone.',
+        a: 'It’s part-time, so you don’t need to be online the whole time. Try to catch the kickoff, and share a short [demo](/submit) at the end — a screen recording works, with a demo day for anyone who can join live (see [Judging](/judging)). You submit through a form — we post the link in the Submissions channel on the morning of Monday 21 September — with your repo, live app URL, project type, and video. There are two ways to be recognised: judges’ awards from the demo, and People’s Choice, voted by everyone.',
       },
     ],
   },
@@ -191,7 +191,7 @@ export const faqGroups: FaqGroup[] = [
         a:
           'Judges need two things: a public live URL (no login wall, so it opens in an incognito window) and your code \u2014 a public GitHub repo or your v0 project link. Never commit `.env.local`, API keys, or secrets to the repo. The [Start building](/start-building) page covers both routes: start in v0 and push to GitHub, or build locally and connect the repo to Vercel. For exact deploy steps, see the [Deployment guide](' +
           doc('deployment-guide') +
-          '). When you\u2019re ready, enter everything in the submission form (posted in the Submissions channel on Monday 14 September) \u2014 the full checklist lives on the [Submit page](/submit).',
+          '). When you\u2019re ready, enter everything in the submission form (posted in the Submissions channel on Monday 21 September) \u2014 the full checklist lives on the [Submit page](/submit).',
       },
       {
         q: 'How do we save our work and collaborate as a team with version control?',

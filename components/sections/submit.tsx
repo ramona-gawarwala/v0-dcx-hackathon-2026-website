@@ -38,11 +38,11 @@ export function Submit() {
             Deadline
           </div>
           <h1 className="mt-4 text-balance font-display text-3xl font-bold tracking-tight sm:text-4xl">
-            Monday 14 September 2026, 23:59 BST
+            Monday 21 September 2026, 23:59 BST
           </h1>
           <Countdown />
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-            On the morning of Monday 14 September we&apos;ll post the submission form in the
+            On the morning of Monday 21 September we&apos;ll post the submission form in the
             Submissions channel — much like the registration form. Fill it in with your public
             repo, live app URL, project type, and demo video; that form is your official entry,
             and judges score from it. Both the repo and the URL must be public — no password or

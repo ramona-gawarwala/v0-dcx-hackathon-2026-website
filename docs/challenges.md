@@ -133,7 +133,7 @@ See the Multi-Agent [project type](project-types.md) for an architecture overvie
 
 ## Bring your own
 
-Have a better idea? Go for it. Pick a level, keep it small enough to demo by Mon 14 Sep, and check it against the [judging criteria](judging.md).
+Have a better idea? Go for it. Pick a level, keep it small enough to demo by Mon 21 Sep, and check it against the [judging criteria](judging.md).
 
 ## Why it's worth it
 

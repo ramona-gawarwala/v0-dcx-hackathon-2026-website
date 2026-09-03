@@ -95,9 +95,10 @@ export const navMenu: NavEntry[] = [
   {
     label: 'Guides',
     items: [
-      { label: 'Beginner guide', href: '/guides/beginner-guide' },
+      { label: 'Quick Start', href: '/guides/quick-start' },
       { label: 'AI SDK guide', href: '/guides/ai-sdk-guide' },
       { label: 'Deployment guide', href: '/guides/deployment-guide' },
+      { label: 'Build lab', href: '/guides/build-lab' },
     ],
   },
   {
@@ -118,11 +119,11 @@ export const navMenu: NavEntry[] = [
 ]
 
 export const schedule = [
-  { when: 'Tue 1 Sep, 09:00 BST', what: 'Kickoff + team formation' },
-  { when: 'Week 1 (1–7 Sep)', what: 'Pick an idea, start building' },
+  { when: 'Mon 7 Sep, 09:00 BST', what: 'Kickoff + team formation' },
+  { when: 'Week 1 (7–13 Sep)', what: 'Pick an idea, start building' },
   { when: 'Throughout', what: 'Mentors available in the Help channel' },
-  { when: 'Week 2 (8–14 Sep)', what: 'Keep building, wrap up your demo' },
-  { when: 'Mon 14 Sep, 23:59 BST', what: 'Submissions due' },
+  { when: 'Week 2 (14–21 Sep)', what: 'Keep building, wrap up your demo' },
+  { when: 'Mon 21 Sep, 23:59 BST', what: 'Submissions due' },
   { when: 'Date to be confirmed', what: 'Demo day + judging' },
 ]
 

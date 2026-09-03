@@ -1,4 +1,4 @@
-# Beginner guide
+# Quick Start
 
 Never built an AI app? Start here. You'll have a live app before you write real code.
 
