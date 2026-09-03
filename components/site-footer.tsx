@@ -15,7 +15,7 @@ export function SiteFooter() {
                 <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                   <Sprout className="size-5" />
                 </span>
-                <span>© 2026 DCX AI Hackathon</span>
+                <span>© 2026 DCX AI Playground Hackathon</span>
               </div>
               <span aria-hidden="true" className="h-5 w-px bg-border" />
               {/* eslint-disable-next-line @next/next/no-img-element */}

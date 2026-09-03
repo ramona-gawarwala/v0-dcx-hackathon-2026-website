@@ -149,7 +149,7 @@ export function Resources() {
               >
                 <Image
                   src="/register-qr.png"
-                  alt="QR code to open the DCX AI Hackathon 2026 registration form"
+                  alt="QR code to open the DCX AI Playground Hackathon 2026 registration form"
                   width={160}
                   height={160}
                   className="rounded-xl border border-border"
@@ -160,7 +160,7 @@ export function Resources() {
 
           <div>
             <h3 className="font-display text-lg font-semibold">Join &amp; connect</h3>
-            <p className="mt-1 text-sm text-muted-foreground">The DCX AI Hackathon 2026 space on Microsoft Teams.</p>
+            <p className="mt-1 text-sm text-muted-foreground">The DCX AI Playground Hackathon 2026 space on Microsoft Teams.</p>
             <div className="mt-6">
               {connect.map((item) => (
                 <ResourceRow key={item.label} item={item} />

@@ -1,4 +1,4 @@
-# DCX AI Hackathon 2026
+# DCX AI Playground Hackathon 2026
 
 Build and ship an app with AI over **2 weeks (7 September – 21 September 2026)**, part-time, using **[v0](https://v0.app)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
 

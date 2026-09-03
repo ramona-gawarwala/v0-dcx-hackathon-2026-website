@@ -7,7 +7,7 @@ const description =
   "Report harassment, unsafe behaviour, or anything that doesn't feel right. Event reports are handled confidentially; Capgemini SpeakUp provides a verified anonymous route."
 
 export const metadata: Metadata = {
-  title: 'Report a problem · DCX AI Hackathon 2026',
+  title: 'Report a problem · DCX AI Playground Hackathon 2026',
   description,
 }
 

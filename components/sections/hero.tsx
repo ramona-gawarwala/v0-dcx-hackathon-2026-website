@@ -13,7 +13,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="relative mx-auto max-w-6xl px-4 pt-20 pb-14 sm:px-6 md:pt-28 md:pb-16">
         <h1 className="max-w-4xl text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-          <span className="block">DCX AI Hackathon</span>
+          <span className="block">DCX AI Playground Hackathon</span>
           <span className="block bg-gradient-to-r from-harvest via-primary to-sprout bg-clip-text text-transparent">
             2026
           </span>
@@ -28,7 +28,7 @@ export function Hero() {
           </p>
           <p>The capabilities of the latest tools are ever evolving and it can be hard to keep up.</p>
           <p>
-            That&rsquo;s why we&rsquo;re launching the DCX AI Hackathon. A lightweight two-week sprint
+            That&rsquo;s why we&rsquo;re launching the DCX AI Playground Hackathon. A lightweight two-week sprint
             designed to create momentum and give you a chance to wrestle with some of the latest tooling,
             experiment with AI without worrying about running out of tokens for client work, and without
             needing to request time off account work. Work with your team (or solo) over the 2 weeks

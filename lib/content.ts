@@ -29,7 +29,7 @@ export const LIVE_URL = 'https://v0-dcx-hackathon-2026.vercel.app'
 export const V0_COMMUNITY_URL = 'https://v0.app/community'
 export const VERCEL_TEMPLATES_URL = 'https://vercel.com/templates?type=ai'
 
-// Microsoft Forms registration for the DCX AI Hackathon 2026.
+// Microsoft Forms registration for the DCX AI Playground Hackathon 2026.
 export const REGISTER_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUOUpIUjVVMURHR0gwM1dRTFpRWkRaVE40SC4u'
 
@@ -41,7 +41,7 @@ export const REPORT_URL =
 export const PULSE_CHECK_URL =
   'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Wq6idgCfa0-V7V0z13xNYVHhzbjsJDpIv5_PXiweEPBUREpHNTA0Nlg1VU5OSTk2Q0NIVlA4WE9LTi4u'
 
-// Microsoft Teams team and channels used by the DCX AI Hackathon 2026.
+// Microsoft Teams team and channels used by the DCX AI Playground Hackathon 2026.
 export const TEAMS_TEAM_URL =
   'https://teams.microsoft.com/l/team/19%3A6VZc0lYnAVy-qh6prOW7bX4V4yAcAyzRikL3TJPp85A1%40thread.tacv2/conversations?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61'
 export const TEAMS_ANNOUNCEMENTS_URL =

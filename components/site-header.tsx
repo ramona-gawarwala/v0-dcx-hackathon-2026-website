@@ -30,7 +30,7 @@ export function SiteHeader() {
             />
           </span>
           <span>
-            <span className="text-brand-blue">DCX</span> AI Hackathon 2026
+            <span className="text-brand-blue">DCX</span> AI Playground Hackathon 2026
           </span>
         </Link>
 

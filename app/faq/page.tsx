@@ -3,9 +3,9 @@ import { FaqAccordion } from '@/components/faq-accordion'
 import { faqGroups } from '@/lib/faq'
 
 export const metadata: Metadata = {
-  title: 'FAQ · DCX AI Hackathon 2026',
+  title: 'FAQ · DCX AI Playground Hackathon 2026',
   description:
-    'Quick answers about the DCX AI Hackathon 2026 — getting started, key AI concepts, building your app, rules, and deployment.',
+    'Quick answers about the DCX AI Playground Hackathon 2026 — getting started, key AI concepts, building your app, rules, and deployment.',
 }
 
 export default function FaqPage() {

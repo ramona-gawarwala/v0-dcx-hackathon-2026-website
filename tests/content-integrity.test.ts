@@ -67,7 +67,6 @@ describe('site content integrity', () => {
       /23 Sep[–-]29 Sep/,
       /30 Sep[ –-]+7 Oct/,
       /Seed \/ Sprout \/ Harvest/,
-      /AI Playground Hackathon/,
       /Innovation Hackathon 2026/,
       /next hackathon/,
       /public organisation repo can work/,
