@@ -55,15 +55,15 @@ Quick answers, grouped by topic. Jump to a question below.
 
 ### 1. Do I need to know how to code?
 
-No. Start in **[v0](https://v0.app)** — describe your app and deploy it. See the [Beginner guide](beginner-guide.md).
+No. Start in **[v0](https://v0.app)** — describe your app and deploy it. See the [Quick Start](quick-start.md).
 
 ### 2. Who can join? Do I need to be a developer?
 
-Every DCX staff member is welcome — whatever your role, you don't need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing *your* expertise with AI, not hand-writing code, and mixed teams bring complementary perspectives. New to it all? Start with the [Beginner guide](beginner-guide.md).
+Every DCX staff member is welcome — whatever your role, you don't need to be a developer or have an AI background. Consultants, designers, product, delivery, and domain experts all add value; the point is pairing *your* expertise with AI, not hand-writing code, and mixed teams bring complementary perspectives. New to it all? Start with the [Quick Start](quick-start.md).
 
 ### 3. Do I need to register, and by when?
 
-Yes — sign up before the kickoff at **09:00 BST on Tuesday 1 September**. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don't have a team yet, post in the team-forming channel (see [How it works](how-it-works.md)).
+Yes — sign up before the kickoff at **09:00 BST on Monday 7 September**. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don't have a team yet, post in the team-forming channel (see [How it works](how-it-works.md)).
 ### 4. Do I need a team, or can I go solo?
 
 Teams of **2–5** are encouraged — solo is allowed, but a team is more fun and usually ships more. No team yet? Post what you want to build and what you bring (dev, design, product, domain) in the team-forming channel, or we'll help group you at kickoff. See [How it works](how-it-works.md).
@@ -91,7 +91,7 @@ Rule of thumb: start with an approved free or funded option, use only sample/syn
 
 ### 6. How much time do I need to commit?
 
-It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (1–14 September), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
+It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (7–21 September), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
 
 ### 7. How finished does my project need to be?
 
@@ -118,7 +118,7 @@ Two things devs mix up:
 - **Model family vs provider** — GPT, Claude, and Gemini are model families; OpenAI, Anthropic, and Google are providers. The [AI Gateway](https://vercel.com/docs/ai-gateway/models-and-providers) supports models from multiple providers.
 - **Agent vs model** — a model produces a response or tool call; an agent adds tools, context management, and stopping conditions around repeated model calls. The AI SDK defines agents as ["LLMs that use tools in a loop"](https://ai-sdk.dev/docs/agents/overview).
 
-**Where Vercel and v0 come in:** [v0](https://v0.app) helps you create the application, Vercel hosts it, and AI Gateway routes model requests. The underlying provider still runs the chosen model. That lets you focus on the experience and any workflow or agent logic (see [You only build the top bit](beginner-guide.md#you-only-build-the-top-bit)).
+**Where Vercel and v0 come in:** [v0](https://v0.app) helps you create the application, Vercel hosts it, and AI Gateway routes model requests. The underlying provider still runs the chosen model. That lets you focus on the experience and any workflow or agent logic (see [You only build the top bit](quick-start.md#you-only-build-the-top-bit)).
 
 ### 9. What's a foundation model, and why are there different ones for images, video, and speech?
 
@@ -304,11 +304,11 @@ Yes. Be respectful, inclusive, and supportive — this is a welcoming space for 
 
 ### 26. Can I start early or reuse an existing project?
 
-Build during the hackathon window (**1–14 September**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
+Build during the hackathon window (**7–21 September**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
 
 ### 27. Do I have to attend live or present in person?
 
-It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Monday 14 September** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
+It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Monday 21 September** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
 
 ## Troubleshooting & deployment
 
@@ -352,7 +352,7 @@ Use the organiser-approved Vercel account or ask whether you should use Pro/Ente
 
 Judges need two things: a **public live URL** (no login wall, so it opens in an incognito window) and your **code** — a public GitHub repo or your v0 project link. You can build either way, and the **Start building** page walks through both: start in v0 and **Push to GitHub**, or build locally and connect the repo to Vercel. Keep secrets out of a public repo — never commit `.env.local` or API keys; set them in Vercel instead. For the exact deploy steps, see the [Deployment guide](deployment-guide.md).
 
-When you're ready, enter everything in the **submission form** — we post the link in the Submissions channel on Monday 14 September, and that's your official entry. The full checklist lives on the [Submit page](submission.md). Want **People's Choice** too? Also share your app as a post in the same channel so other participants can vote.
+When you're ready, enter everything in the **submission form** — we post the link in the Submissions channel on Monday 21 September, and that's your official entry. The full checklist lives on the [Submit page](submission.md). Want **People's Choice** too? Also share your app as a post in the same channel so other participants can vote.
 
 ### 34. How do we save our work and collaborate as a team with version control?
 

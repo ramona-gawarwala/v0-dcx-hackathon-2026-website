@@ -1,6 +1,6 @@
 # Submit
 
-Deadline: **Mon 14 Sep 2026, 23:59 BST (UTC+1)**. Late = not judged, so submit early and update if needed.
+Deadline: **Mon 21 Sep 2026, 23:59 BST (UTC+1)**. Late = not judged, so submit early and update if needed.
 
 ## Checklist
 
@@ -15,7 +15,7 @@ Deadline: **Mon 14 Sep 2026, 23:59 BST (UTC+1)**. Late = not judged, so submit e
 
 ## Where to submit
 
-Submissions go through a **form** — much like the registration form. On the **morning of Monday 14 September** we'll post the link in the **[🏆 Submissions](https://teams.microsoft.com/l/channel/19%3A5b966dd4bf2443718c2214df59d3bce8%40thread.tacv2/Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61)** channel on Microsoft Teams. Fill it in with your public repo, live app URL, project type, and demo video — that form is your official entry, and judges score from it. Both the repo and the URL must be public (no password or login wall).
+Submissions go through a **form** — much like the registration form. On the **morning of Monday 21 September** we'll post the link in the **[🏆 Submissions](https://teams.microsoft.com/l/channel/19%3A5b966dd4bf2443718c2214df59d3bce8%40thread.tacv2/Submissions?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61)** channel on Microsoft Teams. Fill it in with your public repo, live app URL, project type, and demo video — that form is your official entry, and judges score from it. Both the repo and the URL must be public (no password or login wall).
 
 **Want the People's Choice award?** Also share your app as a post in the same channel so other participants can vote for their favourite. See [Judging](judging.md).
 

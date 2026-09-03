@@ -262,4 +262,4 @@ User → Interactive UI → Content / optional model
 
 ---
 
-Picked a type? Turn it into a scoped idea in [Challenges](challenges.md), then start with the [Beginner guide](beginner-guide.md).
+Picked a type? Turn it into a scoped idea in [Challenges](challenges.md), then start with the [Quick Start](quick-start.md).
