@@ -21,6 +21,12 @@ import {
   ShieldCheck,
   Activity,
   Plane,
+  Sprout,
+  Leaf,
+  Wheat,
+  Mic,
+  Image as ImageIcon,
+  Video,
   type LucideIcon,
 } from 'lucide-react'
 
@@ -59,6 +65,7 @@ export const navLinks = [
   { label: 'Why join', href: '/why-join' },
   { label: 'How to build', href: '/how-to-build' },
   { label: 'What to build', href: '/what-to-build' },
+  { label: 'AI Integration', href: '/ai-integration' },
   { label: 'What you get', href: '/benefits' },
   { label: 'Judging', href: '/judging' },
   { label: 'Submit', href: '/submit' },
@@ -86,6 +93,7 @@ export const navMenu: NavEntry[] = [
     items: [
       { label: 'How to build', href: '/how-to-build' },
       { label: 'What to build', href: '/what-to-build' },
+      { label: 'AI Integration', href: '/ai-integration' },
     ],
   },
   {
@@ -145,6 +153,198 @@ export const startSteps = [
     step: '03',
     title: 'Keep iterating',
     body: 'Refine in v0 (or your editor) until it is demo-ready. Done beats perfect.',
+  },
+]
+
+export type Level = {
+  icon: LucideIcon
+  n: number
+  name: string
+  codeword: string
+  does: string
+  meaning: string
+  colorClass: string
+  chipClass: string
+}
+
+export const levels: Level[] = [
+  {
+    icon: Sprout,
+    n: 1,
+    name: 'Seed',
+    codeword: 'Answers or creates',
+    does: 'One prompt produces one useful response',
+    meaning: 'A direct model call answers, summarises, rewrites, or generates.',
+    colorClass: 'text-seed',
+    chipClass: 'bg-seed/10 text-seed border-seed/30',
+  },
+  {
+    icon: Leaf,
+    n: 2,
+    name: 'Sprout',
+    codeword: 'Uses evidence or a tool',
+    does: 'It grounds a response or calls a tool',
+    meaning: 'Approved documents, data, or an API provide real-world context.',
+    colorClass: 'text-sprout',
+    chipClass: 'bg-sprout/10 text-sprout border-sprout/30',
+  },
+  {
+    icon: Wheat,
+    n: 3,
+    name: 'Harvest',
+    codeword: 'Completes a process',
+    does: 'It runs a bounded multi-step process',
+    meaning: 'A code-controlled workflow or model-directed agent reaches a result.',
+    colorClass: 'text-harvest',
+    chipClass: 'bg-harvest/10 text-harvest border-harvest/30',
+  },
+]
+
+export const flavours = [
+  { icon: Mic, name: 'Voice', body: 'Accept spoken input or return a spoken response.' },
+  { icon: ImageIcon, name: 'Images', body: 'Understand or create an image, screenshot, or diagram.' },
+  { icon: Video, name: 'Video', body: 'Analyse a clip, find key moments, or create a short video.' },
+]
+
+export type GrowthIdea = {
+  name: string
+  tagline: string
+  steps: { level: 'Seed' | 'Sprout' | 'Harvest'; what: string }[]
+}
+
+export const growthIdeas: GrowthIdea[] = [
+  {
+    name: 'Language helper',
+    tagline: 'Learn a language with a little help.',
+    steps: [
+      { level: 'Seed', what: 'Generates example sentences from a word.' },
+      { level: 'Sprout', what: 'Quizzes you on your own vocab list.' },
+      { level: 'Harvest', what: 'Plans lessons, quizzes you, and tracks your progress.' },
+    ],
+  },
+  {
+    name: 'Learning buddy',
+    tagline: 'Prep for an exam with an AI coach.',
+    steps: [
+      { level: 'Seed', what: 'Turns a topic into practice questions and a case scenario.' },
+      { level: 'Sprout', what: 'Quizzes you from your own notes and syllabus.' },
+      { level: 'Harvest', what: 'Tracks weak spots, schedules revision, and sets fresh scenarios up to exam day.' },
+    ],
+  },
+  {
+    name: 'Prompt library',
+    tagline: 'Build and reuse better prompts.',
+    steps: [
+      { level: 'Seed', what: 'Writes a tailored prompt from your goal and constraints.' },
+      { level: 'Sprout', what: 'Ranks your saved prompts for a task and suggests the best match.' },
+      {
+        level: 'Harvest',
+        what: 'Runs an approved prompt, checks the result, and stops after a set number of refinements.',
+      },
+    ],
+  },
+  {
+    name: 'Activity by weather',
+    tagline: 'Find something to do, rain or shine.',
+    steps: [
+      { level: 'Seed', what: 'Suggests activities from the weather and who you’re with.' },
+      { level: 'Sprout', what: 'Checks a live weather API for your location.' },
+      { level: 'Harvest', what: 'Sends a daily plan that adapts to the forecast and who’s free.' },
+    ],
+  },
+]
+
+export type Challenge = {
+  level: 'Seed' | 'Sprout' | 'Harvest'
+  title: string
+  problem: string
+  build: string
+  done: string[]
+}
+
+export const challengeQualityBar = [
+  {
+    title: 'Prove the outcome',
+    body: 'Demo one representative task from input to a result you can verify.',
+  },
+  {
+    title: 'Test more than the happy path',
+    body: 'Try at least three cases, including one edge or failure case, and share what happened.',
+  },
+  {
+    title: 'Make failure visible',
+    body: 'Show uncertainty, missing evidence, and tool errors instead of guessing or silently continuing.',
+  },
+  {
+    title: 'Keep people in control',
+    body: 'Use public, dummy, or approved data and require approval before consequential actions.',
+  },
+]
+
+export const challenges: Challenge[] = [
+  {
+    level: 'Seed',
+    title: 'Rewrite Helper',
+    problem: 'A message, summary, or note takes too long to get right.',
+    build: 'An assistant that summarises, rewrites, translates, or reformats text.',
+    done: [
+      'It completes one clear job on a representative example.',
+      'A first-time user can provide input and understand the result without extra instructions.',
+    ],
+  },
+  {
+    level: 'Seed',
+    title: 'Draft It',
+    problem: 'Starting from a blank page is the hardest part.',
+    build: 'Generate a first draft — an email, a plan, a snippet — from a short brief.',
+    done: [
+      'A one-line brief produces a draft with the requested purpose, audience, and format.',
+      'Changing one detail in the brief changes the draft in the expected way.',
+    ],
+  },
+  {
+    level: 'Sprout',
+    title: 'Ask My Docs',
+    problem: 'The answer is buried in documents nobody wants to read.',
+    build: 'Point it at your own docs and ask questions grounded in them.',
+    done: [
+      'Each answer cites or links to the source passage it used.',
+      'It declines when the answer is not supported by the supplied content.',
+    ],
+  },
+  {
+    level: 'Sprout',
+    title: 'Live Lookup',
+    problem: 'A useful answer needs current or approved data the model does not have.',
+    build: 'Give the AI a tool — an API, a search, a database — it can call to fetch what it needs.',
+    done: [
+      'It calls an approved data source and shows when the result was retrieved.',
+      'A failed or empty lookup produces a clear fallback instead of a made-up answer.',
+    ],
+  },
+  {
+    level: 'Harvest',
+    title: 'Do It For Me',
+    problem: 'A repetitive, multi-step task eats time that could go elsewhere.',
+    build: 'An agent or workflow that completes the task end to end.',
+    done: [
+      'One representative task reaches the intended result and exposes the steps taken.',
+      'The run has a completion condition and a hard step, time, or retry limit.',
+      'A failed step is reported and stops or follows a defined fallback.',
+      'Any action that sends, changes, deletes, spends, or publishes waits for explicit approval.',
+    ],
+  },
+  {
+    level: 'Harvest',
+    title: 'The Team Play',
+    problem: 'One component cannot reliably finish a task that needs distinct skills, tools, or boundaries.',
+    build: 'A workflow or small set of specialised agents that hand off or combine work toward one result.',
+    done: [
+      'Each agent or step has a distinct responsibility with a defined input and output.',
+      'The demo shows at least one handoff and how a failed handoff is handled.',
+      'You can explain why one agent or a simpler workflow would be less reliable.',
+      'The full run has a completion condition and a hard step, time, or retry limit.',
+    ],
   },
 ]
 
