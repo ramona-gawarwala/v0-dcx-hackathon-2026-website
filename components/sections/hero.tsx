@@ -26,7 +26,6 @@ export function Hero() {
             to combine their expertise with AI to solve problems, innovate faster, and create better
             outcomes.
           </p>
-          <p>The capabilities of the latest tools are ever evolving and it can be hard to keep up.</p>
           <p>
             That&rsquo;s why we&rsquo;re launching the DCX AI Playground Hackathon. A lightweight two-week sprint
             designed to create momentum and give you a chance to wrestle with some of the latest tooling,
