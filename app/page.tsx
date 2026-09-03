@@ -17,7 +17,7 @@ const steps = [
   {
     n: '03',
     title: 'Demo it',
-    body: 'Show your app doing one thing well, then submit by 23:59 BST on 7 October. Done beats perfect.',
+    body: 'Show your app doing one thing well, then submit by 23:59 BST on 21 September. Done beats perfect.',
   },
 ]
 

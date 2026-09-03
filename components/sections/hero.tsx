@@ -4,7 +4,7 @@ import { V0_COMMUNITY_URL, REGISTER_URL } from '@/lib/content'
 import { CelebrateLink } from '@/components/celebrate-link'
 
 const facts = [
-  { icon: Calendar, label: 'When', value: '23 Sep – 7 Oct 2026', tone: 'bg-primary/15 text-primary' },
+  { icon: Calendar, label: 'When', value: '7–21 Sep 2026', tone: 'bg-primary/15 text-primary' },
   { icon: Users, label: 'Teams', value: 'Solo or 2–5', tone: 'bg-accent/15 text-accent-foreground' },
 ]
 

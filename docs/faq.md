@@ -63,7 +63,7 @@ Every DCX staff member is welcome — whatever your role, you don't need to be a
 
 ### 3. Do I need to register, and by when?
 
-Yes — sign up before the kickoff at **09:00 BST on Tuesday 23 September**. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don't have a team yet, post in the team-forming channel (see [How it works](how-it-works.md)).
+Yes — sign up before the kickoff at **09:00 BST on Monday 7 September**. Registration closes when this hackathon starts, and late registrations are not included in this event. Grab your spot early, and if you don't have a team yet, post in the team-forming channel (see [How it works](how-it-works.md)).
 ### 4. Do I need a team, or can I go solo?
 
 Teams of **2–5** are encouraged — solo is allowed, but a team is more fun and usually ships more. No team yet? Post what you want to build and what you bring (dev, design, product, domain) in the team-forming channel, or we'll help group you at kickoff. See [How it works](how-it-works.md).
@@ -91,7 +91,7 @@ Rule of thumb: start with an approved free or funded option, use only sample/syn
 
 ### 6. How much time do I need to commit?
 
-It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (23 September – 7 October), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
+It is part-time and self-paced: there is no daily meeting, minimum number of hours, or full day blocked out. Fit it around your job across the two weeks (7 September – 21 September), deploy something small early, and improve it when you can. The only shared moments are the kickoff and final demo; coordinate with your team however you like.
 
 ### 7. How finished does my project need to be?
 
@@ -304,11 +304,11 @@ Yes. Be respectful, inclusive, and supportive — this is a welcoming space for 
 
 ### 26. Can I start early or reuse an existing project?
 
-Build during the hackathon window (**23 September – 7 October**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
+Build during the hackathon window (**7 September – 21 September**) — it keeps things fair and it's where the learning happens. Bringing an idea, sketches, or a problem you want to solve is fine; starting from a codebase you wrote earlier isn't. Open-source libraries, templates, and v0's starters are fair game — everyone has those.
 
 ### 27. Do I have to attend live or present in person?
 
-It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Tuesday 7 October** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
+It's **part-time**, so you don't need to be online the whole time — build around your day job. Do try to catch the kickoff, and you'll share a short demo at the end: a screen recording works (see [Submit](submission.md)), with a demo day for anyone who can join live (see [Judging](judging.md)). You submit through a **form** — we post the link in the Submissions channel on the **morning of Monday 21 September** — with your repo, live app URL, project type, and video. There are two ways to be recognised: **judges' awards** from the demo, and **People's Choice**, voted by everyone. Full schedule in [How it works](how-it-works.md).
 
 ## Troubleshooting & deployment
 
@@ -352,7 +352,7 @@ Use the organiser-approved Vercel account or ask whether you should use Pro/Ente
 
 Judges need two things: a **public live URL** (no login wall, so it opens in an incognito window) and your **code** — a public GitHub repo or your v0 project link. You can build either way, and the **How to build** page walks through both: start in v0 and **Push to GitHub**, or build locally and connect the repo to Vercel. Keep secrets out of a public repo — never commit `.env.local` or API keys; set them in Vercel instead. For the exact deploy steps, see the [Deployment guide](deployment-guide.md).
 
-When you're ready, enter everything in the **submission form** — we post the link in the Submissions channel on Wednesday 7 October, and that's your official entry. The full checklist lives on the [Submit page](submission.md). Want **People's Choice** too? Also share your app as a post in the same channel so other participants can vote.
+When you're ready, enter everything in the **submission form** — we post the link in the Submissions channel on Monday 21 September, and that's your official entry. The full checklist lives on the [Submit page](submission.md). Want **People's Choice** too? Also share your app as a post in the same channel so other participants can vote.
 
 ### 34. How do we save our work and collaborate as a team with version control?
 

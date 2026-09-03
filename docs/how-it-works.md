@@ -3,7 +3,7 @@
 ## The basics
 
 - **Teams:** 2–5 people. Solo is allowed but a team is more fun.
-- **Duration:** 2 weeks — **23 September – 7 October 2026**. Part-time: build around your day job, no need to drop everything.
+- **Duration:** 2 weeks — **7 September – 21 September 2026**. Part-time: build around your day job, no need to drop everything.
 - **Goal:** ship a working, demoable app built with AI. Runtime AI inside the app is optional. Done beats perfect.
 - **Tools:** build with [v0](https://v0.app) and deploy on [Vercel](https://vercel.com). Use [AI Gateway](https://vercel.com/docs/ai-gateway) only if your finished app needs model calls.
 
@@ -13,11 +13,11 @@ Every team uses AI during development — to shape the idea, design, code, test,
 
 | When | What |
 |---|---|
-| Wed 23 Sep, 09:00 BST | Kickoff + team formation |
-| Week 1 (23–29 Sep) | Pick an idea, start building |
+| Mon 7 Sep, 09:00 BST | Kickoff + team formation |
+| Week 1 (7–13 Sep) | Pick an idea, start building |
 | Throughout | Mentors available in the [🆘 Help](https://teams.microsoft.com/l/channel/19%3A04b6a2068e4248bd85e0c34288a4d4e5%40thread.tacv2/%F0%9F%86%98%20Help?groupId=e292c5cf-9c44-4ee6-ace4-bc4bbfa60d6c&tenantId=76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61) channel |
-| Week 2 (30 Sep – 7 Oct) | Keep building, wrap up your demo |
-| Wed 7 Oct, 23:59 BST | Submissions due — see [Submit](submission.md) |
+| Week 2 (14–21 Sep) | Keep building, wrap up your demo |
+| Mon 21 Sep, 23:59 BST | Submissions due — see [Submit](submission.md) |
 | Date to be confirmed | Demo day + judging — see [Judging](judging.md) |
 
 ## Forming a team

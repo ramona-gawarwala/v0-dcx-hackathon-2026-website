@@ -1,6 +1,6 @@
 # DCX AI Hackathon 2026
 
-Build and ship an app with AI over **2 weeks (23 September – 7 October 2026)**, part-time, using **[v0](https://v0.app)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
+Build and ship an app with AI over **2 weeks (7 September – 21 September 2026)**, part-time, using **[v0](https://v0.app)** + **[Vercel](https://vercel.com)**. Open to everyone — engineers, POs, BAs, designers, and first-timers.
 
 Every team uses AI to help shape, design, code, test, or deploy the project. Putting AI inside the finished app is optional — you do not need a model key or model API call to participate.
 

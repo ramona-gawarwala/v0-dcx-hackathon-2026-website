@@ -122,11 +122,11 @@ export const navMenu: NavEntry[] = [
 ]
 
 export const schedule = [
-  { when: 'Wed 23 Sep, 09:00 BST', what: 'Kickoff + team formation' },
-  { when: 'Week 1 (23–29 Sep)', what: 'Pick an idea, start building' },
+  { when: 'Mon 7 Sep, 09:00 BST', what: 'Kickoff + team formation' },
+  { when: 'Week 1 (7–13 Sep)', what: 'Pick an idea, start building' },
   { when: 'Throughout', what: 'Mentors available in the Help channel' },
-  { when: 'Week 2 (30 Sep – 7 Oct)', what: 'Keep building, wrap up your demo' },
-  { when: 'Wed 7 Oct, 23:59 BST', what: 'Submissions due' },
+  { when: 'Week 2 (14–21 Sep)', what: 'Keep building, wrap up your demo' },
+  { when: 'Mon 21 Sep, 23:59 BST', what: 'Submissions due' },
   { when: 'Date to be confirmed', what: 'Demo day + judging' },
 ]
 

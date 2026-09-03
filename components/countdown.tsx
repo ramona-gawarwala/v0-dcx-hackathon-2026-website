@@ -4,10 +4,10 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { CalendarClock } from 'lucide-react'
 
-// The hackathon kicks off on 23 September 2026, 09:00 and submissions close end of
-// day on Wednesday 7 October 2026 (UK / BST = UTC+1).
-const START = new Date('2026-09-23T09:00:00+01:00').getTime()
-const DEADLINE = new Date('2026-10-07T23:59:00+01:00').getTime()
+// The hackathon kicks off on 7 September 2026, 09:00 and submissions close end of
+// day on Monday 21 September 2026 (UK / BST = UTC+1).
+const START = new Date('2026-09-07T09:00:00+01:00').getTime()
+const DEADLINE = new Date('2026-09-21T23:59:00+01:00').getTime()
 
 type Parts = { days: number; hours: number; minutes: number; seconds: number; done: boolean }
 
