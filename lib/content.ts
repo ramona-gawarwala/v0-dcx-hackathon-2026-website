@@ -107,9 +107,10 @@ export const navMenu: NavEntry[] = [
   {
     label: 'Guides',
     items: [
-      { label: 'Beginner guide', href: '/guides/beginner-guide' },
+      { label: 'Quick Start', href: '/guides/quick-start' },
       { label: 'AI SDK guide', href: '/guides/ai-sdk-guide' },
       { label: 'Deployment guide', href: '/guides/deployment-guide' },
+      { label: 'Build lab', href: '/guides/build-lab' },
     ],
   },
   {

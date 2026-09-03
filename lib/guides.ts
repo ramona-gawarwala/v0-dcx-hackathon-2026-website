@@ -12,8 +12,8 @@ export type Guide = {
 // The docs served as on-site pages, in reading order.
 export const guides: Guide[] = [
   {
-    slug: 'beginner-guide',
-    title: 'Beginner guide',
+    slug: 'quick-start',
+    title: 'Quick Start',
     description: "Never built an AI app? Start here and ship a live app before you write real code.",
   },
   {
@@ -40,9 +40,10 @@ export function getGuideContent(slug: string): string {
 
 // Where each docs/*.md file lives on the site.
 const DOC_ROUTES: Record<string, string> = {
-  'beginner-guide': '/guides/beginner-guide',
+  'quick-start': '/guides/quick-start',
   'ai-sdk-guide': '/guides/ai-sdk-guide',
   'deployment-guide': '/guides/deployment-guide',
+  'build-lab': '/guides/build-lab',
   challenges: '/what-to-build',
   'how-it-works': '/how-it-works',
   judging: '/judging',

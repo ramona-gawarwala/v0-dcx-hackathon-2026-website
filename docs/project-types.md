@@ -239,4 +239,4 @@ Everyone who takes part gets a **certificate of participation** and **personal f
 
 ---
 
-Picked a type? Start with the [Beginner guide](beginner-guide.md).
+Picked a type? Start with the [Quick Start](quick-start.md).

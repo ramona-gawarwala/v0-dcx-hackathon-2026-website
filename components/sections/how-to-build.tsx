@@ -42,6 +42,16 @@ export function HowToBuild() {
                 Best if you want to do the whole build and deploy on Vercel and have enough v0
                 credits.
               </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Want to go further after the event? The{' '}
+                <Link
+                  href="/guides/build-lab"
+                  className="font-medium text-primary underline-offset-4 hover:underline"
+                >
+                  Build lab
+                </Link>{' '}
+                walks the whole v0 + Vercel AI stack, step by step.
+              </p>
             </div>
             <div className="rounded-lg border border-border bg-card p-5">
               <h4 className="font-display text-base font-semibold">Start on v0, refine locally</h4>

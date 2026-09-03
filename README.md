@@ -58,7 +58,7 @@ Pick a **project type** first — it answers "what kind of thing am I making?" s
 | I want to… | Go to |
 |---|---|
 | Understand the format, teams, and schedule | [How it works](docs/how-it-works.md) |
-| Build my first app (no experience) | [Beginner guide](docs/beginner-guide.md) |
+| Build my first app (no experience) | [Quick Start](docs/quick-start.md) |
 | Pick something to build | [What to build](docs/project-types.md) |
 | Add runtime AI to my app (optional) | [AI SDK guide](docs/ai-sdk-guide.md) |
 | Get my app live | [Deployment guide](docs/deployment-guide.md) |
