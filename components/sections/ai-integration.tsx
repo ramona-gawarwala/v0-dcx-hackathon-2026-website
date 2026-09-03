@@ -144,12 +144,6 @@ export function AiIntegration() {
           Pick one — a scoped idea beats a big vague one. Each works for any project type.
         </p>
         <ChallengeFilter />
-
-        <p className="mt-8 border-l-2 border-primary pl-5 text-sm leading-relaxed text-muted-foreground">
-          <span className="font-semibold text-foreground">Bring your own idea?</span> Go for it. Pick
-          a level, keep it small enough to demo, and check it against the judging criteria. Everyone
-          who takes part gets a certificate of participation and personal feedback on SuccessFactors.
-        </p>
       </div>
     </section>
   )
