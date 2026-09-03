@@ -9,7 +9,7 @@ Everything you need to take part in the **DCX AI Playground Hackathon 2026**, or
 | Doc | What it covers |
 |---|---|
 | [How it works](how-it-works.md) | Format, teams, schedule, and the goal |
-| [Beginner guide](beginner-guide.md) | Build your first app with no experience |
+| [Quick Start](quick-start.md) | Build your first app with no experience |
 
 ## Decide what to build
 

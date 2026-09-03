@@ -25,7 +25,7 @@ describe('isAnchorHref', () => {
 
   it('is false for route links', () => {
     expect(isAnchorHref('/faq')).toBe(false)
-    expect(isAnchorHref('/guides/beginner-guide')).toBe(false)
+    expect(isAnchorHref('/guides/quick-start')).toBe(false)
     expect(isAnchorHref('/')).toBe(false)
   })
 })
@@ -37,17 +37,17 @@ describe('isNavLinkActive', () => {
   })
 
   it('never marks an anchor active on a different route', () => {
-    expect(isNavLinkActive('/#judging', '/guides/beginner-guide', 'judging')).toBe(false)
+    expect(isNavLinkActive('/#judging', '/guides/quick-start', 'judging')).toBe(false)
     expect(isNavLinkActive('/#start-building', '/faq', 'start-building')).toBe(false)
   })
 
   it('marks a route link active on an exact path match', () => {
     expect(isNavLinkActive('/faq', '/faq', null)).toBe(true)
-    expect(isNavLinkActive('/guides/beginner-guide', '/guides/beginner-guide', null)).toBe(true)
+    expect(isNavLinkActive('/guides/quick-start', '/guides/quick-start', null)).toBe(true)
   })
 
   it('does not mark a route link active on a different path', () => {
-    expect(isNavLinkActive('/faq', '/guides/beginner-guide', null)).toBe(false)
+    expect(isNavLinkActive('/faq', '/guides/quick-start', null)).toBe(false)
     expect(isNavLinkActive('/code-of-conduct', '/', 'submit')).toBe(false)
   })
 })

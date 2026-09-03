@@ -6,7 +6,7 @@ Curated links, ranked by how much they help you ship. Start at the top.
 
 | Resource | Why |
 |---|---|
-| [Beginner guide](../docs/beginner-guide.md) | Build + deploy your first app fast |
+| [Quick Start](../docs/quick-start.md) | Build + deploy your first app fast |
 | [v0](https://v0.app) | Prompt, edit, and deploy an application in the browser |
 | [AI SDK guide](../docs/ai-sdk-guide.md) | The canonical build path + how to get a key |
 | [Deployment guide](../docs/deployment-guide.md) | Get a live URL, avoid free-tier traps |
